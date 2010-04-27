@@ -1,0 +1,5 @@
+
+test=/Users/charlietanksley/Desktop/test2 filter="*.tex" {
+ another.tex
+ test.tex
+}
