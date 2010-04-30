@@ -32,7 +32,7 @@ set tabstop=2 shiftwidth=2 expandtab
     """""""""""""""
 
 set foldcolumn=4
-set foldmethod=indent "alternatives: syntax, marker (uses `{{{` to open and `}}}` to close)
+"set foldmethod=indent "alternatives: syntax, marker (uses `{{{` to open and `}}}` to close)
 
     """""""""""""""""""""""""""""""
     """" SPECIFIC PLUGIN STUFF """"
