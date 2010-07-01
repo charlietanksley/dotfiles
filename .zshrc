@@ -1,4 +1,4 @@
-export PATH=$PATH:~/.cabal/bin/
+export PATH=$PATH:~/.cabal/bin/:~/.bin/
 # MacPorts path stuff
 # export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
@@ -49,9 +49,22 @@ bindkey -v
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # prompt
+# autoload -U promptinit
+# promptinit
 autoload -U colors && colors
-PS1="%{${fg[blue]}%}%# %{${fg[black]}%}"
-RPS1="%{${fg[red]}%}%~%{${fg[black]}%}"
+PROMPT="
+%{${fg_bold[red]}%}%~%{${fg_no_bold[white]}%}
+=> "
+
+
+#PROMPT="
+#%B%~%b
+#=> "
+#RPROMPT="%N"
+
+autoload -U colors && colors
+# PS1="%{${fg[blue]}%}%# %{${fg[white]}%}"
+# RPS1="%{${fg[red]}%}%~%{${fg[white]}%}"
 
 # complietions
 autoload -U compinit

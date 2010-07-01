@@ -2,12 +2,27 @@
 		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 
+colorscheme camo
+
 		""""""""""""""""""""""""""""""""""""""""""""""
 		"""""" SEARCH, HIGHLIGHT, SPELLING, ETC. """""
 		""""""""""""""""""""""""""""""""""""""""""""""
-"set hlsearch
 set incsearch
 syntax on
+
+" Vim window stuff
+set linebreak
+set number
+set cursorline
+"set cursorcolumn
+
+"paragraph formatting stuff:
+:set formatprg=par
+
+" Store temporary files in a central location (is this okay?)
+set backupdir=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
+set directory=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
+
 
 		""""""""""""""""""""""""""""""""""
 		""""" GENERIC PLUGIN BEHAVIOR """"
@@ -16,9 +31,6 @@ filetype plugin indent on
 filetype plugin on
 set ofu=syntaxcomplete#Complete
 set autoread
-
-
-
 
 		""""""""""""""""""
 		""""" SPACING """"
@@ -32,7 +44,7 @@ set tabstop=2 shiftwidth=2 expandtab
     """""""""""""""
 
 set foldcolumn=4
-"set foldmethod=indent "alternatives: syntax, marker (uses `{{{` to open and `}}}` to close)
+set foldmethod=marker "alternatives: indent, syntax, marker (uses `{{{` to open and `}}}` to close)
 
     """""""""""""""""""""""""""""""
     """" SPECIFIC PLUGIN STUFF """"
@@ -43,58 +55,25 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1
 
-" General vim stuff
+      """""""""""""""""""""""""""""""""
+      "                               " 
+      " |LatexBox-stuff		      "
+      "                               " 
+      """""""""""""""""""""""""""""""""
+inoremap <F5> <C-X><C-O>
+imap <buffer> <silent> [[ \begin{
+imap <buffer> <silent> ]] <C-R>=LatexBox_CloseLastEnv()<CR>
+imap <buffer> <F11> <C-R>=LatexBox_FindLabelByNumberPrompt()<CR>
+vmap <buffer> <silent> <F7> <Esc>:call LatexBox_WrapSelection('')<CR>i
+let g:LatexBox_viewer = 'skim'
+let g:LatexBox_latexmk_options = '-pvc' 
+"let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\*\?\_\s*{'
 
-" aliases?
-
-
-" Vim window stuff
-set linebreak
-set number
-set cursorline
-set cursorcolumn
-
-" Store temporary files in a central location (is this okay?)
-set backupdir=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
-set directory=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
-
-
-" LaTeX stuff
-let g:Tex_ViewRule_pdf='Preview'
-
-" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
-filetype plugin on
-
-" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
-" can be called correctly.
-set shellslash
-
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a singe file. This will confuse Latex-Suite. Set your grep
-" program to always generate a file-name.
-set grepprg=grep\ -nH\ $*
-
-
-" OPTIONAL: This enables automatic indentation as you type.
-filetype indent on
-
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
-let g:Tex_BIBINPUTS="/Users/charlietanksley/Library/texmf/bibtex/bib/"
-
-" Markdown stuff
-augroup markdown
-autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
-augroup END
+" THIS IS THE CLUPRET
 
 " Git stuff:
 set laststatus=2
-set statusline=%{GitBranch()}
-
-" Project plugin stuff
-set nocompatible
+"set statusline=%{GitBranch()}
 
 		""""""""""""""""""""""""""""""""
 		""""""""" KEYMAP STUFF """"""""
@@ -148,6 +127,4 @@ map <leader>es :sp <C-R>=expand("%:p:h")."/"<CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h")."/"<CR>
 map <leader>et :tabe <C-R>=expand("%:p:h")."/"<CR>
 
-" Attempt to get cursor to move right when word wrapped (from Vimcasts)
-nmap j gj
-nmap k gk
+
