@@ -1,11 +1,13 @@
 export PATH=$PATH:~/.cabal/bin/:~/.bin/
-# MacPorts path stuff
-# export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
-# Pandoc alias
-#alias pandoc='~/.cabal/bin/pandoc'
-#alias hsmarkdown='~/.cabal/bin/hsmarkdown'
-#alias markdown2pdf='~/.cabal/bin/markdown2pdf'
+# Todo list function:
+ t() {
+   if [[ "$*" == "" ]] ; then
+     cat ~/.t
+   else 
+     rm ~/.t ; echo "$*" > ~/.t 
+   fi 
+ }
 
 # Set up aliases
 alias mv='nocorrect mv'       # no spelling correction on mv
@@ -48,23 +50,22 @@ bindkey -v
 # match uppercase from lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-# prompt
-# autoload -U promptinit
+# PROMPT
+# fancy pronpt functions from http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
+#
+# Git repo function
+function prompt_char {
+  git branch >/dev/null 2>/dev/null && echo '±' && return
+  echo '○'
+}
+#
+
 # promptinit
 autoload -U colors && colors
 PROMPT="
-%{${fg_bold[red]}%}%~%{${fg_no_bold[white]}%}
+%{${fg_no_bold[red]}%}%~%{${fg_no_bold[white]}%}
 => "
 
-
-#PROMPT="
-#%B%~%b
-#=> "
-#RPROMPT="%N"
-
-autoload -U colors && colors
-# PS1="%{${fg[blue]}%}%# %{${fg[white]}%}"
-# RPS1="%{${fg[red]}%}%~%{${fg[white]}%}"
 
 # complietions
 autoload -U compinit
@@ -72,3 +73,6 @@ compinit
 
 # directory navigation
 setopt autocd autopushd pushdignoredups
+
+# Change colors of ls
+#export LS_COLORS=cxfxcxdxbxegedabagacad

@@ -1,3 +1,10 @@
+"Test
+map <silent> <Leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/displayline 
+  \ <C-R>=line('.')<CR> "<C-R>=LatexBox_GetOutputFile()<CR>" "%:p" <CR>
+
+"
+"
+"
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
 		""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -17,7 +24,7 @@ set cursorline
 "set cursorcolumn
 
 "paragraph formatting stuff:
-:set formatprg=par
+set formatprg=par
 
 " Store temporary files in a central location (is this okay?)
 set backupdir=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
@@ -60,14 +67,11 @@ let g:miniBufExplModSelTarget = 1
       " |LatexBox-stuff		      "
       "                               " 
       """""""""""""""""""""""""""""""""
-inoremap <F5> <C-X><C-O>
-imap <buffer> <silent> [[ \begin{
-imap <buffer> <silent> ]] <C-R>=LatexBox_CloseLastEnv()<CR>
-imap <buffer> <F11> <C-R>=LatexBox_FindLabelByNumberPrompt()<CR>
-vmap <buffer> <silent> <F7> <Esc>:call LatexBox_WrapSelection('')<CR>i
+" All .tex specific key mappings are in ~/.vim/ftplugin/tex.vim
+
 let g:LatexBox_viewer = 'skim'
 let g:LatexBox_latexmk_options = '-pvc' 
-"let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\*\?\_\s*{'
+let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\*\?\_\s*{'
 
 " THIS IS THE CLUPRET
 
@@ -127,4 +131,5 @@ map <leader>es :sp <C-R>=expand("%:p:h")."/"<CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h")."/"<CR>
 map <leader>et :tabe <C-R>=expand("%:p:h")."/"<CR>
 
-
+" map for omnicomplete
+inoremap <F9> <C-X><C-O>
