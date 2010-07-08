@@ -1,4 +1,4 @@
-export PATH=$PATH:~/.cabal/bin/:~/.bin/
+export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin
 
 # Todo list function:
  t() {
@@ -29,12 +29,14 @@ alias gln='git log --oneline --name-only'
 alias gitx='gitx --all'
 
 # Directory Aliases
-alias zproof4d='cd ~/Documents/C/Proof4D'
 alias zbib='cd ~/Library/texmf/bibtex/bib'
-alias zwb='cd ~/Documents/C/web/blog'
-alias zwl='cd ~/Documents/C/web/latex'
-alias zdaup='cd ~/Documents/C/DAUP'
+alias zwt='cd ~/Documents/C/web/blog'
 alias zuc='cd ~/Documents/C/vagueUC'
+alias zjoy='cd ~/Documents/C/web/joy_site'
+alias zpt='cd ~/Documents/C/web/philtex'
+alias zpn='cd ~/Documents/C/web/philnews'
+alias zms='cd ~/Documents/C/web/mysite'
+
 
 # List only directories and symbolic
 # links that point to directories

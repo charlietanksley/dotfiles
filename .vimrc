@@ -9,7 +9,7 @@ map <silent> <Leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/d
 		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 
-colorscheme camo
+colorscheme desert
 
 		""""""""""""""""""""""""""""""""""""""""""""""
 		"""""" SEARCH, HIGHLIGHT, SPELLING, ETC. """""
@@ -133,3 +133,16 @@ map <leader>et :tabe <C-R>=expand("%:p:h")."/"<CR>
 
 " map for omnicomplete
 inoremap <F9> <C-X><C-O>
+
+"" These all come from http://jetpackweb.com/blog/2010/02/15/vim-tips-for-ruby/
+"" and are for ruby development stuff
+" bind control-l to hashrocket
+imap <C-l> <Space>=><Space>"
+" convert word into ruby symbol
+imap <C-k> <C-o>b:<Esc>Ea
+nmap <C-k> lbi:<Esc>E
+
+" Still from jetpackweb, but this is not ruby specific:
+" Easier non-interactive command insertion
+nnoremap <Space> :
+
