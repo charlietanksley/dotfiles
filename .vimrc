@@ -1,6 +1,4 @@
 "Test
-map <silent> <Leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/displayline 
-  \ <C-R>=line('.')<CR> "<C-R>=LatexBox_GetOutputFile()<CR>" "%:p" <CR>
 
 "
 "
@@ -77,7 +75,7 @@ let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\*\?\_\s*{'
 
 " Git stuff:
 set laststatus=2
-"set statusline=%{GitBranch()}
+set statusline=%{GitBranch()}
 
 		""""""""""""""""""""""""""""""""
 		""""""""" KEYMAP STUFF """"""""
