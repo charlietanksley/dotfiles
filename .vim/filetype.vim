@@ -8,3 +8,7 @@ augroup END
 
 " tumblr theme filetype file
 au BufRead,BufNewFile *.tumblr.html setfiletype tumblr
+
+" mutt
+au BufRead,BufNewFile /tmp/mutt-* setfiletype mail
+
