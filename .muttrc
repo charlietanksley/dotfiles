@@ -1,5 +1,6 @@
 # A basic .muttrc for use with Gmail
 
+
 ### Address book stuff
 set alias_file= ~/.mutt/aliases
 set sort_alias= alias
@@ -16,6 +17,7 @@ set editor = "vim"
 #set edit_headers = yes
 set mark_old = no
 set pager_stop = yes
+
 
 # Gmail-style keyboard shortcuts
 #macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
@@ -83,3 +85,15 @@ bind index B bounce-message
 macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
 macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
  #
+
+## Pager-view stuff (thanks to Randall Wood's page)
+set pager_context=5
+set pager_index_lines=4
+set tilde
+unset resolve
+bind pager <up> previous-line
+bind pager <down> next-line
+bind pager [ previous-unread
+bind pager ] next-unread
+macro pager @ "s=@Archive"
+macro index @ "s=@Archive"
