@@ -89,6 +89,7 @@ macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
 ## Pager-view stuff (thanks to Randall Wood's page)
 set pager_context=5
 set pager_index_lines=4
+set tilde
 unset resolve
 bind pager <up> previous-line
 bind pager <down> next-line
