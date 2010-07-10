@@ -1,2 +1,2 @@
-setlocal formatoptions+=ta
+setlocal formatoptions+=tawoc
 setlocal textwidth=72
