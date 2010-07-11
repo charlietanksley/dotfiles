@@ -1,11 +1,11 @@
 # A basic .muttrc for use with Gmail
 
-
 ### Address book stuff
 set alias_file= ~/.mutt/aliases
 set sort_alias= alias
 set reverse_alias=yes
 source $alias_file
+
 
 source ~/.mutt/.virginia_account
 #source ~/.mutt/.gmail_account
@@ -95,5 +95,6 @@ bind pager <up> previous-line
 bind pager <down> next-line
 bind pager [ previous-unread
 bind pager ] next-unread
-macro pager @ "s=@Archive"
-macro index @ "s=@Archive"
+macro pager @ "s=@Archive\ry"
+macro index @ "s=@Archive\ry"
+
