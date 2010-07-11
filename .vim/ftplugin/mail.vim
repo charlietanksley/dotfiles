@@ -12,7 +12,6 @@
 "" ----------------------------------------------------------------------------
 
 set pastetoggle=<f12>   " toggle mouse paste mode with F12
-set ft=mail             " needless to say, vim had already guessed that alone :)
 
 
 
@@ -57,61 +56,57 @@ map!  <F3>  <ESC>kgqji
 " " issue with the user's own sig.
 "
 
-"" ----------------------------------------------------------------------------
-""   Suppressing quoted signature(s) if any when replying
-"" ----------------------------------------------------------------------------
-
-function! Mail_Erase_Sig_old()
-  let i = line('$')
-  let j = i
-  " search for the signature pattern (takes into account signature  delimiters from broken mailers that forget the space after the two dashes)
-  while ((i > 0) && (getline(i) !~ '^> *-- \=$'))
-    if (getline(i) =~ '^-- $')
-    " this is my own sig. please don't delete it!
-    let j = i - 1
-  endif
-  let i = i - 1
-  endwhile
-
-  " if found, then
-  if (i != 0)
-    " search for the last non empty (non sig) line
-    while ((i > 0) && (getline(i - 1) =~ '^\(>\s*\)*$'))
-      let i = i - 1
-    endwhile
-    " and delete those lines plus the signature
-    exe ':'.i.','.j.'d'
-  endif
-endfunction
-
-" this new version handles cases where there are several signatures
-" (sometimes added by mailing list software)
-function! Mail_Erase_Sig()
-  " search for the signature pattern (takes into account signature
-  " delimiters from broken mailers that forget the space after the 
-  " two dashes)
-  let i = 0
-  while ((i <= line('$')) && (getline(i) !~ '^> *-- \=$'))
-    let i = i + 1
-  endwhile
-
-  " if found, then
-  if (i != line('$') + 1)
-    " first, look for our own signature, to avoid deleting it
-    let j = i
-    while (j < line('$') && (getline(j + 1) !~ '^-- $'))
-      let j = j + 1
-    endwhile
-
-    " second, search for the last non empty (non sig) line
-    while ((i > 0) && (getline(i - 1) =~ '^\(>\s*\)*$'))
-      let i = i - 1
-    endwhile
-
-    " third, delete those lines plus the signature 
-    exe ':'.i.','.j.'d'
-  endif
-endfunction
+"function! Mail_Erase_Sig_old()
+"  let i = line('$')
+"  let j = i
+"  " search for the signature pattern (takes into account signature  delimiters from broken mailers that forget the space after the two dashes)
+"  while ((i > 0) && (getline(i) !~ '^> *-- \=$'))
+"    if (getline(i) =~ '^-- $')
+"    " this is my own sig. please don't delete it!
+"    let j = i - 1
+"  endif
+"  let i = i - 1
+"  endwhile
+"
+"  " if found, then
+"  if (i != 0)
+"    " search for the last non empty (non sig) line
+"    while ((i > 0) && (getline(i - 1) =~ '^\(>\s*\)*$'))
+"      let i = i - 1
+"    endwhile
+"    " and delete those lines plus the signature
+"    exe ':'.i.','.j.'d'
+"  endif
+"endfunction
+"
+"" this new version handles cases where there are several signatures
+"" (sometimes added by mailing list software)
+"function! Mail_Erase_Sig()
+"  " search for the signature pattern (takes into account signature
+"  " delimiters from broken mailers that forget the space after the 
+"  " two dashes)
+"  let i = 0
+"  while ((i <= line('$')) && (getline(i) !~ '^> *-- \=$'))
+"    let i = i + 1
+"  endwhile
+"
+"  " if found, then
+"  if (i != line('$') + 1)
+"    " first, look for our own signature, to avoid deleting it
+"    let j = i
+"    while (j < line('$') && (getline(j + 1) !~ '^-- $'))
+"      let j = j + 1
+"    endwhile
+"
+"    " second, search for the last non empty (non sig) line
+"    while ((i > 0) && (getline(i - 1) =~ '^\(>\s*\)*$'))
+"      let i = i - 1
+"    endwhile
+"
+"    " third, delete those lines plus the signature 
+"    exe ':'.i.','.j.'d'
+"  endif
+"endfunction
 
 
 
@@ -145,6 +140,6 @@ endfunction
 ""
 "" ----------------------------------------------------------------------------
 
-call Mail_Erase_Sig()
+"call Mail_Erase_Sig()
 call Mail_Del_Empty_Quoted()
 call Mail_Begining()
