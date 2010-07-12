@@ -32,7 +32,7 @@ set pager_stop = yes
 color hdrdefault white blue
 color quoted white blue
 color signature white blue
-color status black white # I need a new status bar for the pager view
+color status white red # I need a new status bar for the pager view
 #color status yellow blue
 color indicator black white #yellow black #from blue
 color normal white blue
