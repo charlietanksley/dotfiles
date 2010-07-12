@@ -1,6 +1,6 @@
 "setlocal formatoptions+=tawoc
 "setlocal textwidth=72
-"setlocal spell
+setlocal spell
 
 " The following stuff is *all* from
 " http://cedricduval.free.fr/download/mail.vim
