@@ -14,7 +14,7 @@ source ~/.mutt/.virginia_account
 set editor = "vim"
 
 ## Basic config I set up
-set edit_headers = yes
+#set edit_headers = yes
 set mark_old = no
 set pager_stop = yes
 
@@ -32,7 +32,8 @@ set pager_stop = yes
 color hdrdefault white blue
 color quoted white blue
 color signature white blue
-color status yellow blue
+color status black white # I need a new status bar for the pager view
+#color status yellow blue
 color indicator black white #yellow black #from blue
 color normal white blue
 
