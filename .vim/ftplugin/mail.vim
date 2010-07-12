@@ -20,7 +20,8 @@ set pastetoggle=<f12>   " toggle mouse paste mode with F12
 "" ----------------------------------------------------------------------------
 
 set textwidth=72  " max line length
-setlocal formatoptions+=tawocql "added my stuff plus this other guys!
+setlocal formatoptions+=taocql "added my stuff plus this other guys!-- I don't 
+                              " think the w is good
 "set formatoptions=tcql
 set comments+=n:\|  " '|' is a quote char.
 set comments+=n:% " '%' as well.
@@ -126,13 +127,13 @@ map!  <F3>  <ESC>kgqji
 "  ""   Moving the cursor at the begining of the mail
 "  "" ----------------------------------------------------------------------------
 "
-"function! Mail_Begining()
-"  exe "normal gg"
-"    if getline (line ('.')) =~ '^From: '
-"          " if we use edit_headers in Mutt, then go after the headers
-"      exe "normal /^$\<CR>"
-"    endif
-"endfunction
+function! Mail_Begining()
+  exe "normal gg"
+    if getline (line ('.')) =~ '^From: '
+          " if we use edit_headers in Mutt, then go after the headers
+      exe "normal /^$\<CR>"
+    endif
+endfunction
 "
 "
 ""----------------------------------------------------------------------------
@@ -143,4 +144,4 @@ map!  <F3>  <ESC>kgqji
 "
 ""call Mail_Erase_Sig()
 "call Mail_Del_Empty_Quoted()
-"call Mail_Begining()
+call Mail_Begining()
