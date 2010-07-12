@@ -20,7 +20,7 @@ set pastetoggle=<f12>   " toggle mouse paste mode with F12
 "" ----------------------------------------------------------------------------
 
 set textwidth=72  " max line length
-setlocal formatoptions+=taocql "added my stuff plus this other guys!-- I don't 
+setlocal formatoptions+=tcoqalw "added my stuff plus this other guys!-- I don't 
                               " think the w is good
 "set formatoptions=tcql
 set comments+=n:\|  " '|' is a quote char.
