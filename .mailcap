@@ -1,0 +1,15 @@
+# Images
+image/jpeg; /Users/charlietanksley/.mutt/view_attachment.sh %s
+image/pjpeg; /Users/charlietanksley/.mutt/view_attachment.sh %s
+image/png; /Users/charlietanksley/.mutt/view_attachment.sh %s
+image/gif; /Users/charlietanksley/.mutt/view_attachment.sh %s
+
+# # PDF
+application/pdf; /Users/charlietanksley/.mutt/view_attachment.sh %s pdf
+
+# # HTML
+text/html; /Users/charlietanksley/.mutt/view_attachment.sh %s 'Applications/Safari.app'
+
+## Word/pages
+application/msword; /Users/charlietanksley/.mutt/view_attachment.sh %s "-" '/Applications/Pages.app'
+application/pages; /Users/charlietanksley/.mutt/view_attachment.sh %s "-" '/Applications/Pages.app
