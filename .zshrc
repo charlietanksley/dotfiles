@@ -27,7 +27,7 @@ alias ls='ls -G'
 alias gl='git log --oneline'
 alias gln='git log --oneline --name-only'
 alias gitx='gitx --all'
-alias ggraph='git log --online --graph'
+alias ggraph='git log --oneline --graph'
 
 # Directory Aliases
 alias zbib='cd ~/Library/texmf/bibtex/bib'
