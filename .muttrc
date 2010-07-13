@@ -54,7 +54,7 @@ color attachment yellow black
 mailboxes =INBOX
 
 set sidebar_width=30
-set sidebar_visible=yes
+set sidebar_visible=no
 set sidebar_delim='|'
 set sidebar_sort=yes
 #
@@ -95,9 +95,17 @@ set tilde
 unset resolve
 bind pager <up> previous-line
 bind pager <down> next-line
-bind pager [ previous-unread
-bind pager ] next-unread
 macro pager @ "s=@Archive\ry"
 macro index @ "s=@Archive\ry"
+
+## Some bindings I'm trying out:
+bind pager \CH display-toggle-weed
+bind pager j next-page
+bind pager k previous-page
+bind pager h previous-undeleted
+bind pager l next-undeleted
+bind pager [ previous-entry
+bind pager ] next-entry
+
 
 macro pager "\Cb"    "<pipe-message>urlview<enter>"
