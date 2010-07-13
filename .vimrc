@@ -75,7 +75,7 @@ let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\*\?\_\s*{'
 
 " Git stuff:
 set laststatus=2
-set statusline=%{GitBranch()}
+"set statusline=%{GitBranch()}
 
 		""""""""""""""""""""""""""""""""
 		""""""""" KEYMAP STUFF """"""""

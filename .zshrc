@@ -9,7 +9,13 @@ export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin
    fi 
  }
 
+###
+# 
 # Set up aliases
+#
+###
+
+# Generic aliases
 alias mv='nocorrect mv'       # no spelling correction on mv
 alias cp='nocorrect cp'       # no spelling correction on cp
 alias mkdir='nocorrect mkdir' # no spelling correction on mkdir
@@ -22,6 +28,13 @@ alias grep=egrep
 alias ll='ls -l'
 alias la='ls -a'
 alias ls='ls -G'
+
+# List only directories and symbolic
+# links that point to directories
+alias lsd='ls -ld *(-/DN)'
+
+# List only file beginning with "."
+alias lsa='ls -ld .*'
 
 # git aliases
 alias gl='git log --oneline'
@@ -38,13 +51,8 @@ alias zpt='cd ~/Documents/C/web/philtex'
 alias zpn='cd ~/Documents/C/web/philnews'
 alias zms='cd ~/Documents/C/web/mysite'
 
-
-# List only directories and symbolic
-# links that point to directories
-alias lsd='ls -ld *(-/DN)'
-
-# List only file beginning with "."
-alias lsa='ls -ld .*'
+# Shortcut command aliases, generic
+alias m='mutt'
 
 
 # keybindings?

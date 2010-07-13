@@ -11,5 +11,6 @@ application/pdf; /Users/charlietanksley/.mutt/view_attachment.sh %s pdf
 text/html; /Users/charlietanksley/.mutt/view_attachment.sh %s 'Applications/Safari.app'
 
 ## Word/pages
-application/msword; /Users/charlietanksley/.mutt/view_attachment.sh %s "-" '/Applications/Pages.app'
-application/pages; /Users/charlietanksley/.mutt/view_attachment.sh %s "-" '/Applications/Pages.app
+application/msword; /Users/charlietanksley/.mutt/view_attachment.sh %s "-" "/Applications/iWork '09/Pages.app"
+application/pages; /Users/charlietanksley/.mutt/view_attachment.sh %s "-" "/Applications/iWork '09/Pages.app"
+application/octet-stream; /Users/charlietanksley/.mutt/view_attachment.sh %s "-" "/Applications/iWork '09/Pages.app"
