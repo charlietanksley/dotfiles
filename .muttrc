@@ -24,7 +24,7 @@ set fast_reply = yes    # skip reply-to and subject for replies
 # Gmail-style keyboard shortcuts
 #macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
 #macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
-#macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+#macro index,pager @i "<change-folder>=INBOX<enter>" "Go to inbox"
 #macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
 #macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
 #macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
@@ -96,8 +96,10 @@ set tilde
 unset resolve
 bind pager <up> previous-line
 bind pager <down> next-line
-macro pager @ "s=@Archive\ry"
-macro index @ "s=@Archive\ry"
+macro pager @a "s=@Archive\ry"
+macro index @a "s=@Archive\ry"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager ga "<change-folder>=@Archive<enter>" "Go to inbox"
 
 ## Some bindings I'm trying out:
 bind pager \CH display-toggle-weed
