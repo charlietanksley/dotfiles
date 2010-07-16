@@ -30,25 +30,8 @@ set fast_reply = yes    # skip reply-to and subject for replies
 #macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 
 ### Colorscheme
-#White Text on Blue Background
-color hdrdefault white blue
-color quoted white blue
-color signature white blue
-color status white red # I need a new status bar for the pager view
-#color status yellow blue
-color indicator black white #yellow black #from blue
-color normal white blue
-
-color  body brightyellow black (((ht|f)tps?)|mailto):(//)?[^\ "\t]*|www\.[-a-z0-9.]+[^\ .,;\t>">]
-color  quoted          brightgreen     blue
-color  quoted1         yellow      blue
-
-color index brightred     	blue ~F
-color index brightgreen   	blue ~T
-color index brightyellow   	blue ~N
-color index black    		blue ~D
-color index yellow	 	blue ~O
-color attachment yellow black
+#source ~/.mutt/themes/default_blue_white
+source ~/.mutt/themes/blackback
 
 # set up the sidebar, default not visible
 # # which mailboxes to list in the sidebar
