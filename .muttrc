@@ -20,6 +20,7 @@ set mark_old = no       # no distinction between new unread and old unread
 set pager_stop = yes    # keep the pager from srcolling to the next message
 set markers = no        # cut out those wrapped-line '+'s
 set fast_reply = yes    # skip reply-to and subject for replies
+set sendmail_wait=-1    # Don't wait around for sendmail.
 
 # Gmail-style keyboard shortcuts
 #macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
