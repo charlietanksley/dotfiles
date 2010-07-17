@@ -6,8 +6,8 @@ set sort_alias= alias
 set reverse_alias=yes
 source $alias_file
 
-#source ~/.mutt/.mailbox_hooks
-source ~/.mutt/.virginia_account
+source ~/.mutt/.mailbox_hooks
+#source ~/.mutt/.virginia_account
 #source ~/.mutt/.gmail_account
 
 # Change the following line to a different editor you prefer.
@@ -21,6 +21,11 @@ set pager_stop = yes    # keep the pager from srcolling to the next message
 set markers = no        # cut out those wrapped-line '+'s
 set fast_reply = yes    # skip reply-to and subject for replies
 set sendmail_wait=-1    # Don't wait around for sendmail.
+
+###
+# Some IMAP stuff I'm setting up
+###
+set imap_list_subscribed = no
 
 # Gmail-style keyboard shortcuts
 #macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
