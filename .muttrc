@@ -41,7 +41,12 @@ source ~/.mutt/themes/blackback
 
 # set up the sidebar, default not visible
 # # which mailboxes to list in the sidebar
-mailboxes =INBOX
+#mailboxes =INBOX
+
+subscribe vim
+subscribe vim_use
+subscribe MacOSX-TeX
+subscribe staticmatic
 
 set sidebar_width=30
 set sidebar_visible=no
