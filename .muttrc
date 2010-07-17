@@ -6,8 +6,8 @@ set sort_alias= alias
 set reverse_alias=yes
 source $alias_file
 
-#source ~/.mutt/.mailbox_hooks
-source ~/.mutt/.virginia_account
+source ~/.mutt/.mailbox_hooks
+#source ~/.mutt/.virginia_account
 #source ~/.mutt/.gmail_account
 
 # Change the following line to a different editor you prefer.
@@ -36,7 +36,12 @@ source ~/.mutt/themes/blackback
 
 # set up the sidebar, default not visible
 # # which mailboxes to list in the sidebar
-mailboxes =INBOX
+#mailboxes =INBOX
+
+subscribe vim
+subscribe vim_use
+subscribe MacOSX-TeX
+subscribe staticmatic
 
 set sidebar_width=30
 set sidebar_visible=no
