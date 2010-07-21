@@ -104,5 +104,12 @@ bind pager l next-undeleted
 bind pager [ previous-entry
 bind pager ] next-entry
 
+###
+# Mailbox shortcut bindings http://nixtricks.wordpress.com/2010/05/20/mutt-multiple-email-accounts-using-hooks/
+###
+#macro index 1 "y9<return><return>" # ESC+1 takes to first INBOX
+#macro index 2 "y2<return><return>" # ESC+2 takes to the second
+macro index @1 "cimaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
+macro index @2 "cimaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
 
 macro pager "\Cb"    "<pipe-message>urlview<enter>"
