@@ -43,11 +43,22 @@ source ~/.mutt/themes/blackback
 # # which mailboxes to list in the sidebar
 #mailboxes =INBOX
 
+###
+# Mailing lists
+###
 subscribe vim
 subscribe vim_use
 subscribe MacOSX-TeX
 subscribe staticmatic
 
+###
+# Folder-hooks to manage folders
+###
+#folder-hook imaps://cwt7h@virginia.edu@imap.gmail.com/ '~s ' 
+
+###
+# Sidebar
+###
 set sidebar_width=30
 set sidebar_visible=no
 set sidebar_delim='|'
