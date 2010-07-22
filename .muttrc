@@ -36,8 +36,8 @@ set imap_list_subscribed = no
 #macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 
 ### Colorscheme
-#source ~/.mutt/themes/default_blue_white
-source ~/.mutt/themes/blackback
+source ~/.mutt/themes/default_blue_white
+#source ~/.mutt/themes/blackback
 
 # set up the sidebar, default not visible
 # # which mailboxes to list in the sidebar
@@ -101,10 +101,10 @@ set tilde
 unset resolve
 bind pager <up> previous-line
 bind pager <down> next-line
-macro pager @a "s=@Archive\ry"
-macro index @a "s=@Archive\ry"
-macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index,pager ga "<change-folder>=@Archive<enter>" "Go to inbox"
+#macro pager @a "s=@Archive\ry"
+#macro index @a "s=@Archive\ry"
+#macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+#macro index,pager ga "<change-folder>=@Archive<enter>" "Go to inbox"
 
 ## Some bindings I'm trying out:
 bind pager \CH display-toggle-weed
