@@ -6,3 +6,6 @@ PS2="more=> "; export PS2
 
 alias ls='ls -G'
 alias gl='git log --oneline --name-only'
+
+#The Ruby Version Manager stuff
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

@@ -87,3 +87,6 @@ setopt autocd autopushd pushdignoredups
 
 # Change colors of ls
 #export LS_COLORS=cxfxcxdxbxegedabagacad
+#
+#The Ruby Version Manager stuff
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
