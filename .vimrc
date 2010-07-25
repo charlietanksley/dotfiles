@@ -1,5 +1,4 @@
 "Test
-
 "
 "
 "
@@ -128,6 +127,9 @@ map <leader>ew :e <C-R>=expand("%:p:h")."/"<CR>
 map <leader>es :sp <C-R>=expand("%:p:h")."/"<CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h")."/"<CR>
 map <leader>et :tabe <C-R>=expand("%:p:h")."/"<CR>
+
+"imap <C-6> <ESC>:e #<CR>
+"bind <C-6> to :e #
 
 " map for omnicomplete
 inoremap <F9> <C-X><C-O>
