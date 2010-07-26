@@ -1,5 +1,4 @@
 "Test
-
 "
 "
 "
@@ -71,10 +70,26 @@ let g:LatexBox_viewer = 'skim'
 let g:LatexBox_latexmk_options = '-pvc' 
 let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\*\?\_\s*{'
 
-" THIS IS THE CLUPRET
+      """""""""""""""""""
+      """""""""""""""""""
+      "" |Git-fugitive| "
+      """""""""""""""""""
+      """""""""""""""""""
+" These keybindings are all modified from the git-vim plugin:
+" http://github.com/motemen/git-vim/blob/master/plugin/git.vim
+nnoremap <Leader>gd :Gdiff<Enter>
+"nnoremap <Leader>gD :GitDiff --cached<Enter>
+nnoremap <Leader>gs :Gstatus<Enter>
+"nnoremap <Leader>gl :GitLog<Enter>
+"nnoremap <Leader>ga :GitAdd<Enter>
+"nnoremap <Leader>gA :GitAdd <cfile><Enter>
+nnoremap <Leader>gc :Gcommit<Enter>
+"nnoremap <Leader>gp :GitPullRebase<Enter>
+
 
 " Git stuff:
 set laststatus=2
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 "set statusline=%{GitBranch()}
 
 		""""""""""""""""""""""""""""""""
@@ -128,6 +143,9 @@ map <leader>ew :e <C-R>=expand("%:p:h")."/"<CR>
 map <leader>es :sp <C-R>=expand("%:p:h")."/"<CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h")."/"<CR>
 map <leader>et :tabe <C-R>=expand("%:p:h")."/"<CR>
+
+"imap <C-6> <ESC>:e #<CR>
+"bind <C-6> to :e #
 
 " map for omnicomplete
 inoremap <F9> <C-X><C-O>
