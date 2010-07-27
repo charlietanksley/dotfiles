@@ -68,3 +68,8 @@ endif
 " \%(\%(^\|[;=]\)\s*\)\@<=
 "
 let &cpo = s:save_cpo
+
+"""""""""""""""""""""
+" |My-ruby-stuff|   "
+"""""""""""""""""""""
+"colorscheme ruby-blue
