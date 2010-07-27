@@ -1,7 +1,7 @@
 "setlocal formatoptions+=tawoc
 "setlocal textwidth=72
 setlocal spell
-
+setlocal nosmartindent
 " The following stuff is *all* from
 " http://cedricduval.free.fr/download/mail.vim
 " I don't know if I'll like it, but I'm going to comment out my stuff above

@@ -89,6 +89,8 @@ nnoremap <Leader>gc :Gcommit<Enter>
 
 " Git stuff:
 set laststatus=2
+"set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{exists('g:loaded_rvm')?rvm#statusline():''}%=%-16(\ %l,%c-%v\ %)%P
+"set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P %{exists('g:loaded_rvm')?rvm#statusline():''}
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 "set statusline=%{GitBranch()}
 

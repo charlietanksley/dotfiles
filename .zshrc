@@ -24,7 +24,7 @@ alias pu=pushd
 alias po=popd
 alias d='dirs -v'
 alias h=history
-alias grep=egrep
+#alias grep=egrep
 alias ll='ls -l'
 alias la='ls -a'
 alias ls='ls -G'
@@ -62,14 +62,6 @@ bindkey -v
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # PROMPT
-# fancy pronpt functions from http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
-#
-# Git repo function
-function prompt_char {
-  git branch >/dev/null 2>/dev/null && echo '±' && return
-  echo '○'
-}
-#
 
 # promptinit
 autoload -U colors && colors
