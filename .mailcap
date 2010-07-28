@@ -8,7 +8,7 @@ image/gif; /Users/charlietanksley/.mutt/view_attachment.sh %s
 application/pdf; /Users/charlietanksley/.mutt/view_attachment.sh %s pdf
 
 # # HTML
-text/html; /Users/charlietanksley/.mutt/view_attachment.sh %s 'Applications/Safari.app'
+text/html; /Users/charlietanksley/.mutt/view_attachment.sh %s html
 
 ## Word/pages
 application/msword; /Users/charlietanksley/.mutt/view_attachment.sh %s "-" "/Applications/iWork '09/Pages.app"
