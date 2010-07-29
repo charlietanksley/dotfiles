@@ -41,6 +41,7 @@ alias gl='git log --oneline'
 alias gln='git log --oneline --name-only'
 alias gitx='gitx --all'
 alias ggraph='git log --oneline --graph'
+alias gvimdiff='mvim -d'
 
 # Directory Aliases
 alias zbib='cd ~/Library/texmf/bibtex/bib'
