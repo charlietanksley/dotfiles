@@ -21,6 +21,13 @@ set pager_stop = yes    # keep the pager from srcolling to the next message
 set markers = no        # cut out those wrapped-line '+'s
 set fast_reply = yes    # skip reply-to and subject for replies
 set sendmail_wait=-1    # Don't wait around for sendmail.
+set mail_check = 60     # Check for new mail every 60 seconds
+
+###
+# Config I'm trying out from 
+# http://www.mayin.org/ajayshah/COMPUTING/my-muttrc
+###
+set strict_threads
 
 ###
 # Some IMAP stuff I'm setting up
