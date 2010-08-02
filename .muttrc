@@ -43,8 +43,8 @@ set imap_list_subscribed = no
 #macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 
 ### Colorscheme
-source ~/.mutt/themes/default_blue_white
-#source ~/.mutt/themes/blackback
+#source ~/.mutt/themes/default_blue_white
+source ~/.mutt/themes/blackback
 
 # set up the sidebar, default not visible
 # # which mailboxes to list in the sidebar
@@ -57,6 +57,7 @@ subscribe vim
 subscribe vim_use
 subscribe MacOSX-TeX
 subscribe staticmatic
+subscribe philosophy-updates
 
 ###
 # Folder-hooks to manage folders
