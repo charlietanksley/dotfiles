@@ -19,12 +19,12 @@ set pastetoggle=<f12>   " toggle mouse paste mode with F12
 ""   Automatic line wrap
 "" ----------------------------------------------------------------------------
 
-set textwidth=72  " max line length
+setlocal textwidth=72  " max line length
 setlocal formatoptions+=tcoqalw "added my stuff plus this other guys!-- I don't 
                               " think the w is good
 "set formatoptions=tcql
-set comments+=n:\|  " '|' is a quote char.
-set comments+=n:% " '%' as well.
+setlocal comments+=n:\|  " '|' is a quote char.
+setlocal comments+=n:% " '%' as well.
 
 " * <F1> to re-format the current paragraph correctly
  " * <F2> to format a line which is too long, and go to the next line
