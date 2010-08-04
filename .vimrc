@@ -163,4 +163,3 @@ nmap <C-k> lbi:<Esc>E
 " Still from jetpackweb, but this is not ruby specific:
 " Easier non-interactive command insertion
 nnoremap <Space> :
-
