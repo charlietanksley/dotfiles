@@ -9,6 +9,11 @@ export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin
  }
 
 ###
+# Prompt
+###
+export PS1="\w\n=>"
+
+###
 # Generic aliases
 ###
 alias ll='ls -l'
