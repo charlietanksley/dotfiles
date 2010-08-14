@@ -126,16 +126,16 @@ bind pager ] next-entry
 ###
 # Mailbox shortcut bindings http://nixtricks.wordpress.com/2010/05/20/mutt-multiple-email-accounts-using-hooks/
 ###
-macro index gi1 "cimaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
-macro index gi2 "cimaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
-macro index ga1 "cimaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
-macro index ga2 "cimaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
+macro index gvi "cimaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
+macro index ggi "cimaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
+macro index gva "cimaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
+macro index gga "cimaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
 
 # Move files to inbox, archive
-macro index @i1 "simaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
-macro index @i2 "simaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
-macro index @a1 "simaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
-macro index @a2 "simaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
+macro index @va1 "simaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
+macro index @ga2 "simaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
+macro index @va1 "simaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
+macro index @ga2 "simaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
 
 
 macro pager "\Cb"    "<pipe-message>urlview<enter>"
