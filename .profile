@@ -1,6 +1,8 @@
 #export PATH=$PATH:~/.cabal/bin:~/.bin
 export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin
 source ~/.git-completion.bash
+source ~/.inputrc
+
 # Todo list function:
  t() {
    if [[ ”$*” == ”” ]] ; then
