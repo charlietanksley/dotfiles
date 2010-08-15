@@ -1,6 +1,6 @@
 ###
 # Stuff I'm trying out
-# (from http://liquidat.wordpress.com/2008/08/20/short-tip-bash-tab-completion-with-one-tab/)
+# (first two from http://liquidat.wordpress.com/2008/08/20/short-tip-bash-tab-completion-with-one-tab/)
 ###
 set mark-symlinked-directories on
 set show-all-if-ambiguous on
