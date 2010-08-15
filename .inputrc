@@ -2,5 +2,15 @@
 # Stuff I'm trying out
 # (first two from http://liquidat.wordpress.com/2008/08/20/short-tip-bash-tab-completion-with-one-tab/)
 ###
-set mark-symlinked-directories on
-set show-all-if-ambiguous on
+  # Not sure what this one does:
+set mark-symlinked-directories on 
+
+###
+# Tab completion stuff
+###
+  # A single tab causes the tab completion to start:
+set show-all-if-ambiguous on 
+  # Make tab completion case-insensitive:
+set completion-ignore-case on
+
+
