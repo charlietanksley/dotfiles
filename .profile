@@ -9,6 +9,10 @@ source ~/.git-completion.bash
      rm ~/.t ; echo ”$*” > ~/.t 
    fi 
  }
+
+###
+# Prompt
+###
 PS1="\n\
 \[\033[0;34m\]\$PWD\[\033[0m\]\n\
 $BOLD\u$DIM \[\033[0;31m\]\t\[\033[0m\] $ "; export PS1
