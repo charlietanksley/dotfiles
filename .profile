@@ -59,5 +59,10 @@ alias m='mutt'
 # Change colors of ls
 #export LS_COLORS=cxfxcxdxbxegedabagacad
 
+###############################
+# Hopefully fix slideshow gem #
+###############################
+alias slideshow="slideshow -o slides/"
+
 #The Ruby Version Manager stuff
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
