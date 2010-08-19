@@ -23,6 +23,7 @@ set sendmail_wait=-1    # Don't wait around for sendmail.
 set mail_check = 60     # Check for new mail every 60 seconds
 set strict_threads
 set imap_list_subscribed = no
+set signature="~/.mutt/.signature"
 
 #-------------#
 # Colorscheme
