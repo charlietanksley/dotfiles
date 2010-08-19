@@ -132,10 +132,10 @@ macro index gva "cimaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
 macro index gga "cimaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
 
 # Move files to inbox, archive
-macro index @va1 "simaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
-macro index @ga2 "simaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
-macro index @va1 "simaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
-macro index @ga2 "simaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
+macro index @va "simaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
+macro index @ga "simaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
+macro pager @va "simaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
+macro pager @ga "simaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
 
 
 macro pager "\Cb"    "<pipe-message>urlview<enter>"
