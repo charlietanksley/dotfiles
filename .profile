@@ -19,6 +19,9 @@ PS1="\n\
 \[\033[0;34m\]\$PWD\[\033[0m\]\n\
 \[\033[0;31m\]\T\[\033[0m\] => "; export PS1
 PS2="more=> "; export PS2
+# Will this do git?
+#PS1='\h:\@$(__gitps1 "(%s)" \u\$'; export PS1
+
 
 ###
 # Generic aliases
