@@ -1,19 +1,18 @@
-# A basic .muttrc for use with Gmail
+# my mailboxes
+source ~/.mutt/.mailbox_hooks
 
-### Address book stuff
+#--------------#
+# Address book
+#--------------#
 set alias_file= ~/.mutt/aliases
 set sort_alias= alias
 set reverse_alias=yes
 source $alias_file
 
-source ~/.mutt/.mailbox_hooks
-#source ~/.mutt/.virginia_account
-#source ~/.mutt/.gmail_account
-
-# Change the following line to a different editor you prefer.
+#--------------#
+# Basic config
+#--------------#
 set editor = "vim"
-
-## Basic config I set up
 set edit_headers = yes  # show headers in vim when editing
                           # mail.vim function puts cursor below this, however
 set mark_old = no       # no distinction between new unread and old unread
@@ -22,99 +21,37 @@ set markers = no        # cut out those wrapped-line '+'s
 set fast_reply = yes    # skip reply-to and subject for replies
 set sendmail_wait=-1    # Don't wait around for sendmail.
 set mail_check = 60     # Check for new mail every 60 seconds
-
-###
-# Config I'm trying out from 
-# http://www.mayin.org/ajayshah/COMPUTING/my-muttrc
-###
 set strict_threads
-
-###
-# Some IMAP stuff I'm setting up
-###
 set imap_list_subscribed = no
 
-# Gmail-style keyboard shortcuts
-#macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
-#macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
-#macro index,pager @i "<change-folder>=INBOX<enter>" "Go to inbox"
-#macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
-#macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
-#macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
-
-### Colorscheme
+#-------------#
+# Colorscheme
+#-------------#
 #source ~/.mutt/themes/default_blue_white
 source ~/.mutt/themes/blackback
 
-# set up the sidebar, default not visible
-# # which mailboxes to list in the sidebar
-#mailboxes =INBOX
-
-###
+#---------------#
 # Mailing lists
-###
+#---------------#
 subscribe vim
 subscribe vim_use
 subscribe MacOSX-TeX
 subscribe staticmatic
 subscribe philosophy-updates
 
-###
-# Folder-hooks to manage folders
-###
-#folder-hook imaps://cwt7h@virginia.edu@imap.gmail.com/ '~s ' 
-
-###
-# Sidebar
-###
-set sidebar_width=30
-set sidebar_visible=no
-set sidebar_delim='|'
-set sidebar_sort=yes
-#
-#
-# # color of folders with new mail
-color sidebar_new yellow default
-#
-# # ctrl-n, ctrl-p to select next, prev folder
-# # ctrl-o to open selected folder
-bind index \CP sidebar-prev
-bind index \CN sidebar-next
-bind index \CI sidebar-open
-bind pager \CP sidebar-prev
-bind pager \CN sidebar-next
-bind pager \CI sidebar-open
-#
-# # I don't need these.  just for documentation purposes.  See below.
-# # sidebar-scroll-up
-# # sidebar-scroll-down
-#
-# # b toggles sidebar visibility
-macro index b '<enter-command>toggle sidebar_visible<enter>'
-macro pager b '<enter-command>toggle sidebar_visible<enter>'
-#
-# # Remap bounce-message function to "B"
-bind index B bounce-message
-#
-# #
-# # Mario Holbe suggests:
-macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
-macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
- #
-
-## Pager-view stuff (thanks to Randall Wood's page)
+#--------------------------------------------------#
+# Pager-view stuff (thanks to Randall Wood's page)
+#--------------------------------------------------#
 set pager_context=5
 set pager_index_lines=4
 set tilde
 unset resolve
 bind pager <up> previous-line
 bind pager <down> next-line
-#macro pager @a "s=@Archive\ry"
-#macro index @a "s=@Archive\ry"
-#macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
-#macro index,pager ga "<change-folder>=@Archive<enter>" "Go to inbox"
 
-## Some bindings I'm trying out:
+#---------------------#
+# Navigation bindings
+#---------------------#
 bind pager \CH display-toggle-weed
 bind pager j next-page
 bind pager k previous-page
@@ -122,20 +59,23 @@ bind pager h previous-undeleted
 bind pager l next-undeleted
 bind pager [ previous-entry
 bind pager ] next-entry
-
-###
-# Mailbox shortcut bindings http://nixtricks.wordpress.com/2010/05/20/mutt-multiple-email-accounts-using-hooks/
-###
+# Navigate to mailboxes
 macro index gvi "cimaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
 macro index ggi "cimaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
 macro index gva "cimaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
 macro index gga "cimaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
-
-# Move files to inbox, archive
+# Move files to archive
 macro index @va "simaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
 macro index @ga "simaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
 macro pager @va "simaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
 macro pager @ga "simaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
+# Move files to inboxes
+macro index @vi "simaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
+macro index @gi "simaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
+macro pager @vi "simaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
+macro pager @gi "simaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
 
-
+#-------------------#
+# External commands
+#-------------------#
 macro pager "\Cb"    "<pipe-message>urlview<enter>"
