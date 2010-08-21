@@ -87,7 +87,7 @@ nnoremap <Leader>gd :Gdiff<Enter>
 "nnoremap <Leader>gD :GitDiff --cached<Enter>
 nnoremap <Leader>gs :Gstatus<Enter>
 "nnoremap <Leader>gl :GitLog<Enter>
-"nnoremap <Leader>ga :GitAdd<Enter>
+"nnoremap <Leader>ga :Gadd<Enter>
 "nnoremap <Leader>gA :GitAdd <cfile><Enter>
 nnoremap <Leader>gc :Gcommit<Enter>
 "nnoremap <Leader>gp :GitPullRebase<Enter>
