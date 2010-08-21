@@ -8,6 +8,12 @@
 
 colorscheme desert
 
+" Colorscheme for terminal
+noremap <silent> <Leader>c :call TerminalColors()<CR>
+function TerminalColors()
+  colorscheme vividchalk
+endfunction
+
 		""""""""""""""""""""""""""""""""""""""""""""""
 		"""""" SEARCH, HIGHLIGHT, SPELLING, ETC. """""
 		""""""""""""""""""""""""""""""""""""""""""""""
