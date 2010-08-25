@@ -64,7 +64,7 @@ alias lsa='ls -ld .*'
 alias gl='git log --oneline'
 alias gln='git log --oneline --name-only'
 alias gitx='gitx --all'
-alias ggraph='git log --oneline --graph'
+alias ggraph='git log --oneline --graph --all --decorate'
 alias gvimdiff='mvim -d'
 
 # Directory Aliases
