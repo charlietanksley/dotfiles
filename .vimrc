@@ -33,6 +33,9 @@ set formatprg=par
 set backupdir=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
 set directory=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
 
+" hidden character stuff
+nmap <leader>s :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
 
 		""""""""""""""""""""""""""""""""""
 		""""" GENERIC PLUGIN BEHAVIOR """"
