@@ -7,6 +7,7 @@
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 
 colorscheme desert
+nmap <leader>cs :set t_Co=256<CR>
 
 " Colorscheme for terminal
 noremap <silent> <Leader>c :call TerminalColors()<CR>
