@@ -15,3 +15,5 @@ au BufRead,BufNewFile /tmp/mutt-* setfiletype mail
 " Make .treetop files color/act like .rb files
 au BufRead,BufNewFile *.treetop setfiletype ruby
 
+" CSV files
+au BufRead,BufNewFile *.csv setfiletype csv
