@@ -132,7 +132,12 @@ snippet ct
 
 # footnote
 snippet fn
-	\footnote{${1}}${2}
+	%
+	% footnote {{{
+	\footnote{${1}}  %
+	% }}}
+	${2}
+
 # italic
 snippet em
 	\emph{${1}} ${2}
