@@ -16,4 +16,8 @@ au BufRead,BufNewFile /tmp/mutt-* setfiletype mail
 au BufRead,BufNewFile *.treetop setfiletype ruby
 
 " CSV files
-au BufRead,BufNewFile *.csv setfiletype csv
+if exists ("did_load_csvfiletype")
+  finish
+endif
+let did_load_csvfiletype=1
+au! BufRead,BufNewFile *.csv,*.dat setfiletype csv
