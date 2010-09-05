@@ -90,10 +90,11 @@ let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\*\?\_\s*{'
 nnoremap <Leader>gd :Gdiff<Enter>
 "nnoremap <Leader>gD :GitDiff --cached<Enter>
 nnoremap <Leader>gs :Gstatus<Enter>
-"nnoremap <Leader>gl :GitLog<Enter>
+nnoremap <Leader>gl :Glog<Enter>
 "nnoremap <Leader>ga :Gadd<Enter>
 "nnoremap <Leader>gA :GitAdd <cfile><Enter>
 nnoremap <Leader>gc :Gcommit<Enter>
+nnoremap <Leader>gC :Gcommit -v<Enter>
 "nnoremap <Leader>gp :GitPullRebase<Enter>
 
 
