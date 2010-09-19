@@ -71,4 +71,4 @@ alias m='mutt'
 alias slideshow="slideshow -o slides/"
 
 #The Ruby Version Manager stuff
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
