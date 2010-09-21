@@ -14,4 +14,4 @@ $ git fetch remote plugin-name
 $ git branch remote_plugin-name_branch remote_plugin-name/master
 $ git read-tree --prefix=.vim/bundle/plugin-name/ -u remote_plugin-name_branch
 
-p. That should do it.  At least.  That has done it in the past.  How to handle updates?  That is to be determined.
+p. That should do it.  At least.  That has done it in the past.  How to handle updates?  That is too be determined.
