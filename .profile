@@ -48,7 +48,7 @@ alias gln='git log --oneline --name-only'
 alias gitx='gitx --all'
 alias ggraph='git log --oneline --graph --all --decorate'
 alias gvimdiff='mvim -d'
-alias tig='tig --all'
+alias tiga='tig master develop'
 
 # Directory Aliases
 alias zbib='cd ~/Library/texmf/bibtex/bib'
