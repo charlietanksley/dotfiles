@@ -3,16 +3,13 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
 
-"Test
-"
-"
-"
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 
 colorscheme desert
 nmap <leader>cs :set t_Co=256<CR>
+set relativenumber
 
 		""""""""""""""""""""""""""""""""""""""""""""""
 		"""""" SEARCH, HIGHLIGHT, SPELLING, ETC. """""
