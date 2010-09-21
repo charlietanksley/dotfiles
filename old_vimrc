@@ -1,8 +1,7 @@
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-filetype plugin indent on
-
+"Test
+"
+"
+"
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
 		""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -10,18 +9,12 @@ filetype plugin indent on
 colorscheme desert
 nmap <leader>cs :set t_Co=256<CR>
 
-" NEED TO ORGANIZE:
-" this comes from stevelosh.com/blog/2010/09/coming-home-to-vim/
-"
-  " change the way line numbering works
-set relativenumber
-  " use Perl/Python compatible regex formatting, not Vim's version 
-nnoremap / /\v
-vnoremap / /\v
-  " make regex searching work better w/cases--assume mixed case unless using
-  " caps in search string
-set ignorecase
-set smartcase
+" Colorscheme for terminal
+noremap <silent> <Leader>c :call TerminalColors()<CR>
+function TerminalColors()
+  colorscheme vividchalk
+endfunction
+
 		""""""""""""""""""""""""""""""""""""""""""""""
 		"""""" SEARCH, HIGHLIGHT, SPELLING, ETC. """""
 		""""""""""""""""""""""""""""""""""""""""""""""
@@ -48,7 +41,8 @@ set listchars=tab:▸\ ,eol:¬
 		""""""""""""""""""""""""""""""""""
 		""""" GENERIC PLUGIN BEHAVIOR """"
 		""""""""""""""""""""""""""""""""""
-"filetype plugin on
+filetype plugin indent on
+filetype plugin on
 set ofu=syntaxcomplete#Complete
 set autoread
 
@@ -106,7 +100,10 @@ nnoremap <Leader>gC :Gcommit -v<Enter>
 
 " Git stuff:
 set laststatus=2
+"set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{exists('g:loaded_rvm')?rvm#statusline():''}%=%-16(\ %l,%c-%v\ %)%P
+"set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P %{exists('g:loaded_rvm')?rvm#statusline():''}
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+"set statusline=%{GitBranch()}
 
 		""""""""""""""""""""""""""""""""
 		""""""""" KEYMAP STUFF """"""""
@@ -177,7 +174,3 @@ nmap <C-k> lbi:<Esc>E
 " Still from jetpackweb, but this is not ruby specific:
 " Easier non-interactive command insertion
 nnoremap <Space> :
-
-" from http://nvie.com/posts/how-i-boosted-my-vim/
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
