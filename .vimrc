@@ -9,8 +9,19 @@ filetype plugin indent on
 
 colorscheme desert
 nmap <leader>cs :set t_Co=256<CR>
-set relativenumber
 
+" NEED TO ORGANIZE:
+" this comes from stevelosh.com/blog/2010/09/coming-home-to-vim/
+"
+  " change the way line numbering works
+set relativenumber
+  " use Perl/Python compatible regex formatting, not Vim's version 
+nnoremap / /\v
+vnoremap / /\v
+  " make regex searching work better w/cases--assume mixed case unless using
+  " caps in search string
+set ignorecase
+set smartcase
 		""""""""""""""""""""""""""""""""""""""""""""""
 		"""""" SEARCH, HIGHLIGHT, SPELLING, ETC. """""
 		""""""""""""""""""""""""""""""""""""""""""""""
