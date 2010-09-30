@@ -39,6 +39,7 @@ subscribe vim_use
 subscribe MacOSX-TeX
 subscribe staticmatic
 subscribe philosophy-updates
+subscribe rvm
 
 #--------------------------------------------------#
 # Pager-view stuff (thanks to Randall Wood's page)
@@ -65,6 +66,7 @@ macro index gvi "cimaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
 macro index ggi "cimaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
 macro index gva "cimaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
 macro index gga "cimaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
+macro index gci "cimaps://ctanksl@g.clemson.edu@imap.gmail.com/INBOX<return>"
 # Move files to archive
 macro index @va "simaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
 macro index @ga "simaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
