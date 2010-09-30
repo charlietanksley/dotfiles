@@ -12,7 +12,7 @@ source $alias_file
 #--------------#
 # Basic config
 #--------------#
-set editor = "vim"
+set editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
 set edit_headers = yes  # show headers in vim when editing
                           # mail.vim function puts cursor below this, however
 set mark_old = no       # no distinction between new unread and old unread
