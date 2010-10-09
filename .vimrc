@@ -93,12 +93,12 @@ let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\*\?\_\s*{'
       """""""""""""""""""
 " These keybindings are all modified from the git-vim plugin:
 " http://github.com/motemen/git-vim/blob/master/plugin/git.vim
-nnoremap <Leader>gd :Gdiff<Enter>
+nnoremap <Leader>gd :Gdiff!<Enter>
 "nnoremap <Leader>gD :GitDiff --cached<Enter>
 nnoremap <Leader>gs :Gstatus<Enter>
 nnoremap <Leader>gl :Glog<Enter>
 "nnoremap <Leader>ga :Gadd<Enter>
-"nnoremap <Leader>gA :GitAdd <cfile><Enter>
+nnoremap <Leader>ga :Git add <C-R>=expand("%")<CR><CR>
 nnoremap <Leader>gc :Gcommit<Enter>
 nnoremap <Leader>gC :Gcommit -v<Enter>
 "nnoremap <Leader>gp :GitPullRebase<Enter>
