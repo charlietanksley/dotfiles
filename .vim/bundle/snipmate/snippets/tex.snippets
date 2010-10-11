@@ -28,21 +28,36 @@ snippet \
 	\\[
 		${1}
 	\\]
-# Enumerate
-snippet enum
+# Enumerate*
+snippet e*
 	\begin{enumerate*}
 		\item ${1}
 	\end{enumerate*}
+# Enumerate
+snippet enum
+	\begin{enumerate}
+		\item ${1}
+	\end{enumerate}
 # Itemize
-snippet item
+snippet i*
 	\begin{itemize*}
 		\item ${1}
 	\end{itemize*}
+# Itemize
+snippet item
+	\begin{itemize}
+		\item ${1}
+	\end{itemize}
 # Description
-snippet desc
+snippet d*
 	\begin{description*}
 		\item[${1}] ${2}
 	\end{description*}
+# Description
+snippet desc
+	\begin{description}
+		\item[${1}] ${2}
+	\end{description}
 # Matrix
 snippet mat
 	\begin{${1:p/b/v/V/B/small}matrix}
@@ -169,9 +184,9 @@ snippet tf
 # Beamer Snippets #
 #-----------------#
 snippet fr
-	\begin{frame}
-		\frametitle{${1: Frame title}}
+	\begin{frame} \frametitle{${1: Frame title}} %{{{
 		
 		${2}
 
 	\end{frame}
+	%}}}
