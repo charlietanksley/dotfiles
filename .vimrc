@@ -6,7 +6,7 @@ filetype plugin indent on
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
 		""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" maybe also Tesla?
 colorscheme desert
 nmap <leader>cs :set t_Co=256<CR>
 
