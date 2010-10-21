@@ -25,6 +25,19 @@ set strict_threads
 set imap_list_subscribed = no
 set signature="~/.mutt/.signature"
 
+#-----------------------------#
+# Collapse threads by default #
+# http://www.mail-archive.com/mutt-users@mutt.org/msg08552.html
+#-----------------------------#
+bind index P collapse-all
+folder-hook . push "P"
+
+#--------------#
+# Index format #
+#--------------#
+# default: "%4C %Z %{%b %d} %-15.15L (%4l) %s"
+set index_format = "%4C %Z %{%b %d} %-15.15L (%2E) (%4l) %s"
+
 #-------------#
 # Colorscheme
 #-------------#
