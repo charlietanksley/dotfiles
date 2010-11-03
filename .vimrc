@@ -75,6 +75,16 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1
 
+"------------"
+" bufferlist "
+"------------"
+map <silent> <F3> :call BufferList()<CR>
+let g:BufferListWidth = 25
+let g:BufferListMaxWidth = 50
+hi BufferSelected term=reverse ctermfg=white ctermbg=red cterm=bold
+hi BufferNormal term=NONE ctermfg=black ctermbg=darkcyan cterm=NONE
+
+
       """""""""""""""""""""""""""""""""
       "                               " 
       " |LatexBox-stuff		      "
