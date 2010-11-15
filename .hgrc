@@ -1,0 +1,5 @@
+[ui]
+username = Charlie Tanksley <charlie.tanksley@gmail.com>
+[extensions]
+hgext.bookmarks =
+hggit =
