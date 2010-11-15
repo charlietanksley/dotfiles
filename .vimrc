@@ -8,7 +8,6 @@ filetype plugin indent on
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 " maybe also Tesla?
 colorscheme desert
-nmap <leader>cs :set t_Co=256<CR>
 
 " NEED TO ORGANIZE:
 " this comes from stevelosh.com/blog/2010/09/coming-home-to-vim/
@@ -69,11 +68,6 @@ set foldmethod=marker "alternatives: indent, syntax, marker (uses `{{{` to open 
     """""""""""""""""""""""""""""""
     """" SPECIFIC PLUGIN STUFF """"
     """""""""""""""""""""""""""""""
-" minibufexpl
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1
 
 "------------"
 " bufferlist "
@@ -85,22 +79,18 @@ hi BufferSelected term=reverse ctermfg=white ctermbg=red cterm=bold
 hi BufferNormal term=NONE ctermfg=black ctermbg=darkcyan cterm=NONE
 
 
-      """""""""""""""""""""""""""""""""
-      "                               " 
-      " |LatexBox-stuff		      "
-      "                               " 
-      """""""""""""""""""""""""""""""""
+"----------------"
+" LatexBox-stuff
+"----------------"
 " All .tex specific key mappings are in ~/.vim/ftplugin/tex.vim
 
 let g:LatexBox_viewer = 'skim'
 let g:LatexBox_latexmk_options = '-pvc' 
 let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\*\?\_\s*{'
 
-      """""""""""""""""""
-      """""""""""""""""""
-      "" |Git-fugitive| "
-      """""""""""""""""""
-      """""""""""""""""""
+"----------------"
+" |Git-fugitive| "
+"----------------"
 " These keybindings are all modified from the git-vim plugin:
 " http://github.com/motemen/git-vim/blob/master/plugin/git.vim
 nnoremap <Leader>gd :Gdiff!<Enter>
@@ -108,23 +98,26 @@ nnoremap <Leader>gd :Gdiff!<Enter>
 nnoremap <Leader>gs :Gstatus<Enter>
 nnoremap <Leader>gl :Glog<Enter>
 "nnoremap <Leader>ga :Gadd<Enter>
-nnoremap <Leader>ga :Git add <C-R>=expand("%")<CR><CR>
+nnoremap <Leader>ga :Git add %<CR><CR>
 nnoremap <Leader>gc :Gcommit<Enter>
 nnoremap <Leader>gC :Gcommit -v<Enter>
 "nnoremap <Leader>gp :GitPullRebase<Enter>
 
 
-" Git stuff:
+"-----------"
+" Git stuff "
+"-----------"
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-		""""""""""""""""""""""""""""""""
-		""""""""" KEYMAP STUFF """"""""
-		""""""""""""""""""""""""""""""""
-" To remap ii to escape?
+"--------------"
+"--------------"
+" KEYMAP STUFF "
+"--------------"
+"--------------"
 inoremap ;; <Esc>
 
-" Cursor movement in word wrap stuff
+" Cursor movement in word wrap stuff {{{
 noremap <Up> gk 
 noremap <Down> gj
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
@@ -155,13 +148,13 @@ function ToggleWrap()
     inoremap <buffer> <silent> <Home> <C-o>g<Home>
     inoremap <buffer> <silent> <End>  <C-o>g<End>
   endif
-endfunction
+endfunction 
 
 noremap  <buffer> <silent> k gk
 noremap  <buffer> <silent> j gj
 noremap  <buffer> <silent> 0 g0
 noremap  <buffer> <silent> $ g$
-
+"}}}
 set mouse=a
 
 " keymappings for :e
@@ -169,9 +162,6 @@ map <leader>ew :e <C-R>=expand("%:p:h")."/"<CR>
 map <leader>es :sp <C-R>=expand("%:p:h")."/"<CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h")."/"<CR>
 map <leader>et :tabe <C-R>=expand("%:p:h")."/"<CR>
-
-"imap <C-6> <ESC>:e #<CR>
-"bind <C-6> to :e #
 
 " map for omnicomplete
 inoremap <F9> <C-X><C-O>
