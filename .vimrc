@@ -30,7 +30,7 @@ syntax on
 " Vim window stuff
 set linebreak
 "set number
-set cursorline
+"set cursorline
 "set cursorcolumn
 
 "paragraph formatting stuff:
