@@ -6,9 +6,7 @@ filetype plugin indent on
 " vim-update-bundles stuff
 "
 " BUNDLE: https://github.com/vim-scripts/Align.git
-"
-dotvim = "#{ENV['HOME']}/.dotfiles/.vim"
-dotvimrc = "#{ENV['HOME']}/.dotfiles/.vimrc"
+
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
 		""""""""""""""""""""""""""""""""""""""""""""""""""
