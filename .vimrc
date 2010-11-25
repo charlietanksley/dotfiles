@@ -3,6 +3,7 @@ call pathogen#runtime_append_all_bundles()
 "call pathogen#helptags()
 filetype plugin indent on
 
+" BUNDLE: https://github.com/vim-scripts/Align.git
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
 		""""""""""""""""""""""""""""""""""""""""""""""""""
