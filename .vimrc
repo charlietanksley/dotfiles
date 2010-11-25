@@ -7,7 +7,6 @@ filetype plugin indent on
 		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 " maybe also Tesla?
-colorscheme desert
 
 " NEED TO ORGANIZE:
 " this comes from stevelosh.com/blog/2010/09/coming-home-to-vim/
