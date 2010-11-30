@@ -1,0 +1,27 @@
+[submodule ".vim/bundle/snipmate"]
+	path = .vim/bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule ".vim/bundle/vim-endwise"]
+	path = .vim/bundle/vim-endwise
+	url = git://github.com/tpope/vim-endwise.git
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule ".vim/bundle/textile"]
+	path = .vim/bundle/textile
+	url = git://github.com/timcharper/textile.vim.git
+[submodule ".vim/bundle/vim-ruby"]
+	path = .vim/bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule ".vim/bundle/vim-rake"]
+	path = .vim/bundle/vim-rake
+	url = git://github.com/tpope/vim-rake.git
+[submodule ".vim/bundle/simplefold"]
+	path = .vim/bundle/simplefold
+	url = https://github.com/vim-scripts/simplefold.git
+[submodule ".vim/bundle/LaTeX-Box"]
+	path = .vim/bundle/LaTeX-Box
+	url = https://github.com/vim-scripts/LaTeX-Box.git
+[submodule ".vim/bundle/bufferlist"]
+	path = .vim/bundle/bufferlist
+	url = https://github.com/vim-scripts/bufferlist.vim.git
