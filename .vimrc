@@ -184,3 +184,7 @@ nnoremap <Space> :
 " from http://nvie.com/posts/how-i-boosted-my-vim/
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Clojure stuff (from writequit.org)
+let vimclojure#HighlightBuiltins=1
+let vimclojure#ParenRainbow=1
