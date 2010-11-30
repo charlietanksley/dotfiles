@@ -25,3 +25,36 @@
 [submodule ".vim/bundle/bufferlist"]
 	path = .vim/bundle/bufferlist
 	url = https://github.com/vim-scripts/bufferlist.vim.git
+[submodule ".vim/bundle/nerdcommenter"]
+	path = .vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule ".vim/bundle/taglist"]
+	path = .vim/bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim
+[submodule ".vim/bundle/vim-shoulda"]
+	path = .vim/bundle/vim-shoulda
+	url = git://github.com/tsaleh/vim-shoulda.git
+[submodule ".vim/bundle/ScrollColors"]
+	path = .vim/bundle/ScrollColors
+	url = https://github.com/vim-scripts/ScrollColors.git
+[submodule ".vim/bundle/vim-unimpaired"]
+	path = .vim/bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+[submodule ".vim/bundle/vim-yankring"]
+	path = .vim/bundle/vim-yankring
+	url = https://github.com/chrismetcalf/vim-yankring.git
+[submodule ".vim/bundle/vim_colors"]
+	path = .vim/bundle/vim_colors
+	url = https://github.com/squil/vim_colors.git
+[submodule ".vim/bundle/vim-vividchalk"]
+	path = .vim/bundle/vim-vividchalk
+	url = git://github.com/tpope/vim-vividchalk.git
+[submodule ".vim/bundle/Align"]
+	path = .vim/bundle/Align
+	url = git://github.com/vim-scripts/Align.git
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
