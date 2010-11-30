@@ -50,10 +50,6 @@
 	path = .vim/bundle/vim-shoulda
 	url = git://github.com/tsaleh/vim-shoulda.git
   ignore = untracked
-[submodule ".vim/bundle/ScrollColors"]
-	path = .vim/bundle/ScrollColors
-	url = https://github.com/vim-scripts/ScrollColors.git
-  ignore = untracked
 [submodule ".vim/bundle/vim-unimpaired"]
 	path = .vim/bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
@@ -61,10 +57,6 @@
 [submodule ".vim/bundle/vim-yankring"]
 	path = .vim/bundle/vim-yankring
 	url = https://github.com/chrismetcalf/vim-yankring.git
-  ignore = untracked
-[submodule ".vim/bundle/vim_colors"]
-	path = .vim/bundle/vim_colors
-	url = https://github.com/squil/vim_colors.git
   ignore = untracked
 [submodule ".vim/bundle/vim-vividchalk"]
 	path = .vim/bundle/vim-vividchalk
@@ -86,3 +78,10 @@
 	path = .vim/bundle/VimClojure
 	url = https://github.com/vim-scripts/VimClojure.git
   ignore = untracked
+[submodule ".vim/bundle/ScrollColors"]
+  path = .vim/bundle/ScrollColors
+	url = https://github.com/vim-scripts/ScrollColors.git
+  ignore = untracked
+[submodule ".vim/bundle/vim_colors"]
+	path = .vim/bundle/vim_colors
+	url = https://github.com/squil/vim_colors.git
