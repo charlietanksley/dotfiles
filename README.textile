@@ -6,12 +6,4 @@ h1. My .vim directory
 
 I overhauled my .vim directory on 21 September 2010.  I finally decided to join the bandwagen and start using pathogen to manage my plugins.  The main motivation is the ability to update and/or remove plugins more easily.
 
-To that end, I've opted to use the github versions of plugins whenever possible, and rather than using git submodules, I opted to use git subtrees for these plugins.  I haven't updated any plugins this way, so this may fall apart.  But, for my own records when I try to add a new plugin, here is how this works (this comes from ??Pro Git?? Chapter 6 (pp. 171-172), though the terrible naming strategy is my own:
-
-bc.. $ git remote add remote_plugin-name http://github...
-$ git fetch remote plugin-name
-
-$ git branch remote_plugin-name_branch remote_plugin-name/master
-$ git read-tree --prefix=.vim/bundle/plugin-name/ -u remote_plugin-name_branch
-
-p. That should do it.  At least.  That has done it in the past.  How to handle updates?  That is to be determined.
+To that end, I've opted to use the github versions of all plugins (either directly from the author or via the very helpful "vim-scripts":https://github.com/vim-scripts on github) and use git submodules to include them here.  I don't know exactly how updating them will work, nor do I quite understand yet how to delete a submodule, but I can figure all that out when the time comes.  This is the strategy for now.
