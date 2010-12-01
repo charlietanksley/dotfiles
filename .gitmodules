@@ -30,10 +30,6 @@
 	path = .vim/bundle/LaTeX-Box
 	url = https://github.com/vim-scripts/LaTeX-Box.git
   ignore = untracked
-[submodule ".vim/bundle/bufferlist"]
-	path = .vim/bundle/bufferlist
-	url = https://github.com/vim-scripts/bufferlist.vim.git
-  ignore = untracked
 [submodule ".vim/bundle/nerdcommenter"]
 	path = .vim/bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
@@ -85,3 +81,7 @@
 [submodule ".vim/bundle/vim_colors"]
 	path = .vim/bundle/vim_colors
 	url = https://github.com/squil/vim_colors.git
+[submodule ".vim/bundle/bufexplorer"]
+	path = .vim/bundle/bufexplorer
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
+  ignore = untracked
