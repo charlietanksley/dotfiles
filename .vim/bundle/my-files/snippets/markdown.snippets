@@ -1,0 +1,41 @@
+# Parens and brackets
+snippet (
+	\(${1}\)${2}
+snippet {
+	\{${1}\}${2}
+
+# Code blocks
+snippet ~
+	~~~
+	${1}
+	~~~
+	
+	${2}
+
+# Links
+snippet link
+	[${1}](${2}) ${3}
+# Images
+snippet img
+	![${1}](${2}) ${3}
+
+### YMAL stuff
+snippet post
+	---
+	title: ${1}
+	state: ${2}
+	tags: ${3}
+	format: markdown
+	---
+
+	${4}
+snippet quote
+	---
+	title: ${1}
+	state: ${2}
+	tags: ${3}
+	source: ${4}
+	format: markdown
+	---
+
+	${5}
