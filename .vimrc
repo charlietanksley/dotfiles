@@ -188,3 +188,10 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " Clojure stuff (from writequit.org)
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
+
+" some mappings
+nmap Q gwip
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+nmap <C-h> <C-w>h
