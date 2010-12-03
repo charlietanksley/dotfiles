@@ -1,6 +1,6 @@
 [submodule ".vim/bundle/snipmate"]
 	path = .vim/bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
+	url = git@github.com:charlietanksley/snipmate.vim.git
   ignore = untracked
 [submodule ".vim/bundle/vim-endwise"]
 	path = .vim/bundle/vim-endwise
