@@ -1,6 +1,6 @@
 h1. Dotfiles
 
-No surprises here--this repository is home to all the .* files in my home directory.  Well, not quite.  It houses neither those files that contain passwords nor those files that I do not share between computers (like my .gvimrc).  But it contains all the major players.
+This repository is home to all the .* files in my home directory.  Well, not quite.  It houses neither those files that contain passwords nor those files that I do not share between computers (like my .gvimrc).  But it contains all the major players.
 
 h1. My .vim directory
 
