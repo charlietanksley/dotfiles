@@ -78,3 +78,7 @@
 	path = .vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
   ignore = untracked
+[submodule ".vim/bundle/up.vim"]
+	path = .vim/bundle/up.vim
+	url = https://github.com/vim-scripts/up.vim.git
+  ignore = untracked
