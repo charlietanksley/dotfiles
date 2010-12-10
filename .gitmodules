@@ -82,3 +82,11 @@
 	path = .vim/bundle/up.vim
 	url = https://github.com/vim-scripts/up.vim.git
   ignore = untracked
+[submodule ".vim/bundle/devbox-dark-256"]
+	path = .vim/bundle/devbox-dark-256
+	url = https://github.com/vim-scripts/devbox-dark-256.git
+  ignore = untracked
+[submodule ".vim/bundle/colors-chance-of-storm"]
+	path = .vim/bundle/colors-chance-of-storm
+	url = https://github.com/vim-scripts/chance-of-storm.git
+  ignore = untracked
