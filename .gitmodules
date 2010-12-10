@@ -70,9 +70,6 @@
   path = .vim/bundle/ScrollColors
 	url = https://github.com/vim-scripts/ScrollColors.git
   ignore = untracked
-[submodule ".vim/bundle/vim_colors"]
-	path = .vim/bundle/vim_colors
-	url = https://github.com/squil/vim_colors.git
 [submodule ".vim/bundle/bufexplorer"]
 	path = .vim/bundle/bufexplorer
 	url = https://github.com/vim-scripts/bufexplorer.zip.git
