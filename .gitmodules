@@ -90,3 +90,15 @@
 	path = .vim/bundle/colors-chance-of-storm
 	url = https://github.com/vim-scripts/chance-of-storm.git
   ignore = untracked
+[submodule ".vim/bundle/lusty"]
+	path = .vim/bundle/lusty
+	url = https://github.com/sjbach/lusty.git
+  ignore = untracked
+[submodule ".vim/bundle/tmarks_vim"]
+	path = .vim/bundle/tmarks_vim
+	url = https://github.com/tomtom/tmarks_vim.git
+  ignore = untracked
+[submodule ".vim/bundle/tlib_vim"]
+	path = .vim/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+  ignore = untracked

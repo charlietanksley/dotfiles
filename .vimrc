@@ -44,6 +44,9 @@ set directory=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
 nmap <leader>s :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
+" let me switch buffers with unsaved changes
+set hidden
+
 		""""""""""""""""""""""""""""""""""
 		""""" GENERIC PLUGIN BEHAVIOR """"
 		""""""""""""""""""""""""""""""""""
