@@ -14,10 +14,6 @@
 	path = .vim/bundle/textile
 	url = git://github.com/timcharper/textile.vim.git
   ignore = untracked
-[submodule ".vim/bundle/vim-ruby"]
-	path = .vim/bundle/vim-ruby
-	url = git://github.com/vim-ruby/vim-ruby.git
-  ignore = untracked
 [submodule ".vim/bundle/vim-rake"]
 	path = .vim/bundle/vim-rake
 	url = git://github.com/tpope/vim-rake.git
@@ -74,10 +70,27 @@
   path = .vim/bundle/ScrollColors
 	url = https://github.com/vim-scripts/ScrollColors.git
   ignore = untracked
-[submodule ".vim/bundle/vim_colors"]
-	path = .vim/bundle/vim_colors
-	url = https://github.com/squil/vim_colors.git
 [submodule ".vim/bundle/bufexplorer"]
 	path = .vim/bundle/bufexplorer
 	url = https://github.com/vim-scripts/bufexplorer.zip.git
+  ignore = untracked
+[submodule ".vim/bundle/vim-rails"]
+	path = .vim/bundle/vim-rails
+	url = git://github.com/tpope/vim-rails.git
+  ignore = untracked
+[submodule ".vim/bundle/up.vim"]
+	path = .vim/bundle/up.vim
+	url = https://github.com/vim-scripts/up.vim.git
+  ignore = untracked
+[submodule ".vim/bundle/devbox-dark-256"]
+	path = .vim/bundle/devbox-dark-256
+	url = https://github.com/vim-scripts/devbox-dark-256.git
+  ignore = untracked
+[submodule ".vim/bundle/colors-chance-of-storm"]
+	path = .vim/bundle/colors-chance-of-storm
+	url = https://github.com/vim-scripts/chance-of-storm.git
+  ignore = untracked
+[submodule ".vim/bundle/lusty"]
+	path = .vim/bundle/lusty
+	url = https://github.com/sjbach/lusty.git
   ignore = untracked
