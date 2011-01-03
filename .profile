@@ -1,6 +1,5 @@
 #export PATH=$PATH:~/.cabal/bin:~/.bin
-export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin
-#:~/.git-achievements
+export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin:~/.git-achievements
 source ~/.git-completion.bash
 source ~/.inputrc
 
