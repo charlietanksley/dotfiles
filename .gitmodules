@@ -94,3 +94,6 @@
 	path = .vim/bundle/lusty
 	url = https://github.com/sjbach/lusty.git
   ignore = untracked
+[submodule "git-achievements"]
+	path = git-achievements
+	url = git@github.com:charlietanksley/git-achievements.git
