@@ -1,19 +1,11 @@
-export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin
+#export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin
+export PATH=$PATH:~/.cabal/bin:~/.bin
+export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin:~/.git-achievements
+source ~/.git-completion.bash
 
-# Todo list function:
- t() {
-   if [[ "$*" == "" ]] ; then
-     cat ~/.t
-   else 
-     rm ~/.t ; echo "$*" > ~/.t 
-   fi 
- }
-
-###
-# 
-# Set up aliases
-#
-###
+#----------------#
+# Set up aliases #
+#----------------#
 
 # Generic aliases
 alias mv='nocorrect mv'       # no spelling correction on mv
@@ -43,18 +35,8 @@ alias gitx='gitx --all'
 alias ggraph='git log --oneline --graph'
 alias gvimdiff='mvim -d'
 
-# Directory Aliases
-alias zbib='cd ~/Library/texmf/bibtex/bib'
-alias zwt='cd ~/Documents/C/web/blog'
-alias zuc='cd ~/Documents/C/vagueUC'
-alias zjoy='cd ~/Documents/C/web/joy_site'
-alias zpt='cd ~/Documents/C/web/philtex'
-alias zpn='cd ~/Documents/C/web/philnews'
-alias zms='cd ~/Documents/C/web/mysite'
-
 # Shortcut command aliases, generic
 alias m='mutt'
-
 
 # keybindings?
 bindkey -v

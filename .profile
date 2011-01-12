@@ -3,15 +3,6 @@ export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin:~/.git-ac
 source ~/.git-completion.bash
 source ~/.inputrc
 
-# Todo list function:
- t() {
-   if [[ ”$*” == ”” ]] ; then
-     cat ~/.t
-   else 
-     rm ~/.t ; echo ”$*” > ~/.t 
-   fi 
- }
-
 #--------#
 # Prompt #
 #--------#
