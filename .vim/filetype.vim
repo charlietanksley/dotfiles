@@ -18,6 +18,9 @@ au BufRead,BufNewFile *.treetop setfiletype ruby
 " tex files
 au BufRead,BufNewFile *.tex setfiletype tex
 
+" Php files
+"au BufRead,BufNewFile *.php setfiletype php
+
 " CSV files
 if exists ("did_load_csvfiletype")
   finish
