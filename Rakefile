@@ -10,7 +10,7 @@ task :update do
   # Current directory
   home = Dir.pwd
   # Directory housing submodules
-  submodules = Dir.pwd
+  submodules = home + '/.vim/bundle'
 
   # Go to right directory
   Dir.chdir submodules
