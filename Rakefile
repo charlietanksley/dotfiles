@@ -1,4 +1,4 @@
-# Rakefile
+bundle_dir = '/.vim/bundle'
 
 desc "Update all git submodules"
 task :update do
@@ -10,7 +10,7 @@ task :update do
   # Current directory
   home = Dir.pwd
   # Directory housing submodules
-  submodules = home + '/.vim/bundle'
+  submodules = home + bundle_dir
 
   # Go to right directory
   Dir.chdir submodules
@@ -29,7 +29,7 @@ task :update do
   submodules.each do |mod|
     Dir.chdir mod
     begin
-      %x{git pull origin}
+      %x{git pull origin master}
     rescue
       puts "There was an error in #{mod}"
     end
@@ -60,5 +60,44 @@ task :update do
   puts
   puts
   puts "You may need to perform a commit."
+
+end
+
+desc "Tell me about branches"
+task :remotes do
+
+  # Current directory
+  home = Dir.pwd
+  # Directory housing submodules
+  submodules = home + bundle_dir
+
+  # Go to right directory
+  Dir.chdir submodules
+
+  # Get the list of directories
+  submodules = Dir.glob('*')
+  submodules.map! { |dir| dir if File.directory? dir }
+  submodules.compact!
+
+  # Make sure you only worry about submodules that are their own
+  # submodules
+  submodules.map! { |dir| dir if File.exists?(dir + '/.git') }
+  submodules.compact!
+
+  # Now go into each submodule and perform my git operations.
+  submodules.each do |mod|
+    Dir.chdir mod
+    begin
+      puts
+      puts mod
+      f = %x{git branch -a}
+      puts f
+      puts
+    rescue
+      puts "There was an error in #{mod}"
+    end
+    Dir.chdir('..')
+  end
+  Dir.chdir home
 
 end
