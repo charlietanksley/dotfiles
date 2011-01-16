@@ -33,8 +33,9 @@ task :update do
     rescue
       puts "There was an error in #{mod}"
     end
-    Dir.chdir home
+    Dir.chdir('..')
   end
+  Dir.chdir home
 
   # Figure out which of my submodules have been updated
   changed = %x{git status -s}
