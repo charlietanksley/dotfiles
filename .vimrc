@@ -89,7 +89,7 @@ hi BufferNormal term=NONE ctermfg=black ctermbg=darkcyan cterm=NONE
 
 let g:LatexBox_viewer = 'skim'
 let g:LatexBox_latexmk_options = '-pvc' 
-let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\*\?\_\s*{'
+let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\(\[.*\]\)\{0,2}\*\?\_\s*{'
 
 "----------------"
 " |Git-fugitive| "
