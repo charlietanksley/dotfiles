@@ -9,6 +9,10 @@ filetype plugin indent on
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 " maybe also Tesla?
 
+" I don't like the menu (m) and toolbar (T).  They waste space.
+set guioptions-=m
+set guioptions-=T
+
 " NEED TO ORGANIZE:
 " this comes from stevelosh.com/blog/2010/09/coming-home-to-vim/
 "
