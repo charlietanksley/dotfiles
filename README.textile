@@ -7,3 +7,5 @@ h1. My .vim directory
 I overhauled my .vim directory on 21 September 2010.  I finally decided to join the bandwagen and start using pathogen to manage my plugins (this change happened on 30 November 2010).  The main motivation is the ability to update and/or remove plugins more easily.
 
 To that end, I've opted to use the github versions of all plugins (either directly from the author or via the very helpful "vim-scripts":https://github.com/vim-scripts on github) and use git submodules to include them here.  I don't know exactly how updating them will work, nor do I quite understand yet how to delete a submodule, but I can figure all that out when the time comes.  This is the strategy for now.
+
+This is a test of my new (old, crappy) laptop.

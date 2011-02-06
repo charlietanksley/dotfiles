@@ -1,16 +1,8 @@
 #export PATH=$PATH:~/.cabal/bin:~/.bin
-export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin:/usr/local/share/npm/bin
+export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin:/usr/local/share/npm/bin:~/.git-achievements
+#export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin:~/.git-achievements
 source ~/.git-completion.bash
 source ~/.inputrc
-
-# Todo list function:
- t() {
-   if [[ ”$*” == ”” ]] ; then
-     cat ~/.t
-   else 
-     rm ~/.t ; echo ”$*” > ~/.t 
-   fi 
- }
 
 #--------#
 # Prompt #

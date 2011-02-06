@@ -1,0 +1,29 @@
+URxvt.saveLines: 999
+URxvt.scrollBar: False
+URxvt.background: black
+URxvt.foreground: grey
+
+URxvt.transparent: True
+URxvt.shading: 25
+URxvt*tintColor: blue
+URxvt*font: xft:Inconsolata:pixelsize=16
+URxvt.scrollstyle:      plain
+URxvt.depth:           24
+
+! Colorscheme
+*color0:      #000000
+*color1:      #ff6565
+*color2:      #93d44f
+*color3:      #ecc049
+*color4:      #3060aa
+*color5:      #ce5c00
+*color6:      #89b6e2
+*color7:      #cccccc
+*color8:      #1A1A1A
+*color9:      #ff8d8d
+*color10:     #c8e7a8
+*color11:     #ffc123
+*color12:     #6099dd
+*color13:     #f57900
+*color14:     #ff8080
+*color15:     #ffffff

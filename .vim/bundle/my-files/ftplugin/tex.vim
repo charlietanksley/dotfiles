@@ -1,6 +1,6 @@
 "setlocal formatoptions+=tcwa
 setlocal formatoptions+=twc
-setlocal textwidth=72  " max line length
+setlocal textwidth=70  " max line length
 
 imap <buffer> [[ \begin{
 "imap <buffer> <silent> ]] <C-R>=LatexBox_CloseLastEnv()<CR>
