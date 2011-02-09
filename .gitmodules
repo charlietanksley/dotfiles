@@ -94,7 +94,3 @@
 	path = .vim/bundle/VimClojure
 	url = https://github.com/vim-scripts/VimClojure.git
   ignore = untracked
-[submodule ".vim/bundle/vim-rspec"]
-	path = .vim/bundle/vim-rspec
-	url = https://github.com/taq/vim-rspec.git
-  ignore = untracked
