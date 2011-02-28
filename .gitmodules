@@ -86,11 +86,3 @@
 	path = .vim/bundle/colors-chance-of-storm
 	url = https://github.com/vim-scripts/chance-of-storm.git
   ignore = untracked
-[submodule ".vim/bundle/php.vim-html-enhanced"]
-	path = .vim/bundle/php.vim-html-enhanced
-	url = https://github.com/vim-scripts/php.vim-html-enhanced.git
-  ignore = untracked
-[submodule ".vim/bundle/VimClojure"]
-	path = .vim/bundle/VimClojure
-	url = https://github.com/vim-scripts/VimClojure.git
-  ignore = untracked
