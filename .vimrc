@@ -45,7 +45,7 @@ set backupdir=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
 set directory=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
 
 " hidden character stuff
-nmap <leader>s :set list!<CR>
+nmap <leader>si :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
 " let me switch buffers with unsaved changes
@@ -127,7 +127,7 @@ inoremap ;; <Esc>
 " Cursor movement in word wrap stuff {{{
 noremap <Up> gk 
 noremap <Down> gj
-noremap <silent> <Leader>w :call ToggleWrap()<CR>
+noremap <silent> <Leader>wl :call ToggleWrap()<CR>
 function ToggleWrap()
   if &wrap
     echo "Wrap OFF"
