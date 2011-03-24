@@ -90,3 +90,7 @@
 	path = .vim/bundle/mustache.vim
 	url = https://github.com/juvenn/mustache.vim.git
   ignore = untracked
+[submodule ".vim/bundle/solarized"]
+	path = .vim/bundle/solarized
+	url = https://github.com/altercation/vim-colors-solarized
+  ignore = untracked
