@@ -3,11 +3,45 @@ call pathogen#runtime_append_all_bundles()
 "call pathogen#helptags()
 filetype plugin indent on
 
+" Rainbows!
+" From Steve Losh
+nmap <leader>R :RainbowParenthesesToggle<CR>
+
+" various things lifted from Steve Losh:
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
+set encoding=utf-8
+set scrolloff=3
+set showmode
+set showcmd
+"set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+"set cursorline
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+"set laststatus=2
+"set relativenumber
+"set undofile
 
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
 		""""""""""""""""""""""""""""""""""""""""""""""""""
-" maybe also Tesla?
+" Background
+function! ToggleBackground()
+  if (w:solarized_style=="dark")
+    let w:solarized_style="light"
+    colorscheme solarized
+  else
+    let w:solarized_style="dark"
+    colorscheme solarized
+  endif
+endfunction
+command! Togbg call ToggleBackground()
+noremap <leader>tb :call ToggleBackground()<CR>
+inoremap <leader>tb :call ToggleBackground()<CR>
+vnoremap <leader>tb :call ToggleBackground()<CR>
 
 " I don't like the menu (m) and toolbar (T).  They waste space.
 set guioptions-=m
