@@ -94,3 +94,11 @@
 	path = .vim/bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized
   ignore = untracked
+[submodule ".vim/bundle/FuzzyFinder"]
+	path = .vim/bundle/FuzzyFinder
+	url = https://github.com/vim-scripts/FuzzyFinder.git
+  ignore = untracked
+[submodule ".vim/bundle/L9"]
+	path = .vim/bundle/L9
+	url = https://github.com/vim-scripts/L9.git
+  ignore = untracked
