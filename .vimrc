@@ -234,6 +234,10 @@ nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 nmap <C-h> <C-w>h
 
+" NERDTree stuff
+let NERDTreeShowLineNumbers=1
+let NERDTreeWinSize=20
+nmap <leader>tr :NERDTree<CR>
 
 " FuzzyFinder stuff:
 let g:fuf_modesDisable = []
