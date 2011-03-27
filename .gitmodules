@@ -102,3 +102,7 @@
 	path = .vim/bundle/L9
 	url = https://github.com/vim-scripts/L9.git
   ignore = untracked
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+  ignore = untracked
