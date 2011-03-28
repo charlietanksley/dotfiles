@@ -3,11 +3,45 @@ call pathogen#runtime_append_all_bundles()
 "call pathogen#helptags()
 filetype plugin indent on
 
+" Rainbows!
+" From Steve Losh
+nmap <leader>R :RainbowParenthesesToggle<CR>
+
+" various things lifted from Steve Losh:
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
+set encoding=utf-8
+set scrolloff=3
+set showmode
+set showcmd
+"set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+"set cursorline
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+"set laststatus=2
+"set relativenumber
+"set undofile
 
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
 		""""""""""""""""""""""""""""""""""""""""""""""""""
-" maybe also Tesla?
+" Background
+function! ToggleBackground()
+  if (w:solarized_style=="dark")
+    let w:solarized_style="light"
+    colorscheme solarized
+  else
+    let w:solarized_style="dark"
+    colorscheme solarized
+  endif
+endfunction
+command! Togbg call ToggleBackground()
+noremap <leader>tb :call ToggleBackground()<CR>
+inoremap <leader>tb :call ToggleBackground()<CR>
+vnoremap <leader>tb :call ToggleBackground()<CR>
 
 " I don't like the menu (m) and toolbar (T).  They waste space.
 set guioptions-=m
@@ -45,7 +79,7 @@ set backupdir=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
 set directory=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
 
 " hidden character stuff
-nmap <leader>s :set list!<CR>
+nmap <leader>si :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
 " let me switch buffers with unsaved changes
@@ -127,7 +161,7 @@ inoremap ;; <Esc>
 " Cursor movement in word wrap stuff {{{
 noremap <Up> gk 
 noremap <Down> gj
-noremap <silent> <Leader>w :call ToggleWrap()<CR>
+noremap <silent> <Leader>wl :call ToggleWrap()<CR>
 function ToggleWrap()
   if &wrap
     echo "Wrap OFF"
@@ -199,3 +233,53 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 nmap <C-h> <C-w>h
+
+" NERDTree stuff
+let NERDTreeShowLineNumbers=1
+let NERDTreeWinSize=20
+nmap <leader>tr :NERDTree<CR>
+
+" FuzzyFinder stuff:
+let g:fuf_modesDisable = []
+let g:fuf_mrufile_maxItem = 400
+let g:fuf_mrucmd_maxItem = 400
+nnoremap <silent> sj     :FufBuffer<CR>
+nnoremap <silent> sk     :FufFileWithCurrentBufferDir<CR>
+nnoremap <silent> sK     :FufFileWithFullCwd<CR>
+nnoremap <silent> s<C-k> :FufFile<CR>
+nnoremap <silent> sl     :FufCoverageFileChange<CR>
+nnoremap <silent> sL     :FufCoverageFileChange<CR>
+nnoremap <silent> s<C-l> :FufCoverageFileRegister<CR>
+nnoremap <silent> sd     :FufDirWithCurrentBufferDir<CR>
+nnoremap <silent> sD     :FufDirWithFullCwd<CR>
+nnoremap <silent> s<C-d> :FufDir<CR>
+nnoremap <silent> sn     :FufMruFile<CR>
+nnoremap <silent> sN     :FufMruFileInCwd<CR>
+nnoremap <silent> sm     :FufMruCmd<CR>
+nnoremap <silent> su     :FufBookmarkFile<CR>
+nnoremap <silent> s<C-u> :FufBookmarkFileAdd<CR>
+vnoremap <silent> s<C-u> :FufBookmarkFileAddAsSelectedText<CR>
+nnoremap <silent> si     :FufBookmarkDir<CR>
+nnoremap <silent> s<C-i> :FufBookmarkDirAdd<CR>
+nnoremap <silent> st     :FufTag<CR>
+nnoremap <silent> sT     :FufTag!<CR>
+nnoremap <silent> s<C-]> :FufTagWithCursorWord!<CR>
+nnoremap <silent> s,     :FufBufferTag<CR>
+nnoremap <silent> s<     :FufBufferTag!<CR>
+vnoremap <silent> s,     :FufBufferTagWithSelectedText!<CR>
+vnoremap <silent> s<     :FufBufferTagWithSelectedText<CR>
+nnoremap <silent> s}     :FufBufferTagWithCursorWord!<CR>
+nnoremap <silent> s.     :FufBufferTagAll<CR>
+nnoremap <silent> s>     :FufBufferTagAll!<CR>
+vnoremap <silent> s.     :FufBufferTagAllWithSelectedText!<CR>
+vnoremap <silent> s>     :FufBufferTagAllWithSelectedText<CR>
+nnoremap <silent> s]     :FufBufferTagAllWithCursorWord!<CR>
+nnoremap <silent> sg     :FufTaggedFile<CR>
+nnoremap <silent> sG     :FufTaggedFile!<CR>
+nnoremap <silent> so     :FufJumpList<CR>
+nnoremap <silent> sp     :FufChangeList<CR>
+nnoremap <silent> sq     :FufQuickfix<CR>
+nnoremap <silent> sy     :FufLine<CR>
+nnoremap <silent> sh     :FufHelp<CR>
+nnoremap <silent> se     :FufEditDataFile<CR>
+nnoremap <silent> sr     :FufRenewCache<CR>

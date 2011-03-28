@@ -2,3 +2,4 @@
 .vim/spell/
 tmp/
 .vim/vim-tmp/
+.vim/bundle/my-files/plugin/secret.vim
