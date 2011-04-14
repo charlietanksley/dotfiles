@@ -21,6 +21,9 @@ au BufRead,BufNewFile *.tex setfiletype tex
 " Php files
 "au BufRead,BufNewFile *.php setfiletype php
 
+" Scheme
+au BufNewFile,BufRead *.scm setfiletype scheme
+
 " CSV files
 if exists ("did_load_csvfiletype")
   finish
