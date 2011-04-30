@@ -1,6 +1,36 @@
 filetype off
-call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
+
+set rtp +=~/.dotfiles/.vim/vundle.git/
+call vundle#rc()
+
+" Bundles!
+Bundle "charlietanksley/snipmate.vim.git"
+Bundle "tpope/vim-endwise.git"
+Bundle "tpope/vim-fugitive.git"
+Bundle "timcharper/textile.vim.git"
+Bundle "tpope/vim-rake.git"
+Bundle "vim-scripts/simplefold.git"
+Bundle "vim-scripts/LaTeX-Box.git"
+Bundle "scrooloose/nerdcommenter.git"
+Bundle "tpope/vim-surround.git"
+Bundle "vim-scripts/taglist.vim"
+Bundle "vim-shoulda.git"
+Bundle "tpope/vim-unimpaired.git"
+Bundle "chrismetcalf/vim-yankring.git"
+Bundle "tpope/vim-vividchalk.git"
+Bundle "vim-scripts/Align.git"
+Bundle "ervandew/supertab.git"
+Bundle "vim-scripts/ScrollColors.git"
+Bundle "vim-scripts/bufexplorer.zip.git"
+Bundle "tpope/vim-rails.git"
+Bundle "vim-scripts/up.vim.git"
+Bundle "vim-scripts/devbox-dark-256.git"
+Bundle "vim-scripts/chance-of-storm.git"
+Bundle "juvenn/mustache.vim.git"
+Bundle "altercation/vim-colors-solarized"
+Bundle "scrooloose/nerdtree.git"
+
+
 filetype plugin indent on
 
 " Rainbows!
