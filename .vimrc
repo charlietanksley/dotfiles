@@ -14,6 +14,7 @@ call vundle#rc()
 " Trial
 "Bundle "mikewest/vimroom"
 Bundle "gregsexton/gitv"
+Bundle "mattn/zencoding-vim"
 
 " My forks/scripts
 Bundle "charlietanksley/snipmate.vim.git"
