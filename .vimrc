@@ -10,6 +10,11 @@ call vundle#rc()
 " :BundleClean will remove deleted bundles
 
 " Bundles!
+
+" Trial
+"Bundle "mikewest/vimroom"
+Bundle "gregsexton/gitv"
+
 " My forks/scripts
 Bundle "charlietanksley/snipmate.vim.git"
 Bundle "charlietanksley/slimv.vim.git"
