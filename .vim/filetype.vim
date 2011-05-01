@@ -22,6 +22,7 @@ au BufRead,BufNewFile *.tex setfiletype tex
 "au BufRead,BufNewFile *.php setfiletype php
 
 " Scheme
+au BufNewFile,BufRead *.scm call PareditInitBuffer()
 au BufNewFile,BufRead *.scm setfiletype scheme
 
 " CSV files

@@ -1,3 +1,4 @@
+set nocompatible
 filetype off
 
 set rtp +=~/.dotfiles/.vim/vundle.git/
@@ -11,6 +12,7 @@ call vundle#rc()
 " Bundles!
 " My forks/scripts
 Bundle "charlietanksley/snipmate.vim.git"
+Bundle "charlietanksley/slimv.vim.git"
 
 " Utilities
 Bundle "tpope/vim-endwise.git"
@@ -27,7 +29,7 @@ Bundle "vim-scripts/bufexplorer.zip.git"
 Bundle "scrooloose/nerdtree.git"
 
 " Ruby
-Bundle "vim-shoulda.git"
+"Bundle "vim-shoulda.git"
 Bundle "tpope/vim-rake.git"
 Bundle "tpope/vim-rails.git"
 
