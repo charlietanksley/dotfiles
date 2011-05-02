@@ -1,0 +1,11 @@
+#!/bin/sh
+if [ $1 = 0000000000000000000000000000000000000000 ]; then
+  old=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+else
+  old=$1
+fi
+if [ -f .vimrc ] &&
+  git diff --name-only $old $2 | egrep -q '^\.vimrc$'
+then
+  vim +BundleInstall! +BundleClean +q -
+fi
