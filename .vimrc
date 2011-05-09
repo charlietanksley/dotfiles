@@ -33,6 +33,7 @@ Bundle "vim-scripts/Align.git"
 Bundle "ervandew/supertab.git"
 Bundle "vim-scripts/bufexplorer.zip.git"
 Bundle "scrooloose/nerdtree.git"
+Bundle "vim-scripts/TaskList.vim.git"
 
 " Ruby
 "Bundle "vim-shoulda.git"
