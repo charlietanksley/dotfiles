@@ -14,7 +14,6 @@ call vundle#rc()
 " Trial
 "Bundle "mikewest/vimroom"
 Bundle "gregsexton/gitv"
-Bundle "mattn/zencoding-vim"
 
 " My forks/scripts
 Bundle "charlietanksley/snipmate.vim.git"
@@ -39,6 +38,11 @@ Bundle "vim-scripts/TaskList.vim.git"
 "Bundle "vim-shoulda.git"
 Bundle "tpope/vim-rake.git"
 Bundle "tpope/vim-rails.git"
+
+" HTML, CSS, Javascript
+Bundle "mattn/zencoding-vim"
+Bundle "bbommarito/vim-slim.git"
+Bundle "tpope/vim-ragtag.git"
 
 " Colorschemes
 Bundle "tpope/vim-vividchalk.git"
