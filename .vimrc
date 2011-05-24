@@ -39,10 +39,11 @@ Bundle "vim-scripts/TaskList.vim.git"
 Bundle "tpope/vim-rake.git"
 Bundle "tpope/vim-rails.git"
 
-" HTML, CSS, Javascript
+" HTML, CSS, JavaScript, CoffeeScript
 Bundle "mattn/zencoding-vim"
 Bundle "bbommarito/vim-slim.git"
 Bundle "tpope/vim-ragtag.git"
+Bundle "kchmck/vim-coffee-script.git"
 
 " Colorschemes
 Bundle "tpope/vim-vividchalk.git"
