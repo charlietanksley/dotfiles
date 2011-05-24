@@ -41,8 +41,8 @@ Bundle "tpope/vim-rails.git"
 
 " HTML, CSS, JavaScript, CoffeeScript
 Bundle "mattn/zencoding-vim"
-Bundle "bbommarito/vim-slim.git"
-Bundle "tpope/vim-ragtag.git"
+Bundle "bbommarito/vim-slim"
+Bundle "tpope/vim-ragtag"
 Bundle "kchmck/vim-coffee-script.git"
 
 " Colorschemes
