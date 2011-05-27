@@ -44,6 +44,7 @@ Bundle "mattn/zencoding-vim"
 Bundle "bbommarito/vim-slim"
 Bundle "tpope/vim-ragtag"
 Bundle "kchmck/vim-coffee-script.git"
+Bundle "pangloss/vim-javascript"
 
 " Colorschemes
 Bundle "tpope/vim-vividchalk.git"
