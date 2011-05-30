@@ -34,8 +34,11 @@ alias gvimdiff='mvim -d'
 # Shortcut command aliases, generic
 alias m='mutt'
 
-# Change colors of ls
-#export LS_COLORS=cxfxcxdxbxegedabagacad
+# make bundle exec easer to use:
+alias be='bundle exec'
+
+# }}}
+
 
 
 ## RVM
