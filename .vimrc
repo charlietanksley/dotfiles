@@ -33,6 +33,8 @@ Bundle "ervandew/supertab.git"
 Bundle "vim-scripts/bufexplorer.zip.git"
 Bundle "scrooloose/nerdtree.git"
 Bundle "vim-scripts/TaskList.vim.git"
+Bundle "scrooloose/syntastic.git"
+Bundle "majutsushi/tagbar.git"
 
 " Ruby
 "Bundle "vim-shoulda.git"
@@ -62,6 +64,14 @@ Bundle "juvenn/mustache.vim.git"
 
 filetype plugin indent on
 
+" TRIAL STUFF
+nnoremap <silent> <leader>mtb :TagbarToggle<CR>
+let g:tagbar_width = 30
+
+
+
+
+
 " Rainbows!
 " From Steve Losh
 nmap <leader>R :RainbowParenthesesToggle<CR>
@@ -88,19 +98,19 @@ set backspace=indent,eol,start
 		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 " Background
-function! ToggleBackground()
-  if (w:solarized_style=="dark")
-    let w:solarized_style="light"
-    colorscheme solarized
-  else
-    let w:solarized_style="dark"
-    colorscheme solarized
-  endif
-endfunction
-command! Togbg call ToggleBackground()
-noremap <leader>tb :call ToggleBackground()<CR>
-inoremap <leader>tb :call ToggleBackground()<CR>
-vnoremap <leader>tb :call ToggleBackground()<CR>
+"function! ToggleBackground()
+"  if (w:solarized_style=="dark")
+"    let w:solarized_style="light"
+"    colorscheme solarized
+"  else
+"    let w:solarized_style="dark"
+"    colorscheme solarized
+"  endif
+"endfunction
+"command! Togbg call ToggleBackground()
+"noremap <leader>tb :call ToggleBackground()<CR>
+"inoremap <leader>tb :call ToggleBackground()<CR>
+"vnoremap <leader>tb :call ToggleBackground()<CR>
 
 " I don't like the menu (m) and toolbar (T).  They waste space.
 set guioptions-=m
