@@ -24,6 +24,10 @@ export PS2='more => '
 # }}}
 ## Aliases {{{
 
+# must have color ls output
+
+alias ls='ls -G'
+
 # git aliases
 alias gl='git log --oneline'
 alias gln='git log --oneline --name-only'
