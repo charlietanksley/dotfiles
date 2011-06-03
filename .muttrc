@@ -43,6 +43,7 @@ set index_format = "%4C %Z %{%b %d} %-15.15L (%2E) (%4l) %s"
 #-------------#
 #source ~/.mutt/themes/default_blue_white
 source ~/.mutt/themes/blackback
+source ~/.mutt/themes/mutt-colors-solarized-dark-16
 
 #---------------#
 # Mailing lists
