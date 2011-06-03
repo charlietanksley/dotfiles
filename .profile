@@ -18,8 +18,8 @@ function parse_git_branch {
   [[ $branch ]] && echo "[$branch$(parse_git_dirty)]"
 }
 
-export PS1='\n\[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)\n$ '
-export PS2='more => '
+#export PS1='\n\[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)\n$ '
+#export PS2='more => '
 
 # }}}
 ## Aliases {{{
@@ -47,3 +47,6 @@ alias be='bundle exec'
 
 ## RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+source "$rvm_path/contrib/ps1_functions"
+ps1_set
