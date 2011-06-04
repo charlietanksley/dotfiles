@@ -54,8 +54,48 @@ if [ -f `brew --prefix`/etc/profile.d/z.sh ]; then
 fi
 
 # }}}
+## git function lifted from RVM contrib file {{{
+altered_ps1_git()
+{
+  local branch="" sha1="" line="" attr="" color=0
 
+  shopt -s extglob # Important, for our nice matchers :)
 
+  command -v git >/dev/null 2>&1 || {
+    printf " \033[1;37m\033[41m[git not found]\033[m "
+    return 0
+  }
+
+  branch=$(git symbolic-ref -q HEAD 2>/dev/null)
+
+  (( $? > 0 )) && return 0 # Not in a git repo, no need to continue.
+
+  branch=${branch##refs/heads/}
+
+  # Now we display the branch.
+  sha1=$(git rev-parse --short --quiet HEAD)
+
+  case "${branch:-"(no branch)"}" in
+   production|prod) attr="1;37m\033[" ; color=41 ;; # red
+   master|deploy)   color=31                     ;; # red
+   stage|staging)   color=33                     ;; # yellow
+   dev|develop|development) color=34             ;; # blue
+   next)            color=36                     ;; # gray
+   *)
+     if [[ -n "${branch}" ]] ; then # Feature Branch :)
+       color=32 # green
+     else
+       color=0 # reset
+     fi
+     ;;
+  esac
+
+  [[ $color -gt 0 ]] &&
+    #printf "\[\033[${attr}${color}m\](git:${branch}$(ps1_git_status):$sha1)\[\033[0m\] "
+    printf "\033[${attr}${color}m(git:${branch}$(ps1_git_status):$sha1)\033[0m "
+}
+
+#}}}
 
 
 
@@ -63,4 +103,5 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 source "$rvm_path/contrib/ps1_functions"
-ps1_set
+export PS1='\n[$(ps1_rvm)] $(altered_ps1_git)$(ps1_git_status)\n\[\033[1;33m\]\w\[\033[0m\]\n$ ' 
+export PS2='more => '
