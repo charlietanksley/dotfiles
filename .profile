@@ -41,6 +41,9 @@ alias m='mutt'
 # make bundle exec easer to use:
 alias be='bundle exec'
 
+# Alias git to hub, because Github is our friend
+alias git='hub'
+
 # I can't remember the lousy commands for working on Rubinius
 
 alias failing='bin/mspec tag --list fails :files'
