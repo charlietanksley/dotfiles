@@ -18,12 +18,12 @@ Bundle "gregsexton/gitv"
 " My forks/scripts
 Bundle "charlietanksley/snipmate.vim.git"
 Bundle "charlietanksley/slimv.vim.git"
+Bundle "charlietanksley/simplefold.git"
 
 " Utilities
 Bundle "tpope/vim-endwise.git"
 Bundle "tpope/vim-fugitive.git"
 Bundle "tpope/vim-surround.git"
-Bundle "vim-scripts/simplefold.git"
 Bundle "scrooloose/nerdcommenter.git"
 Bundle "vim-scripts/taglist.vim"
 Bundle "tpope/vim-unimpaired.git"
