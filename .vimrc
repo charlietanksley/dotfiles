@@ -13,7 +13,7 @@ call vundle#rc()
 
 " Trial
 "Bundle "mikewest/vimroom"
-Bundle "gregsexton/gitv"
+"Bundle "gregsexton/gitv"
 
 " My forks/scripts
 Bundle "charlietanksley/snipmate.vim.git"
@@ -26,13 +26,13 @@ Bundle "tpope/vim-fugitive.git"
 Bundle "tpope/vim-surround.git"
 Bundle "scrooloose/nerdcommenter.git"
 Bundle "vim-scripts/taglist.vim"
-Bundle "tpope/vim-unimpaired.git"
-Bundle "chrismetcalf/vim-yankring.git"
+"Bundle "tpope/vim-unimpaired.git"
+"Bundle "chrismetcalf/vim-yankring.git"
 Bundle "vim-scripts/Align.git"
 Bundle "ervandew/supertab.git"
 Bundle "vim-scripts/bufexplorer.zip.git"
 Bundle "scrooloose/nerdtree.git"
-Bundle "vim-scripts/TaskList.vim.git"
+"Bundle "vim-scripts/TaskList.vim.git"
 Bundle "scrooloose/syntastic.git"
 Bundle "majutsushi/tagbar.git"
 
@@ -47,6 +47,7 @@ Bundle "bbommarito/vim-slim"
 Bundle "tpope/vim-ragtag"
 Bundle "kchmck/vim-coffee-script.git"
 Bundle "pangloss/vim-javascript"
+Bundle "juvenn/mustache.vim.git"
 
 " Colorschemes
 Bundle "tpope/vim-vividchalk.git"
@@ -59,7 +60,6 @@ Bundle "altercation/vim-colors-solarized"
 " LaTeX, Textile, Etc.
 Bundle "vim-scripts/LaTeX-Box.git"
 Bundle "timcharper/textile.vim.git"
-Bundle "juvenn/mustache.vim.git"
 
 
 filetype plugin indent on
