@@ -14,7 +14,9 @@ call vundle#rc()
 " Trial
 "Bundle "mikewest/vimroom"
 "Bundle "gregsexton/gitv"
-Bundle 'vim-scripts/Specky.git'
+"Bundle "vim-scripts/Specky.git"
+Bundle "duskhacker/sweet-rspec-vim"
+" |sweet-rspec-vim-keybindings|
 
 " My forks/scripts
 Bundle "charlietanksley/snipmate.vim.git"
@@ -353,3 +355,14 @@ nmap <leader>tr :NERDTree<CR>
 "nnoremap <silent> sh     :FufHelp<CR>
 "nnoremap <silent> se     :FufEditDataFile<CR>
 "nnoremap <silent> sr     :FufRenewCache<CR>
+
+" *sweet-rspec-vim-keybindings*
+set macmeta
+"(CMD-r)  or (Apple-r)
+map <D-r> :SweetVimRspecRunFile<CR>
+"(SHIFT-CMD-r) 
+map <D-R> :SweetVimRspecRunFocused<CR>
+"(OPT-CMD-r)
+map <M-D-r> :SweetVimRspecRunPrevious<CR>
+
+
