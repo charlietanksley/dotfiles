@@ -12,6 +12,9 @@ au BufRead,BufNewFile *.tumblr.html setfiletype tumblr
 " mutt
 au BufRead,BufNewFile /tmp/mutt-* setfiletype mail
 
+" Mail using QuickCursor
+au BufRead,BufNewFile *.mail setfiletype mail
+
 " Make .treetop files color/act like .rb files
 au BufRead,BufNewFile *.treetop setfiletype ruby
 
