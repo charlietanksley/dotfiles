@@ -369,4 +369,50 @@ map <D-R> :SweetVimRspecRunFocused<CR>
 "(OPT-CMD-r)
 map <M-D-r> :SweetVimRspecRunPrevious<CR>
 
+" My functions and commands
+"function AddBlankLinesAbove()
+"  let s:blank_counter = 0
+"  let s:save_cursor = getpos(".")
+"  while s:blank_counter < v:count1
+"    call append(line('.'), '')
+"    let s:blank_counter += 1
+"  endwhile
+"  "call setpos('.', s:save_cursor)
+"endfunction
+"
+"function AddBlankLinesBelow()
+"  let s:blank_add_to_line = line('.') + 1
+"  let s:save_cursor = getpos(".")
+"  let s:blank_counter = 0
+"  call setpos('.', [v:beval_bufnr, s:blank_add_to_line, 0, 0])
+"  call setpos('.', s:save_cursor)
+"endfunction
 
+function AddBlankLinesBelow()
+  let s:blank_counter = 0
+  while s:blank_counter < v:count1
+    call append(line('.'), '')
+    let s:blank_counter += 1
+  endwhile
+endfunction
+
+"function AddBlankLinesAbove()
+"  let s:blank_current_line = getpos(".")
+"  let s:blank_list = ['', '', '', '']
+"  call set
+"  call add(s:blank_list, 'this text')
+"  call setpos('.', s:blank_current_line)
+"
+"  "let s:blank_one_above = line('.') - 1
+"  "call setpos('.', [v:beval_bufnr, s:blank_one_above, 0, 0])
+"  "call AddBlankLinesBelow()
+"  "call setpos('.', s:blank_current_line
+"endfunction
+"
+"nnoremap <silent> [<space> :<C-U>call AddBlankLinesAbove()<CR>
+nnoremap <silent> ]<space> :<C-U>call AddBlankLinesBelow()<CR>
+
+
+function CrazyTest()
+  echo line('.')
+endfunction
