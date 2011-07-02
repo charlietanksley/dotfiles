@@ -40,6 +40,7 @@ Bundle "vim-scripts/bufexplorer.zip.git"
 Bundle "scrooloose/nerdtree.git"
 "Bundle "vim-scripts/TaskList.vim.git"
 Bundle "scrooloose/syntastic.git"
+" |syntastic_configuration|
 Bundle "majutsushi/tagbar.git"
 
 " Ruby
@@ -368,6 +369,13 @@ map <D-r> :SweetVimRspecRunFile<CR>
 map <D-R> :SweetVimRspecRunFocused<CR>
 "(OPT-CMD-r)
 map <M-D-r> :SweetVimRspecRunPrevious<CR>
+
+" *syntastic_configuration*
+"let g:syntastic_auto_loc_list=1
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_warnings=1
+
+
 
 " My functions and commands
 "function AddBlankLinesAbove()
