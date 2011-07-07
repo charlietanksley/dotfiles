@@ -20,13 +20,13 @@ Bundle "duskhacker/sweet-rspec-vim"
 Bundle "vim-scripts/L9.git"
 Bundle "vim-scripts/FuzzyFinder.git"
 " |FuzzyFinder-keybindings|
-Bundle 'vim-scripts/Rainbow-Parenthsis-Bundle.git'
-" |Rainbow-Parenthesis-keybindings|
 
 " My forks/scripts
 Bundle "charlietanksley/snipmate.vim.git"
 Bundle "charlietanksley/slimv.vim.git"
 Bundle "charlietanksley/simplefold.git"
+Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
+" |Rainbow-Parenthesis-keybindings|
 
 " Utilities
 Bundle "tpope/vim-endwise.git"
@@ -375,13 +375,15 @@ let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
 
 " *Rainbow-Parenthesis-keybindings*
-function RainbowParenthesesToggle()
+function RainbowParenthesesOn()
   call rainbow_parenthsis#LoadSquare ()
   call rainbow_parenthsis#LoadRound ()
   call rainbow_parenthsis#Activate ()
 endfunction
 
-nmap <leader>R :call RainbowParenthesesToggle()<CR>
+nmap <leader>R :call RainbowParenthesesOn()<CR>
+
+
 
 function AddBlankLinesBelow()
   let s:blank_counter = 0
