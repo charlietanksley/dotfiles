@@ -20,6 +20,8 @@ Bundle "duskhacker/sweet-rspec-vim"
 Bundle "vim-scripts/L9.git"
 Bundle "vim-scripts/FuzzyFinder.git"
 " |FuzzyFinder-keybindings|
+Bundle 'vim-scripts/Rainbow-Parenthsis-Bundle.git'
+" |Rainbow-Parenthesis-keybindings|
 
 " My forks/scripts
 Bundle "charlietanksley/snipmate.vim.git"
@@ -79,9 +81,6 @@ let g:tagbar_width = 30
 
 
 
-" Rainbows!
-" From Steve Losh
-nmap <leader>R :RainbowParenthesesToggle<CR>
 
 " various things lifted from Steve Losh:
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
@@ -375,26 +374,14 @@ map <M-D-r> :SweetVimRspecRunPrevious<CR>
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
 
+" *Rainbow-Parenthesis-keybindings*
+function RainbowParenthesesToggle()
+  call rainbow_parenthsis#LoadSquare ()
+  call rainbow_parenthsis#LoadRound ()
+  call rainbow_parenthsis#Activate ()
+endfunction
 
-
-" My functions and commands
-"function AddBlankLinesAbove()
-"  let s:blank_counter = 0
-"  let s:save_cursor = getpos(".")
-"  while s:blank_counter < v:count1
-"    call append(line('.'), '')
-"    let s:blank_counter += 1
-"  endwhile
-"  "call setpos('.', s:save_cursor)
-"endfunction
-"
-"function AddBlankLinesBelow()
-"  let s:blank_add_to_line = line('.') + 1
-"  let s:save_cursor = getpos(".")
-"  let s:blank_counter = 0
-"  call setpos('.', [v:beval_bufnr, s:blank_add_to_line, 0, 0])
-"  call setpos('.', s:save_cursor)
-"endfunction
+nmap <leader>R :call RainbowParenthesesToggle()<CR>
 
 function AddBlankLinesBelow()
   let s:blank_counter = 0
@@ -404,23 +391,4 @@ function AddBlankLinesBelow()
   endwhile
 endfunction
 
-"function AddBlankLinesAbove()
-"  let s:blank_current_line = getpos(".")
-"  let s:blank_list = ['', '', '', '']
-"  call set
-"  call add(s:blank_list, 'this text')
-"  call setpos('.', s:blank_current_line)
-"
-"  "let s:blank_one_above = line('.') - 1
-"  "call setpos('.', [v:beval_bufnr, s:blank_one_above, 0, 0])
-"  "call AddBlankLinesBelow()
-"  "call setpos('.', s:blank_current_line
-"endfunction
-"
-"nnoremap <silent> [<space> :<C-U>call AddBlankLinesAbove()<CR>
 nnoremap <silent> ]<space> :<C-U>call AddBlankLinesBelow()<CR>
-
-
-function CrazyTest()
-  echo line('.')
-endfunction
