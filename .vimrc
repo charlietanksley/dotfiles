@@ -32,6 +32,7 @@ Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
 Bundle "tpope/vim-endwise.git"
 Bundle "tpope/vim-fugitive.git"
 Bundle "tpope/vim-surround.git"
+Bundle "tpope/vim-unimpaired.git"
 Bundle "scrooloose/nerdcommenter.git"
 Bundle "vim-scripts/taglist.vim"
 "Bundle "tpope/vim-unimpaired.git"
@@ -387,13 +388,13 @@ nmap <leader>R :call RainbowParenthesesOn()<CR>
 
 
 
-function AddBlankLinesBelow()
-  let s:blank_counter = 0
-  while s:blank_counter < v:count1
-    call append(line('.'), '')
-    let s:blank_counter += 1
-  endwhile
-endfunction
-
-nnoremap <silent> ]<space> :<C-U>call AddBlankLinesBelow()<CR>
+"function AddBlankLinesBelow()
+"  let s:blank_counter = 0
+"  while s:blank_counter < v:count1
+"    call append(line('.'), '')
+"    let s:blank_counter += 1
+"  endwhile
+"endfunction
+"
+"nnoremap <silent> ]<space> :<C-U>call AddBlankLinesBelow()<CR>
 
