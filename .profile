@@ -101,6 +101,9 @@ altered_ps1_git()
 #}}}
 
 
+## TMUXINATOR
+export EDITOR='vim'
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 ## RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
