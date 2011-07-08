@@ -4,8 +4,6 @@ export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin:/usr/loca
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
 export RBXOPT=-Xrbc.db=$HOME/.rbx
 
-export EDITOR='vim'
-
 source ~/.git-completion.bash
 source ~/.inputrc
 
@@ -102,7 +100,8 @@ altered_ps1_git()
 
 #}}}
 
-## Tmuxinator
+## TMUXINATOR
+export EDITOR='vim'
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 ## RVM

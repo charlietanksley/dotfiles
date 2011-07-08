@@ -32,6 +32,7 @@ Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
 Bundle "tpope/vim-endwise.git"
 Bundle "tpope/vim-fugitive.git"
 Bundle "tpope/vim-surround.git"
+Bundle "tpope/vim-unimpaired.git"
 Bundle "scrooloose/nerdcommenter.git"
 Bundle "vim-scripts/taglist.vim"
 "Bundle "tpope/vim-unimpaired.git"
@@ -373,6 +374,8 @@ map <M-D-r> :SweetVimRspecRunPrevious<CR>
 "let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
+" Tell Syntastic to ignore Sass:
+let g:syntastic_disabled_filetypes = ['sass']
 
 " *Rainbow-Parenthesis-keybindings*
 function RainbowParenthesesOn()
@@ -385,12 +388,13 @@ nmap <leader>R :call RainbowParenthesesOn()<CR>
 
 
 
-function AddBlankLinesBelow()
-  let s:blank_counter = 0
-  while s:blank_counter < v:count1
-    call append(line('.'), '')
-    let s:blank_counter += 1
-  endwhile
-endfunction
+"function AddBlankLinesBelow()
+"  let s:blank_counter = 0
+"  while s:blank_counter < v:count1
+"    call append(line('.'), '')
+"    let s:blank_counter += 1
+"  endwhile
+"endfunction
+"
+"nnoremap <silent> ]<space> :<C-U>call AddBlankLinesBelow()<CR>
 
-nnoremap <silent> ]<space> :<C-U>call AddBlankLinesBelow()<CR>
