@@ -384,7 +384,7 @@ function RainbowParenthesesOn()
   call rainbow_parenthsis#Activate ()
 endfunction
 
-nmap <leader>R :call RainbowParenthesesOn()<CR>
+nmap <leader>mr :call RainbowParenthesesOn()<CR>
 
 
 
