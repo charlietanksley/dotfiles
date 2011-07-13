@@ -76,32 +76,39 @@ bind pager l next-undeleted
 bind pager [ previous-entry
 bind pager ] next-entry
 
-# Navigate to mailboxes
-macro index gvi "cimaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
-macro index ggi "cimaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
-macro index gva "cimaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
-macro index gga "cimaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
-macro index gci "cimaps://ctanksl@g.clemson.edu@imap.gmail.com/INBOX<return>"
+## Navigate to mailboxes
 
-# Move files to archive
+# Gmail
+macro index ggi "cimaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
+macro index gga "cimaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
+# Virginia
+macro index gvi "cimaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
+macro index gva "cimaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
+# Clemson
+macro index gci "cimaps://ctanksl@g.clemson.edu@imap.gmail.com/INBOX<return>"
+# Shortmail
+macro index gsi "cimaps://charlietanksley@imap.shortmail.com<return>"
+
+
+## Move files to archive
 macro index @va "simaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
 macro index @ga "simaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
 macro pager @va "simaps://cwt7h@virginia.edu@imap.gmail.com/@Archive<return>"
 macro pager @ga "simaps://charlie.tanksley@imap.gmail.com/@Archive<return>"
 
-# Move files to inboxes
+## Move files to inboxes
 macro index @vi "simaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
 macro index @gi "simaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
 macro pager @vi "simaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
 macro pager @gi "simaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
 
-# Move emails to current semester folder; also, navigate there
+## Move emails to current semester folder; also, navigate there
 macro index @gc "simaps://charlie.tanksley@imap.gmail.com/spring2011<return>"
 macro pager @gc "simaps://charlie.tanksley@imap.gmail.com/spring2011<return>"
 macro index ggc "cimaps://charlie.tanksley@imap.gmail.com/spring2011<return>"
 macro pager ggc "cimaps://charlie.tanksley@imap.gmail.com/spring2011<return>"
 
-# Reply all
+## Reply all
 bind index gr group-reply
 #-------------------#
 # External commands
