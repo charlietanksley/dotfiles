@@ -27,6 +27,7 @@ Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
 " |Rainbow-Parenthesis-keybindings|
 
 " Utilities
+
 Bundle "tpope/vim-endwise.git"
 Bundle "tpope/vim-fugitive.git"
 Bundle "tpope/vim-surround.git"
@@ -98,20 +99,6 @@ set backspace=indent,eol,start
 		""""""""""""""""""""""""""""""""""""""""""""""""""
 		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
 		""""""""""""""""""""""""""""""""""""""""""""""""""
-" Background
-"function! ToggleBackground()
-"  if (w:solarized_style=="dark")
-"    let w:solarized_style="light"
-"    colorscheme solarized
-"  else
-"    let w:solarized_style="dark"
-"    colorscheme solarized
-"  endif
-"endfunction
-"command! Togbg call ToggleBackground()
-"noremap <leader>tb :call ToggleBackground()<CR>
-"inoremap <leader>tb :call ToggleBackground()<CR>
-"vnoremap <leader>tb :call ToggleBackground()<CR>
 
 " I don't like the menu (m) and toolbar (T).  They waste space.
 set guioptions-=m
@@ -268,12 +255,6 @@ noremap  <buffer> <silent> $ g$
 "}}}
 set mouse=a
 
-" keymappings for :e
-map <leader>ew :e <C-R>=expand("%:p:h")."/"<CR> 
-map <leader>es :sp <C-R>=expand("%:p:h")."/"<CR>
-map <leader>ev :vsp <C-R>=expand("%:p:h")."/"<CR>
-map <leader>et :tabe <C-R>=expand("%:p:h")."/"<CR>
-
 " map for omnicomplete
 inoremap <F9> <C-X><C-O>
 
@@ -288,14 +269,6 @@ nmap <C-k> lbi:<Esc>E
 " Still from jetpackweb, but this is not ruby specific:
 " Easier non-interactive command insertion
 nnoremap <Space> :
-
-" from http://nvie.com/posts/how-i-boosted-my-vim/
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
-" Clojure stuff (from writequit.org)
-let vimclojure#HighlightBuiltins=1
-let vimclojure#ParenRainbow=1
 
 " some mappings
 nmap Q gwip
