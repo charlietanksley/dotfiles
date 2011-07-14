@@ -12,9 +12,6 @@ call vundle#rc()
 " Bundles!
 
 " Trial
-"Bundle "mikewest/vimroom"
-"Bundle "gregsexton/gitv"
-"Bundle "vim-scripts/Specky.git"
 Bundle "duskhacker/sweet-rspec-vim"
 " |sweet-rspec-vim-keybindings|
 Bundle "vim-scripts/L9.git"
@@ -36,19 +33,15 @@ Bundle "tpope/vim-surround.git"
 Bundle "tpope/vim-unimpaired.git"
 Bundle "scrooloose/nerdcommenter.git"
 Bundle "vim-scripts/taglist.vim"
-"Bundle "tpope/vim-unimpaired.git"
-"Bundle "chrismetcalf/vim-yankring.git"
 Bundle "vim-scripts/Align.git"
 Bundle "ervandew/supertab.git"
 Bundle "vim-scripts/bufexplorer.zip.git"
 Bundle "scrooloose/nerdtree.git"
-"Bundle "vim-scripts/TaskList.vim.git"
 Bundle "scrooloose/syntastic.git"
 " |syntastic_configuration|
 Bundle "majutsushi/tagbar.git"
 
 " Ruby
-"Bundle "vim-shoulda.git"
 Bundle "tpope/vim-rake.git"
 Bundle "tpope/vim-rails.git"
 
