@@ -25,7 +25,6 @@ Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
 " |Rainbow-Parenthesis-keybindings|
 
 " Utilities
-
 Bundle "tpope/vim-endwise.git"
 Bundle "tpope/vim-fugitive.git"
 Bundle "tpope/vim-surround.git"
@@ -168,11 +167,11 @@ set foldmethod=marker "alternatives: indent, syntax, marker (uses `{{{` to open 
 "------------"
 " bufferlist "
 "------------"
-map <silent> <F3> :call BufferList()<CR>
-let g:BufferListWidth = 25
-let g:BufferListMaxWidth = 50
-hi BufferSelected term=reverse ctermfg=white ctermbg=red cterm=bold
-hi BufferNormal term=NONE ctermfg=black ctermbg=darkcyan cterm=NONE
+"map <silent> <F3> :call BufferList()<CR>
+"let g:BufferListWidth = 25
+"let g:BufferListMaxWidth = 50
+"hi BufferSelected term=reverse ctermfg=white ctermbg=red cterm=bold
+"hi BufferNormal term=NONE ctermfg=black ctermbg=darkcyan cterm=NONE
 
 
 "----------------"
@@ -259,7 +258,7 @@ inoremap <F9> <C-X><C-O>
 "" These all come from http://jetpackweb.com/blog/2010/02/15/vim-tips-for-ruby/
 "" and are for ruby development stuff
 " bind control-l to hashrocket
-imap <C-l> <Space>=><Space>"
+imap <C-l> <Space>=><Space>
 " convert word into ruby symbol
 imap <C-k> <C-o>b:<Esc>Ea
 nmap <C-k> lbi:<Esc>E
@@ -298,22 +297,9 @@ let g:syntastic_disabled_filetypes = ['sass']
 
 " *Rainbow-Parenthesis-keybindings*
 function RainbowParenthesesOn()
-  call rainbow_parenthsis#LoadSquare ()
+  "call rainbow_parenthsis#LoadSquare ()
   call rainbow_parenthsis#LoadRound ()
   call rainbow_parenthsis#Activate ()
 endfunction
 
 nmap <leader>mr :call RainbowParenthesesOn()<CR>
-
-
-
-"function AddBlankLinesBelow()
-"  let s:blank_counter = 0
-"  while s:blank_counter < v:count1
-"    call append(line('.'), '')
-"    let s:blank_counter += 1
-"  endwhile
-"endfunction
-"
-"nnoremap <silent> ]<space> :<C-U>call AddBlankLinesBelow()<CR>
-
