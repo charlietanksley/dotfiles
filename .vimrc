@@ -20,6 +20,7 @@ Bundle "duskhacker/sweet-rspec-vim"
 Bundle "vim-scripts/L9.git"
 Bundle "vim-scripts/FuzzyFinder.git"
 " |FuzzyFinder-keybindings|
+"Bundle "Lokaltog/vim-easymotion.git"
 
 " My forks/scripts
 Bundle "charlietanksley/snipmate.vim.git"
