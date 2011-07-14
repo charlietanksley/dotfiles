@@ -14,7 +14,8 @@ call vundle#rc()
 " Trial
 Bundle "duskhacker/sweet-rspec-vim"
 " |sweet-rspec-vim-keybindings|
-"Bundle 'Lokaltog/vim-easymotion.git'
+Bundle 'Lokaltog/vim-easymotion.git'
+" |easymotion-keybindings|
 Bundle 'sjbach/lusty.git'
 
 " My forks/scripts
@@ -302,3 +303,6 @@ function RainbowParenthesesOn()
 endfunction
 
 nmap <leader>mr :call RainbowParenthesesOn()<CR>
+
+" *easymotion-keybindings*
+let g:EasyMotion_leader_key = '<Leader>e'
