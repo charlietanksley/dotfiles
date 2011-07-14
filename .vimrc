@@ -37,7 +37,6 @@ Bundle "vim-scripts/bufexplorer.zip.git"
 Bundle "scrooloose/nerdtree.git"
 Bundle "scrooloose/syntastic.git"
 " |syntastic_configuration|
-Bundle "majutsushi/tagbar.git"
 
 " Ruby
 Bundle "tpope/vim-rake.git"
@@ -67,8 +66,8 @@ Bundle "timcharper/textile.vim.git"
 filetype plugin indent on
 
 " TRIAL STUFF
-nnoremap <silent> <leader>mtb :TagbarToggle<CR>
-let g:tagbar_width = 30
+nnoremap <silent> <leader>mtl :TlistToggle<CR>
+let Tlist_GainFocus_On_ToggleOpen=1
 
 
 
