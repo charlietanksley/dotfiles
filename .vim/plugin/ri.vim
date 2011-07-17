@@ -6,5 +6,5 @@ if exists("g:RIVimLoaded") || &cp || version < 700
   finish
 endif
 let g:ri_vim_tool = 'ri_vim '
-source /Users/charlietanksley/.rvm/gems/ruby-1.9.2-p180/gems/ri_vim-0.1.5/lib/ri.vim
+source /Users/charlietanksley/.rvm/gems/ruby-1.9.2-head/gems/ri_vim-0.1.8/lib/ri.vim
 
