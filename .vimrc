@@ -23,6 +23,14 @@ Bundle 'chrisbra/NrrwRgn.git'
 " http://www.vim.org/scripts/script.php?script_id=3664#1.1
 " Bundle 'tlavi/SnipMgr.git'
 
+"" SERIOUS TRIAL
+" I want to try orgmode.  The following plugins are added *just* to make that
+" work:
+Bundle 'tpope/vim-speeddating.git'
+Bundle 'vim-scripts/utl.vim.git'
+Bundle 'tpope/vim-repeat.git'
+Bundle 'jceb/vim-orgmode.git'
+
 " My forks/scripts
 Bundle "charlietanksley/snipmate.vim.git"
 Bundle "charlietanksley/slimv.vim.git"
