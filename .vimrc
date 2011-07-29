@@ -17,6 +17,11 @@ Bundle "duskhacker/sweet-rspec-vim"
 Bundle 'Lokaltog/vim-easymotion.git'
 " |easymotion-keybindings|
 Bundle 'sjbach/lusty.git'
+Bundle 'thinca/vim-quickrun.git'
+Bundle 'chrisbra/NrrwRgn.git'
+" I'm not sure about this one.  Look into it more:
+" http://www.vim.org/scripts/script.php?script_id=3664#1.1
+" Bundle 'tlavi/SnipMgr.git'
 
 " My forks/scripts
 Bundle "charlietanksley/snipmate.vim.git"
