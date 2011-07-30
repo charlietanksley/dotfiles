@@ -319,3 +319,6 @@ nmap <leader>mr :call RainbowParenthesesOn()<CR>
 
 " *easymotion-keybindings*
 let g:EasyMotion_leader_key = '<Leader>e'
+
+" *orgmode-keybindings*
+nmap <leader>mtd :e ~/Dropbox/orgmode.org<CR>
