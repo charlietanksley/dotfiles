@@ -23,13 +23,25 @@ Bundle 'chrisbra/NrrwRgn.git'
 " http://www.vim.org/scripts/script.php?script_id=3664#1.1
 " Bundle 'tlavi/SnipMgr.git'
 
-"" SERIOUS TRIAL
-" I want to try orgmode.  The following plugins are added *just* to make that
-" work:
-Bundle 'tpope/vim-speeddating.git'
-Bundle 'vim-scripts/utl.vim.git'
-Bundle 'tpope/vim-repeat.git'
-Bundle 'jceb/vim-orgmode.git'
+"" ORGMODE TRIALS {{{
+" I want to try orgmode. There are two versions.  I'm going to try and pick
+" one here!
+"
+" The following plugins are added *just* to make the vim-orgmode plugin work:
+"Bundle 'tpope/vim-speeddating.git'
+"Bundle 'vim-scripts/utl.vim.git'
+"Bundle 'tpope/vim-repeat.git'
+"Bundle 'jceb/vim-orgmode.git'
+"
+" So I didn't *love* vim-orgmode.  Mostly I didn't love it because the
+" documentation was terrible.  I had to do a lot of work to figure out the
+" keybindings, and even after that I'm not sure I had them all or had them
+" right.  Maybe the plugin is just too young?
+"
+" This is another option: VimOrganizer
+Bundle 'hsitz/VimOrganizer.git'
+
+" END ORMODE TRIALS }}}
 
 " My forks/scripts
 Bundle "charlietanksley/snipmate.vim.git"
