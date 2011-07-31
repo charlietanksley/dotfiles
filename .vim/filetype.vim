@@ -34,16 +34,3 @@ if exists ("did_load_csvfiletype")
 endif
 let did_load_csvfiletype=1
 au! BufRead,BufNewFile *.csv,*.dat setfiletype csv
-
-" ORGMODE
-augroup org
-  au! BufRead,BufWrite,BufWritePost,BufNewFile *.org 
-  au BufRead,BufNewFile *.org            call org#SetOrgFileType()
-  au BufRead *.org :PreLoadTags
-  au BufWrite *.org :PreWriteTags
-  au BufWritePost *.org :PostWriteTags
-  "colorscheme org_dark
-  "setlocal list
-  let g:org_todo_setup='TODO | DONE'
-  "let g:org_tag_setup='{@home(h) @work(w) @tennisclub(t)} \n {easy(e) hard(d)} \n {computer(c) phone(p)}'
-augroup END
