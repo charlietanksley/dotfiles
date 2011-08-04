@@ -94,6 +94,9 @@ Bundle "timcharper/textile.vim.git"
 
 filetype plugin indent on
 
+let mapleader = "\\"
+let g:mapleader = "\\"
+
 " TRIAL STUFF
 nnoremap <silent> <leader>mtl :TlistToggle<CR>
 let Tlist_GainFocus_On_ToggleOpen=1
