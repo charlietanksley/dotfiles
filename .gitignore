@@ -4,3 +4,4 @@ tmp/
 .vim/vim-tmp/
 .vim/plugin/secret.vim
 .vim/bundle/
+.vim/plugin/ri.vim
