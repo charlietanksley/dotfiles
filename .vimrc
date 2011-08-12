@@ -21,6 +21,8 @@ Bundle 'chrisbra/NrrwRgn.git'
 " I'm not sure about this one.  Look into it more:
 " http://www.vim.org/scripts/script.php?script_id=3664#1.1
 " Bundle 'tlavi/SnipMgr.git'
+Bundle 'fousa/vim-flog.git'
+" |vim-flog-settings|
 
 "" ORGMODE TRIALS {{{
 " I want to try orgmode. There are two versions.  I'm going to try and pick
@@ -340,3 +342,6 @@ let g:EasyMotion_leader_key = '<Leader>e'
 
 " *orgmode-keybindings*
 nmap <leader>mtd :e ~/Dropbox/orgmode.org<CR>
+
+" *vim-flog-settings*
+:silent exe "g:flog_enable"
