@@ -21,7 +21,7 @@ Bundle 'chrisbra/NrrwRgn.git'
 " I'm not sure about this one.  Look into it more:
 " http://www.vim.org/scripts/script.php?script_id=3664#1.1
 " Bundle 'tlavi/SnipMgr.git'
-Bundle 'fousa/vim-flog.git'
+"Bundle 'fousa/vim-flog.git'
 " |vim-flog-settings|
 
 "" ORGMODE TRIALS {{{
@@ -326,7 +326,7 @@ map <M-D-r> :SweetVimRspecRunPrevious<CR>
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
 " Tell Syntastic to ignore Sass:
-let g:syntastic_disabled_filetypes = ['sass']
+let g:syntastic_disabled_filetypes = ['sass', 'rb']
 
 " *Rainbow-Parenthesis-keybindings*
 function RainbowParenthesesOn()
@@ -344,4 +344,4 @@ let g:EasyMotion_leader_key = '<Leader>e'
 nmap <leader>mtd :e ~/Dropbox/orgmode.org<CR>
 
 " *vim-flog-settings*
-:silent exe "g:flog_enable"
+"silent exe 'g:flog_enable'
