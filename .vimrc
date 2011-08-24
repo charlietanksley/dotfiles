@@ -23,6 +23,8 @@ Bundle 'chrisbra/NrrwRgn.git'
 " Bundle 'tlavi/SnipMgr.git'
 "Bundle 'fousa/vim-flog.git'
 " |vim-flog-settings|
+Bundle 'roman/golden-ratio.git'
+" |golden-ratio-settings|
 
 "" ORGMODE TRIALS {{{
 " I want to try orgmode. There are two versions.  I'm going to try and pick
@@ -345,3 +347,9 @@ nmap <leader>mtd :e ~/Dropbox/orgmode.org<CR>
 
 " *vim-flog-settings*
 "silent exe 'g:flog_enable'
+
+" *golden-ratio-settings*
+" to turn off
+"let g:loaded_golden_ratio = 1
+" to turn off autocommand events
+"let g:golden_ratio_autocommand = 0
