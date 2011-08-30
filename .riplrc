@@ -1,10 +1,10 @@
-require 'ripl/multi_line'
-require 'ripl/short_errors'
-require 'ripl/color_result'
-require 'ripl/color_streams'
-require 'ripl/color_error'
-require 'interactive_editor'
-require 'ripl/auto_indent'
-
-
-Ripl.config[:color_error] = :blue
+#require 'ripl/multi_line'
+#require 'ripl/short_errors'
+#require 'ripl/color_result'
+#require 'ripl/color_streams'
+#require 'ripl/color_error'
+#require 'interactive_editor'
+#require 'ripl/auto_indent'
+#
+#
+#Ripl.config[:color_error] = :blue
