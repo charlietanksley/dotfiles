@@ -104,6 +104,9 @@ altered_ps1_git()
 export EDITOR='vim'
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
+## DEVELOPMENT
+export ADMIN_PASSWORD='password'
+
 ## RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
