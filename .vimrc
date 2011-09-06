@@ -17,7 +17,7 @@ Bundle "duskhacker/sweet-rspec-vim"
 Bundle 'Lokaltog/vim-easymotion.git'
 " |easymotion-keybindings|
 Bundle 'sjbach/lusty.git'
-Bundle 'chrisbra/NrrwRgn.git'
+"Bundle 'chrisbra/NrrwRgn.git'
 " I'm not sure about this one.  Look into it more:
 " http://www.vim.org/scripts/script.php?script_id=3664#1.1
 " Bundle 'tlavi/SnipMgr.git'
@@ -140,8 +140,9 @@ set guioptions-=T
 " NEED TO ORGANIZE:
 " this comes from stevelosh.com/blog/2010/09/coming-home-to-vim/
 "
-  " change the way line numbering works
-set relativenumber
+" change the way line numbering works
+" I don't think I want relative number.
+"set relativenumber
   " use Perl/Python compatible regex formatting, not Vim's version 
 nnoremap / /\v
 vnoremap / /\v
