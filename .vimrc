@@ -18,38 +18,10 @@ Bundle 'duskhacker/sweet-rspec-vim'
 Bundle 'Lokaltog/vim-easymotion.git'
 " |easymotion-keybindings|
 Bundle 'sjbach/lusty.git'
-"Bundle 'chrisbra/NrrwRgn.git'
-" I'm not sure about this one.  Look into it more:
-" http://www.vim.org/scripts/script.php?script_id=3664#1.1
-" Bundle 'tlavi/SnipMgr.git'
-"Bundle 'fousa/vim-flog.git'
+Bundle 'fousa/vim-flog.git'
 " |vim-flog-settings|
 Bundle 'roman/golden-ratio.git'
 " |golden-ratio-settings|
-
-"" ORGMODE TRIALS {{{
-" I want to try orgmode. There are two versions.  I'm going to try and pick
-" one here!
-"
-" The following plugins are added *just* to make the vim-orgmode plugin work:
-Bundle 'tpope/vim-speeddating.git'
-Bundle 'vim-scripts/utl.vim.git'
-Bundle 'tpope/vim-repeat.git'
-Bundle 'jceb/vim-orgmode.git'
-"
-" So I didn't *love* vim-orgmode.  Mostly I didn't love it because the
-" documentation was terrible.  I had to do a lot of work to figure out the
-" keybindings, and even after that I'm not sure I had them all or had them
-" right.  Maybe the plugin is just too young?
-"
-" Okay, to be honest, I loved VimOrganizer *less*.  It isn't terrible, and it
-" is a bit better documented, but it isn't great, and it looks like
-" development has completely stalled.  So I'm going with vim-orgmode.
-"
-" This is another option: VimOrganizer
-"Bundle 'hsitz/VimOrganizer.git'
-
-" END ORMODE TRIALS }}}
 
 " My forks/scripts
 Bundle 'charlietanksley/snipmate.vim.git'
@@ -64,7 +36,6 @@ Bundle 'tpope/vim-fugitive.git'
 Bundle 'tpope/vim-surround.git'
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-commentary.git'
-"Bundle "scrooloose/nerdcommenter.git"
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/Align.git'
 Bundle 'ervandew/supertab.git'
