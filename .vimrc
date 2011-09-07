@@ -3,6 +3,7 @@ filetype off
 
 set rtp +=~/.dotfiles/.vim/vundle.git/
 call vundle#rc()
+
 " Key commands:
 " :BundleInstall for main install
 " :BundleInstall! will install/update all
@@ -12,8 +13,8 @@ call vundle#rc()
 " Bundles!
 
 " Trial
-Bundle "duskhacker/sweet-rspec-vim"
-" |sweet-rspec-vim-keybindings|
+Bundle 'duskhacker/sweet-rspec-vim'
+" |sweet_rspec_vim_keybindings|
 Bundle 'Lokaltog/vim-easymotion.git'
 " |easymotion-keybindings|
 Bundle 'sjbach/lusty.git'
@@ -51,50 +52,50 @@ Bundle 'jceb/vim-orgmode.git'
 " END ORMODE TRIALS }}}
 
 " My forks/scripts
-Bundle "charlietanksley/snipmate.vim.git"
-Bundle "charlietanksley/slimv.vim.git"
-Bundle "charlietanksley/simplefold.git"
+Bundle 'charlietanksley/snipmate.vim.git'
+Bundle 'charlietanksley/slimv.vim.git'
+Bundle 'charlietanksley/simplefold.git'
 Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
 " |Rainbow-Parenthesis-keybindings|
 
 " Utilities
-Bundle "tpope/vim-endwise.git"
-Bundle "tpope/vim-fugitive.git"
-Bundle "tpope/vim-surround.git"
-Bundle "tpope/vim-unimpaired.git"
+Bundle 'tpope/vim-endwise.git'
+Bundle 'tpope/vim-fugitive.git'
+Bundle 'tpope/vim-surround.git'
+Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-commentary.git'
 "Bundle "scrooloose/nerdcommenter.git"
-Bundle "vim-scripts/taglist.vim"
-Bundle "vim-scripts/Align.git"
-Bundle "ervandew/supertab.git"
-Bundle "vim-scripts/bufexplorer.zip.git"
-Bundle "scrooloose/nerdtree.git"
-Bundle "scrooloose/syntastic.git"
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/Align.git'
+Bundle 'ervandew/supertab.git'
+Bundle 'vim-scripts/bufexplorer.zip.git'
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'scrooloose/syntastic.git'
 " |syntastic_configuration|
 
 " Ruby
-Bundle "tpope/vim-rake.git"
-Bundle "tpope/vim-rails.git"
+Bundle 'tpope/vim-rake.git'
+Bundle 'tpope/vim-rails.git'
 
 " HTML, CSS, JavaScript, CoffeeScript
-Bundle "mattn/zencoding-vim"
-Bundle "bbommarito/vim-slim"
-Bundle "tpope/vim-ragtag"
-Bundle "kchmck/vim-coffee-script.git"
-Bundle "pangloss/vim-javascript"
-Bundle "juvenn/mustache.vim.git"
+Bundle 'mattn/zencoding-vim'
+Bundle 'bbommarito/vim-slim'
+Bundle 'tpope/vim-ragtag'
+Bundle 'kchmck/vim-coffee-script.git'
+Bundle 'pangloss/vim-javascript'
+Bundle 'juvenn/mustache.vim.git'
 
 " Colorschemes
-Bundle "tpope/vim-vividchalk.git"
-Bundle "vim-scripts/up.vim.git"
-Bundle "vim-scripts/ScrollColors.git"
-Bundle "vim-scripts/devbox-dark-256.git"
-Bundle "vim-scripts/chance-of-storm.git"
-Bundle "altercation/vim-colors-solarized"
+Bundle 'tpope/vim-vividchalk.git'
+Bundle 'vim-scripts/up.vim.git'
+Bundle 'vim-scripts/ScrollColors.git'
+Bundle 'vim-scripts/devbox-dark-256.git'
+Bundle 'vim-scripts/chance-of-storm.git'
+Bundle 'altercation/vim-colors-solarized'
 
 " LaTeX, Textile, Etc.
-Bundle "vim-scripts/LaTeX-Box.git"
-Bundle "timcharper/textile.vim.git"
+Bundle 'vim-scripts/LaTeX-Box.git'
+Bundle 'timcharper/textile.vim.git'
 
 
 filetype plugin indent on
@@ -109,7 +110,7 @@ let Tlist_GainFocus_On_ToggleOpen=1
 
 
 
-
+set number
 
 " various things lifted from Steve Losh:
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
@@ -316,7 +317,7 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeWinSize=20
 nmap <leader>tr :NERDTree<CR>
 
-" *sweet-rspec-vim-keybindings*
+" *sweet_rspec_vim_keybindings*
 set macmeta
 "(CMD-r)  or (Apple-r)
 map <D-r> :SweetVimRspecRunFile<CR>
