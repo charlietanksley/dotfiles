@@ -1,8 +1,14 @@
+" VUNDLE {{{
+" VUNDLE SETUP {{{
+
 set nocompatible
 filetype off
 
 set rtp +=~/.dotfiles/.vim/vundle.git/
 call vundle#rc()
+
+" END VUNDLE SETUP }}}
+" BUNDLES {{{
 
 " Key commands:
 " :BundleInstall for main install
@@ -12,18 +18,24 @@ call vundle#rc()
 
 " Utilities
 Bundle 'tpope/vim-fugitive.git'
+" |fugitive| 
 Bundle 'tpope/vim-surround.git'
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-commentary.git'
 Bundle 'vim-scripts/taglist.vim'
+" |taglist|
 Bundle 'vim-scripts/Align.git'
 Bundle 'ervandew/supertab.git'
 Bundle 'vim-scripts/bufexplorer.zip.git'
 Bundle 'scrooloose/nerdtree.git'
-Bundle 'scrooloose/syntastic.git'                       " |syntastic_configuration|
-Bundle 'Lokaltog/vim-easymotion.git'                    " |easymotion-keybindings|
+" |NERDTree|
+Bundle 'scrooloose/syntastic.git'
+" |syntastic|
+Bundle 'Lokaltog/vim-easymotion.git'
+" |easymotion|
 Bundle 'sjbach/lusty.git'
-Bundle 'roman/golden-ratio.git'                         " |golden-ratio-settings|
+Bundle 'roman/golden-ratio.git'
+" |golden_ratio|
 Bundle 'charlietanksley/snipmate.vim.git'
 Bundle 'charlietanksley/simplefold.git'
 
@@ -31,12 +43,15 @@ Bundle 'charlietanksley/simplefold.git'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'tpope/vim-rake.git'
 Bundle 'tpope/vim-rails.git'
-Bundle 'duskhacker/sweet-rspec-vim'                     " |sweet_rspec_vim_keybindings|
-Bundle 'fousa/vim-flog.git'                             " |vim-flog-settings|
+Bundle 'duskhacker/sweet-rspec-vim'
+" |sweet_rspec_vim|
+Bundle 'fousa/vim-flog.git'
+" |vim_flog|
 
 " Scheme
 Bundle 'charlietanksley/slimv.vim.git'
-Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'  " |Rainbow-Parenthesis-keybindings|
+Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
+" |Rainbow_Parenthesis|
 
 " HTML, CSS, JavaScript, CoffeeScript
 Bundle 'mattn/zencoding-vim'
@@ -54,157 +69,80 @@ Bundle 'vim-scripts/ScrollColors.git'
 Bundle 'vim-scripts/LaTeX-Box.git'
 Bundle 'timcharper/textile.vim.git'
 
+" END BUNDLES }}}
+" END VUNDLE }}}
+" GLOBAL/GENERIC SETTINGS {{{
 
 filetype plugin indent on
 
-let mapleader = "\\"
-let g:mapleader = "\\"
-
-" TRIAL STUFF
-nnoremap <silent> <leader>mtl :TlistToggle<CR>
-let Tlist_GainFocus_On_ToggleOpen=1
-
-
-
-
+" Non-relative line numbers
 set number
 
-" various things lifted from Steve Losh:
-" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
 set encoding=utf-8
 set scrolloff=3
 set showmode
 set showcmd
-"set hidden
 set wildmenu
 set wildmode=list:longest
 set visualbell
-"set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
-"set laststatus=2
-"set relativenumber
-"set undofile
 
-		""""""""""""""""""""""""""""""""""""""""""""""""""
-		""""" MACVIM SPECIFIC STUFF IS IN ~/.gvimrc """""
-		""""""""""""""""""""""""""""""""""""""""""""""""""
+set mouse=a
 
 " I don't like the menu (m) and toolbar (T).  They waste space.
 set guioptions-=m
 set guioptions-=T
 
-" NEED TO ORGANIZE:
-" this comes from stevelosh.com/blog/2010/09/coming-home-to-vim/
-"
-" change the way line numbering works
-" I don't think I want relative number.
-"set relativenumber
-  " use Perl/Python compatible regex formatting, not Vim's version 
+" use Perl/Python compatible regex formatting, not Vim's version 
 nnoremap / /\v
 vnoremap / /\v
-  " make regex searching work better w/cases--assume mixed case unless using
-  " caps in search string
+" make regex searching work better w/cases--assume mixed case unless using
+" caps in search string
 set ignorecase
 set smartcase
-		""""""""""""""""""""""""""""""""""""""""""""""
-		"""""" SEARCH, HIGHLIGHT, SPELLING, ETC. """""
-		""""""""""""""""""""""""""""""""""""""""""""""
+
 set incsearch
 syntax on
 
-" Vim window stuff
 set linebreak
-"set number
-"set cursorline
-"set cursorcolumn
 
-"paragraph formatting stuff:
 set formatprg=par
 
-" Store temporary files in a central location (is this okay?)
 set backupdir=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
 set directory=~/.vim/vim-tmp,~/.tmp,~/tmp,~/var/tmp,/tmp
 
-" hidden character stuff
-nmap <leader>si :set list!<CR>
+" hidden characters
 set listchars=tab:▸\ ,eol:¬
 
 " let me switch buffers with unsaved changes
 set hidden
 
-		""""""""""""""""""""""""""""""""""
-		""""" GENERIC PLUGIN BEHAVIOR """"
-		""""""""""""""""""""""""""""""""""
-"filetype plugin on
 set ofu=syntaxcomplete#Complete
 set autoread
 
-		""""""""""""""""""
-		""""" SPACING """"
-		""""""""""""""""""	
+" Spacing
 set autoindent
 set smartindent
 set tabstop=2 shiftwidth=2 expandtab
 
-    """""""""""""""
-    """" FOLDS """"
-    """""""""""""""
-
+" Folds
 set foldcolumn=4
 set foldmethod=marker "alternatives: indent, syntax, marker (uses `{{{` to open and `}}}` to close)
 
-    """""""""""""""""""""""""""""""
-    """" SPECIFIC PLUGIN STUFF """"
-    """""""""""""""""""""""""""""""
-
-"------------"
-" bufferlist "
-"------------"
-"map <silent> <F3> :call BufferList()<CR>
-"let g:BufferListWidth = 25
-"let g:BufferListMaxWidth = 50
-"hi BufferSelected term=reverse ctermfg=white ctermbg=red cterm=bold
-"hi BufferNormal term=NONE ctermfg=black ctermbg=darkcyan cterm=NONE
-
-
-"----------------"
-" LatexBox-stuff
-"----------------"
-" All .tex specific key mappings are in ~/.vim/ftplugin/tex.vim
-
-let g:LatexBox_viewer = 'skim'
-let g:LatexBox_latexmk_options = '-pvc' 
-let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\(\[.*\]\)\{0,2}\*\?\_\s*{'
-
-"----------------"
-" |Git-fugitive| "
-"----------------"
-" These keybindings are all modified from the git-vim plugin:
-" http://github.com/motemen/git-vim/blob/master/plugin/git.vim
-nnoremap <Leader>gd :Gdiff!<Enter>
-"nnoremap <Leader>gD :GitDiff --cached<Enter>
-nnoremap <Leader>gs :Gstatus<Enter>
-nnoremap <Leader>gl :Glog<Enter>
-"nnoremap <Leader>ga :Gadd<Enter>
-nnoremap <Leader>ga :Git add %<CR><CR>
-nnoremap <Leader>gc :Gcommit<Enter>
-nnoremap <Leader>gC :Gcommit -v<Enter>
-"nnoremap <Leader>gp :GitPullRebase<Enter>
-
-
-"-----------"
 " Git stuff "
-"-----------"
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-"--------------"
-"--------------"
-" KEYMAP STUFF "
-"--------------"
-"--------------"
+let mapleader = "\\"
+let g:mapleader = "\\"
+
+" END GLOBAL/GENERIC SETTINGS }}}
+" GLOBAL/GENERIC (NON-PLUGIN SPECIFIC) KEYBINDINGS {{{
+
+nmap <leader>si :set list!<CR>
+
 inoremap ;; <Esc>
 
 " Cursor movement in word wrap stuff {{{
@@ -245,36 +183,60 @@ noremap  <buffer> <silent> j gj
 noremap  <buffer> <silent> 0 g0
 noremap  <buffer> <silent> $ g$
 "}}}
-set mouse=a
 
 " map for omnicomplete
 inoremap <F9> <C-X><C-O>
 
 "" These all come from http://jetpackweb.com/blog/2010/02/15/vim-tips-for-ruby/
-"" and are for ruby development stuff
 " bind control-l to hashrocket
 imap <C-l> <Space>=><Space>
 " convert word into ruby symbol
 imap <C-k> <C-o>b:<Esc>Ea
 nmap <C-k> lbi:<Esc>E
 
-" Still from jetpackweb, but this is not ruby specific:
 " Easier non-interactive command insertion
 nnoremap <Space> :
 
-" some mappings
 nmap Q gwip
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 nmap <C-h> <C-w>h
 
-" NERDTree stuff
+" END GLOBAL/GENERIC (NON-PLUGIN SPECIFIC) SETTINGS/KEYBINDINGS }}}
+" PLUGIN SPECIFIC BINDINGS AND CONFIGURATIONS {{{
+
+"----------"
+" LatexBox "
+"----------"
+" All .tex specific key mappings are in ~/.vim/ftplugin/tex.vim
+
+let g:LatexBox_viewer = 'skim'
+let g:LatexBox_latexmk_options = '-pvc' 
+let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\(\[.*\]\)\{0,2}\*\?\_\s*{'
+
+"----------"
+" fugitive "
+"----------"
+" These keybindings are all modified from the git-vim plugin:
+" http://github.com/motemen/git-vim/blob/master/plugin/git.vim
+nnoremap <Leader>gd :Gdiff!<Enter>
+nnoremap <Leader>gs :Gstatus<Enter>
+nnoremap <Leader>gl :Glog<Enter>
+nnoremap <Leader>ga :Git add %<CR><CR>
+nnoremap <Leader>gc :Gcommit<Enter>
+nnoremap <Leader>gC :Gcommit -v<Enter>
+
+"----------"
+" NERDTree "
+"----------"
 let NERDTreeShowLineNumbers=1
 let NERDTreeWinSize=20
 nmap <leader>tr :NERDTree<CR>
 
-" *sweet_rspec_vim_keybindings*
+"-----------------"
+" sweet_rspec_vim "
+"-----------------"
 set macmeta
 "(CMD-r)  or (Apple-r)
 map <D-r> :SweetVimRspecRunFile<CR>
@@ -283,14 +245,18 @@ map <D-R> :SweetVimRspecRunFocused<CR>
 "(OPT-CMD-r)
 map <M-D-r> :SweetVimRspecRunPrevious<CR>
 
-" *syntastic_configuration*
+"-----------"
+" syntastic "
+"-----------"
 "let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
 " Tell Syntastic to ignore Sass:
 let g:syntastic_disabled_filetypes = ['sass', 'rb']
 
-" *Rainbow-Parenthesis-keybindings*
+"---------------------"
+" Rainbow_Parenthesis "
+"---------------------"
 function RainbowParenthesesOn()
   "call rainbow_parenthsis#LoadSquare ()
   call rainbow_parenthsis#LoadRound ()
@@ -299,17 +265,28 @@ endfunction
 
 nmap <leader>mr :call RainbowParenthesesOn()<CR>
 
-" *easymotion-keybindings*
+"------------"
+" easymotion "
+"------------"
 let g:EasyMotion_leader_key = '<Leader>e'
 
-" *orgmode-keybindings*
-nmap <leader>mtd :e ~/Dropbox/orgmode.org<CR>
-
-" *vim-flog-settings*
+"----------"
+" vim_flog "
+"----------"
 "silent exe 'g:flog_enable'
 
-" *golden-ratio-settings*
+"--------------"
+" golden_ratio "
+"--------------"
 " to turn off
 "let g:loaded_golden_ratio = 1
 " to turn off autocommand events
 "let g:golden_ratio_autocommand = 0
+
+"---------"
+" taglist "
+"---------"
+nnoremap <silent> <leader>mtl :TlistToggle<CR>
+let Tlist_GainFocus_On_ToggleOpen=1
+
+" END PLUGIN SPECIFIC BINDINGS AND CONFIGURATIONS }}}
