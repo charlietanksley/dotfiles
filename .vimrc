@@ -10,28 +10,7 @@ call vundle#rc()
 " :Bundle "foo" searches for foo.
 " :BundleClean will remove deleted bundles
 
-" Bundles!
-
-" Trial
-Bundle 'duskhacker/sweet-rspec-vim'
-" |sweet_rspec_vim_keybindings|
-Bundle 'Lokaltog/vim-easymotion.git'
-" |easymotion-keybindings|
-Bundle 'sjbach/lusty.git'
-Bundle 'fousa/vim-flog.git'
-" |vim-flog-settings|
-Bundle 'roman/golden-ratio.git'
-" |golden-ratio-settings|
-
-" My forks/scripts
-Bundle 'charlietanksley/snipmate.vim.git'
-Bundle 'charlietanksley/slimv.vim.git'
-Bundle 'charlietanksley/simplefold.git'
-Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
-" |Rainbow-Parenthesis-keybindings|
-
 " Utilities
-Bundle 'tpope/vim-endwise.git'
 Bundle 'tpope/vim-fugitive.git'
 Bundle 'tpope/vim-surround.git'
 Bundle 'tpope/vim-unimpaired.git'
@@ -41,12 +20,23 @@ Bundle 'vim-scripts/Align.git'
 Bundle 'ervandew/supertab.git'
 Bundle 'vim-scripts/bufexplorer.zip.git'
 Bundle 'scrooloose/nerdtree.git'
-Bundle 'scrooloose/syntastic.git'
-" |syntastic_configuration|
+Bundle 'scrooloose/syntastic.git'                       " |syntastic_configuration|
+Bundle 'Lokaltog/vim-easymotion.git'                    " |easymotion-keybindings|
+Bundle 'sjbach/lusty.git'
+Bundle 'roman/golden-ratio.git'                         " |golden-ratio-settings|
+Bundle 'charlietanksley/snipmate.vim.git'
+Bundle 'charlietanksley/simplefold.git'
 
 " Ruby
+Bundle 'tpope/vim-endwise.git'
 Bundle 'tpope/vim-rake.git'
 Bundle 'tpope/vim-rails.git'
+Bundle 'duskhacker/sweet-rspec-vim'                     " |sweet_rspec_vim_keybindings|
+Bundle 'fousa/vim-flog.git'                             " |vim-flog-settings|
+
+" Scheme
+Bundle 'charlietanksley/slimv.vim.git'
+Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'  " |Rainbow-Parenthesis-keybindings|
 
 " HTML, CSS, JavaScript, CoffeeScript
 Bundle 'mattn/zencoding-vim'
@@ -57,12 +47,8 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'juvenn/mustache.vim.git'
 
 " Colorschemes
-Bundle 'tpope/vim-vividchalk.git'
 Bundle 'vim-scripts/up.vim.git'
 Bundle 'vim-scripts/ScrollColors.git'
-Bundle 'vim-scripts/devbox-dark-256.git'
-Bundle 'vim-scripts/chance-of-storm.git'
-Bundle 'altercation/vim-colors-solarized'
 
 " LaTeX, Textile, Etc.
 Bundle 'vim-scripts/LaTeX-Box.git'
