@@ -40,6 +40,7 @@ alias m='mutt'
 
 # make bundle exec easer to use:
 alias be='bundle exec'
+alias bep='bundle exec padrino'
 
 # Alias git to hub, because Github is our friend
 alias git='hub'
