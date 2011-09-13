@@ -4,8 +4,11 @@
 set nocompatible
 filetype off
 
-set rtp +=~/.dotfiles/.vim/vundle.git/
+"set rtp +=~/.dotfiles/.vim/vundle.git/
+set rtp +=~/.dotfiles/.vim/bundle/vundle/
 call vundle#rc()
+
+Bundle 'gmarik/vundle.git'
 
 " END VUNDLE SETUP }}}
 " BUNDLES {{{
