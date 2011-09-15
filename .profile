@@ -24,6 +24,9 @@ function parse_git_branch {
 # }}}
 ## Aliases {{{
 
+# Emacs from Homebrew
+alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
+
 # must have color ls output
 
 alias ls='ls -G'
