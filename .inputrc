@@ -12,6 +12,3 @@ set mark-symlinked-directories on
 set show-all-if-ambiguous on 
   # Make tab completion case-insensitive:
 set completion-ignore-case on
-
-set editing-mode vi
-

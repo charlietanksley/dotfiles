@@ -5,6 +5,6 @@
 #require 'ripl/color_error'
 #require 'interactive_editor'
 #require 'ripl/auto_indent'
-
-
-Ripl.config[:color_error] = :blue
+#
+#
+#Ripl.config[:color_error] = :blue

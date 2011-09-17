@@ -24,6 +24,9 @@ function parse_git_branch {
 # }}}
 ## Aliases {{{
 
+# Emacs from Homebrew
+alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
+
 # must have color ls output
 
 alias ls='ls -G'
@@ -40,6 +43,8 @@ alias m='mutt'
 
 # make bundle exec easer to use:
 alias be='bundle exec'
+alias bep='bundle exec padrino'
+alias p='padrino'
 
 # Alias git to hub, because Github is our friend
 alias git='hub'
@@ -103,6 +108,9 @@ altered_ps1_git()
 ## TMUXINATOR
 export EDITOR='vim'
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+## DEVELOPMENT
+export ADMIN_PASSWORD='password'
 
 ## RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
