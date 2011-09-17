@@ -1,8 +1,8 @@
-begin
-  require 'interactive_editor'
-  require 'awesome_print'
-rescue
-end
+#begin
+#  #require 'interactive_editor'
+#  #require 'awesome_print'
+#rescue
+#end
 
 
 HASH = {:name => 'Charlie Tanksley',
@@ -18,4 +18,4 @@ ARRAY =  ["This is the first sentence",
           ['first', 'second'],
           "last element in array"]
 
-alias :awesome_print :ap
+#alias :awesome_print :ap
