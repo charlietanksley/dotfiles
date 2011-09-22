@@ -101,6 +101,9 @@ Bundle 'vim-scripts/ScrollColors.git'
 
 filetype plugin indent on
 
+" Use a colorscheme
+colorscheme desert
+
 " Non-relative line numbers
 set number
 
@@ -336,4 +339,3 @@ set winheight=999
 ""nnoremap <leader><leader> <c-^> 
 
 " END STUFF I GRABBED FROM DESTROY ALL SOFTWARE }}}
-
