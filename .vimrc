@@ -48,15 +48,6 @@ Bundle 'Lokaltog/vim-easymotion.git'
 let g:EasyMotion_leader_key = '<Leader>e'
 
 " easymotion }}}
-" golden_ratio {{{
-Bundle 'roman/golden-ratio.git'
-
-" to turn off
-"let g:loaded_golden_ratio = 1
-" to turn off autocommand events
-"let g:golden_ratio_autocommand = 0
-
-" golden_ratio }}}
 " LatexBox {{{
 " All .tex specific key mappings are in ~/.vim/ftplugin/tex.vim
 Bundle 'vim-scripts/LaTeX-Box.git'
