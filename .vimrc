@@ -66,63 +66,7 @@ let g:LatexBox_latexmk_options = '-pvc'
 let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\(\[.*\]\)\{0,2}\*\?\_\s*{'
 
 " LatexBox }}}
-" syntastic {{{
-"Bundle 'scrooloose/syntastic.git'
 
-"let g:syntastic_auto_loc_list=1
-"let g:syntastic_enable_signs=1
-"let g:syntastic_quiet_warnings=1
-"" Tell Syntastic to ignore Sass:
-"let g:syntastic_disabled_filetypes = ['sass', 'rb']
-
-" syntastic }}}
-" sweet_rspec_vim {{{
-"Bundle 'duskhacker/sweet-rspec-vim'
-
-"set macmeta
-"(CMD-r)  or (Apple-r)
-"map <D-r> :SweetVimRspecRunFile<CR>
-"(SHIFT-CMD-r) 
-"map <D-R> :SweetVimRspecRunFocused<CR>
-"(OPT-CMD-r)
-"map <M-D-r> :SweetVimRspecRunPrevious<CR>
-
-" sweet_rspec_vim }}}
-" Rainbow_Parenthesis {{{
-"Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
-
-"function RainbowParenthesesOn()
-"  "call rainbow_parenthsis#LoadSquare ()
-"  call rainbow_parenthsis#LoadRound ()
-"  call rainbow_parenthsis#Activate ()
-"endfunction
-"
-"nmap <leader>mr :call RainbowParenthesesOn()<CR>
-
-" Rainbow_Parenthesis }}}
-" vim_flog {{{
-"Bundle 'fousa/vim-flog.git'
-
-"silent exe 'g:flog_enable'
-
-" vim_flog }}}
-" taglist {{{
-"Bundle 'vim-scripts/taglist.vim'
-
-"nnoremap <silent> <leader>mtl :TlistToggle<CR>
-"let Tlist_GainFocus_On_ToggleOpen=1
-
-" taglist }}}
-" ctrlp_settings {{{
-"Bundle 'kien/ctrlp.vim.git'
-
-"set wildignore+=*/.git/*
-"let g:ctrlp_working_path_mode = 2
-"let g:ctrlp_persistent_input = 0
-
-" ctrlp_settings }}}
-
-"Bundle 'tpope/vim-surround.git'
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-commentary.git'
 Bundle 'vim-scripts/Align.git'
@@ -133,15 +77,9 @@ Bundle 'charlietanksley/snipmate.vim.git'
 Bundle 'charlietanksley/simplefold.git'
 
 " Ruby
-"Bundle 'tpope/vim-endwise.git'
-"Bundle 'tpope/vim-rake.git'
 Bundle 'tpope/vim-rails.git'
 
-" Scheme
-"Bundle 'charlietanksley/slimv.vim.git'
-
 " HTML, CSS, JavaScript, CoffeeScript
-"Bundle 'mattn/zencoding-vim'
 Bundle 'bbommarito/vim-slim'
 Bundle 'tpope/vim-ragtag'
 Bundle 'kchmck/vim-coffee-script.git'
@@ -151,9 +89,6 @@ Bundle 'juvenn/mustache.vim.git'
 " Colorschemes
 Bundle 'vim-scripts/up.vim.git'
 Bundle 'vim-scripts/ScrollColors.git'
-
-" LaTeX, Textile, Etc.
-"Bundle 'timcharper/textile.vim.git'
 
 " END BUNDLES }}}
 " END VUNDLE }}}
