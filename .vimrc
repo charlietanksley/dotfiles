@@ -20,44 +20,128 @@ Bundle 'gmarik/vundle.git'
 " :BundleClean will remove deleted bundles
 
 " Utilities
+
+" fugitive {{{
+" These keybindings are all modified from the git-vim plugin:
+" http://github.com/motemen/git-vim/blob/master/plugin/git.vim
 Bundle 'tpope/vim-fugitive.git'
-" |fugitive| 
-Bundle 'tpope/vim-surround.git'
+
+nnoremap <Leader>gd :Gdiff!<Enter>
+nnoremap <Leader>gs :Gstatus<Enter>
+nnoremap <Leader>gl :Glog<Enter>
+nnoremap <Leader>ga :Git add %<CR><CR>
+nnoremap <Leader>gc :Gcommit<Enter>
+nnoremap <Leader>gC :Gcommit -v<Enter>
+
+" fugitive }}}
+" NERDTree {{{
+Bundle 'scrooloose/nerdtree.git'
+
+let NERDTreeShowLineNumbers=1
+let NERDTreeWinSize=20
+nmap <leader>tr :NERDTree<CR>
+
+" NERDTree }}}
+" easymotion {{{
+Bundle 'Lokaltog/vim-easymotion.git'
+
+let g:EasyMotion_leader_key = '<Leader>e'
+
+" easymotion }}}
+" golden_ratio {{{
+Bundle 'roman/golden-ratio.git'
+
+" to turn off
+"let g:loaded_golden_ratio = 1
+" to turn off autocommand events
+"let g:golden_ratio_autocommand = 0
+
+" golden_ratio }}}
+" LatexBox {{{
+" All .tex specific key mappings are in ~/.vim/ftplugin/tex.vim
+Bundle 'vim-scripts/LaTeX-Box.git'
+
+let g:LatexBox_viewer = 'skim'
+let g:LatexBox_latexmk_options = '-pvc' 
+let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\(\[.*\]\)\{0,2}\*\?\_\s*{'
+
+" LatexBox }}}
+" syntastic {{{
+"Bundle 'scrooloose/syntastic.git'
+
+"let g:syntastic_auto_loc_list=1
+"let g:syntastic_enable_signs=1
+"let g:syntastic_quiet_warnings=1
+"" Tell Syntastic to ignore Sass:
+"let g:syntastic_disabled_filetypes = ['sass', 'rb']
+
+" syntastic }}}
+" sweet_rspec_vim {{{
+"Bundle 'duskhacker/sweet-rspec-vim'
+
+"set macmeta
+"(CMD-r)  or (Apple-r)
+"map <D-r> :SweetVimRspecRunFile<CR>
+"(SHIFT-CMD-r) 
+"map <D-R> :SweetVimRspecRunFocused<CR>
+"(OPT-CMD-r)
+"map <M-D-r> :SweetVimRspecRunPrevious<CR>
+
+" sweet_rspec_vim }}}
+" Rainbow_Parenthesis {{{
+"Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
+
+"function RainbowParenthesesOn()
+"  "call rainbow_parenthsis#LoadSquare ()
+"  call rainbow_parenthsis#LoadRound ()
+"  call rainbow_parenthsis#Activate ()
+"endfunction
+"
+"nmap <leader>mr :call RainbowParenthesesOn()<CR>
+
+" Rainbow_Parenthesis }}}
+" vim_flog {{{
+"Bundle 'fousa/vim-flog.git'
+
+"silent exe 'g:flog_enable'
+
+" vim_flog }}}
+" taglist {{{
+"Bundle 'vim-scripts/taglist.vim'
+
+"nnoremap <silent> <leader>mtl :TlistToggle<CR>
+"let Tlist_GainFocus_On_ToggleOpen=1
+
+" taglist }}}
+" ctrlp_settings {{{
+"Bundle 'kien/ctrlp.vim.git'
+
+"set wildignore+=*/.git/*
+"let g:ctrlp_working_path_mode = 2
+"let g:ctrlp_persistent_input = 0
+
+" ctrlp_settings }}}
+
+"Bundle 'tpope/vim-surround.git'
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-commentary.git'
-Bundle 'vim-scripts/taglist.vim'
-" |taglist|
 Bundle 'vim-scripts/Align.git'
 Bundle 'ervandew/supertab.git'
 Bundle 'vim-scripts/bufexplorer.zip.git'
-Bundle 'scrooloose/nerdtree.git'
-" |NERDTree|
-Bundle 'scrooloose/syntastic.git'
-" |syntastic|
-Bundle 'Lokaltog/vim-easymotion.git'
-" |easymotion|
 Bundle 'sjbach/lusty.git'
-Bundle 'roman/golden-ratio.git'
-" |golden_ratio|
 Bundle 'charlietanksley/snipmate.vim.git'
 Bundle 'charlietanksley/simplefold.git'
 
 " Ruby
-Bundle 'tpope/vim-endwise.git'
-Bundle 'tpope/vim-rake.git'
+"Bundle 'tpope/vim-endwise.git'
+"Bundle 'tpope/vim-rake.git'
 Bundle 'tpope/vim-rails.git'
-Bundle 'duskhacker/sweet-rspec-vim'
-" |sweet_rspec_vim|
-Bundle 'fousa/vim-flog.git'
-" |vim_flog|
 
 " Scheme
-Bundle 'charlietanksley/slimv.vim.git'
-Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
-" |Rainbow_Parenthesis|
+"Bundle 'charlietanksley/slimv.vim.git'
 
 " HTML, CSS, JavaScript, CoffeeScript
-Bundle 'mattn/zencoding-vim'
+"Bundle 'mattn/zencoding-vim'
 Bundle 'bbommarito/vim-slim'
 Bundle 'tpope/vim-ragtag'
 Bundle 'kchmck/vim-coffee-script.git'
@@ -69,8 +153,7 @@ Bundle 'vim-scripts/up.vim.git'
 Bundle 'vim-scripts/ScrollColors.git'
 
 " LaTeX, Textile, Etc.
-Bundle 'vim-scripts/LaTeX-Box.git'
-Bundle 'timcharper/textile.vim.git'
+"Bundle 'timcharper/textile.vim.git'
 
 " END BUNDLES }}}
 " END VUNDLE }}}
@@ -209,87 +292,106 @@ nmap <C-h> <C-w>h
 " END GLOBAL/GENERIC (NON-PLUGIN SPECIFIC) SETTINGS/KEYBINDINGS }}}
 " PLUGIN SPECIFIC BINDINGS AND CONFIGURATIONS {{{
 
-"----------"
-" LatexBox "
-"----------"
-" All .tex specific key mappings are in ~/.vim/ftplugin/tex.vim
-
-let g:LatexBox_viewer = 'skim'
-let g:LatexBox_latexmk_options = '-pvc' 
-let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\(\[.*\]\)\{0,2}\*\?\_\s*{'
-
-"----------"
-" fugitive "
-"----------"
-" These keybindings are all modified from the git-vim plugin:
-" http://github.com/motemen/git-vim/blob/master/plugin/git.vim
-nnoremap <Leader>gd :Gdiff!<Enter>
-nnoremap <Leader>gs :Gstatus<Enter>
-nnoremap <Leader>gl :Glog<Enter>
-nnoremap <Leader>ga :Git add %<CR><CR>
-nnoremap <Leader>gc :Gcommit<Enter>
-nnoremap <Leader>gC :Gcommit -v<Enter>
-
-"----------"
-" NERDTree "
-"----------"
-let NERDTreeShowLineNumbers=1
-let NERDTreeWinSize=20
-nmap <leader>tr :NERDTree<CR>
-
-"-----------------"
-" sweet_rspec_vim "
-"-----------------"
-set macmeta
-"(CMD-r)  or (Apple-r)
-map <D-r> :SweetVimRspecRunFile<CR>
-"(SHIFT-CMD-r) 
-map <D-R> :SweetVimRspecRunFocused<CR>
-"(OPT-CMD-r)
-map <M-D-r> :SweetVimRspecRunPrevious<CR>
-
-"-----------"
-" syntastic "
-"-----------"
-"let g:syntastic_auto_loc_list=1
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
-" Tell Syntastic to ignore Sass:
-let g:syntastic_disabled_filetypes = ['sass', 'rb']
-
-"---------------------"
-" Rainbow_Parenthesis "
-"---------------------"
-function RainbowParenthesesOn()
-  "call rainbow_parenthsis#LoadSquare ()
-  call rainbow_parenthsis#LoadRound ()
-  call rainbow_parenthsis#Activate ()
-endfunction
-
-nmap <leader>mr :call RainbowParenthesesOn()<CR>
-
-"------------"
-" easymotion "
-"------------"
-let g:EasyMotion_leader_key = '<Leader>e'
-
-"----------"
-" vim_flog "
-"----------"
-"silent exe 'g:flog_enable'
-
-"--------------"
-" golden_ratio "
-"--------------"
-" to turn off
-"let g:loaded_golden_ratio = 1
-" to turn off autocommand events
-"let g:golden_ratio_autocommand = 0
-
-"---------"
-" taglist "
-"---------"
-nnoremap <silent> <leader>mtl :TlistToggle<CR>
-let Tlist_GainFocus_On_ToggleOpen=1
 
 " END PLUGIN SPECIFIC BINDINGS AND CONFIGURATIONS }}}
+" STUFF I GRABBED FROM DESTROY ALL SOFTWARE {{{
+" https://www.destroyallsoftware.com/file-navigation-in-vim.html
+
+"" I don't use Command-T right now, maybe I will though?
+"" Open files with <leader>f
+"map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+"" Open files, limited to the directory of the current file, with <leader>gf
+"" This requires the %% mapping found below.
+"map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
+"map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+"map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+"map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
+"map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
+"map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+"map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
+"map <leader>gs :CommandTFlush<cr>\|:CommandT public/stylesheets<cr>
+
+"" Rails specific bindings
+"map <leader>gr :topleft :split config/routes.rb<cr>
+"map <leader>gg :topleft 100 :split Gemfile<cr>
+"
+"" Current routes in a split
+"function! ShowRoutes()
+"  " Requires 'scratch' plugin
+"  :topleft 100 :split __Routes__
+"  " Make sure Vim doesn't write __Routes__ as a file
+"  :set buftype=nofile
+"  " Delete everything
+"  :normal 1GdG
+"  " Put routes output in buffer
+"  :0r! rake -s routes
+"  " Size window to number of lines (1 plus rake output length)
+"  :exec ":normal " . line("$") . "_ "
+"  " Move cursor to bottom
+"  :normal 1GG
+"  " Delete empty trailing line
+"  :normal dd
+"endfunction
+"map <leader>gR :call ShowRoutes()<cr>
+"
+"" Edit or view files in same directory as current file
+"cnoremap %% <C-R>=expand('%:h').'/'<cr>
+"map <leader>e :edit %%
+"map <leader>v :view %%
+"
+"" Make the current window big, but leave others context
+"set winwidth=84
+"" We have to have a winheight bigger than we want to set winminheight. But if
+"" we set winheight to be huge before winminheight, the winminheight set will
+"" fail.
+"set winheight=5
+"set winminheight=5
+"set winheight=999
+"
+"" Run only the tests you want while moving around
+"function! RunTests(filename)
+"    " Write the file and run tests for the given filename
+"    :w
+"    :silent !echo;echo;echo;echo;echo
+"    exec ":!bundle exec rspec " . a:filename
+"endfunction
+"
+"function! SetTestFile()
+"    " Set the spec file that tests will be run for.
+"    let t:grb_test_file=@%
+"endfunction
+"
+"function! RunTestFile(...)
+"    if a:0
+"        let command_suffix = a:1
+"    else
+"        let command_suffix = ""
+"    endif
+"
+"    " Run the tests for the previously-marked file.
+"    let in_spec_file = match(expand("%"), '_spec.rb$') != -1
+"    if in_spec_file
+"        call SetTestFile()
+"    elseif !exists("t:grb_test_file")
+"        return
+"    end
+"    call RunTests(t:grb_test_file . command_suffix)
+"endfunction
+"
+"function! RunNearestTest()
+"    let spec_line_number = line('.')
+"    call RunTestFile(":" . spec_line_number)
+"endfunction
+"
+"" Run this file
+"map <leader>t :call RunTestFile()<cr>
+"" Run only the example under the cursor
+"map <leader>T :call RunNearestTest()<cr>
+"" Run all test files
+"map <leader>a :call RunTests('spec')<cr>
+"
+"" Switch between the last two files	
+""nnoremap <leader><leader> <c-^> 
+
+" END STUFF I GRABBED FROM DESTROY ALL SOFTWARE }}}
+
