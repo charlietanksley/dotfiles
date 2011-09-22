@@ -7,3 +7,5 @@ set line-graphics = yes
 
 # keybindings
 bind generic F !git fetch
+bind generic c !git checkout %(commit)
+#bind generic p !%(commit) | pbcopy
