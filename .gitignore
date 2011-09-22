@@ -5,3 +5,7 @@ tmp/
 .vim/plugin/secret.vim
 .vim/bundle/
 .vim/plugin/ri.vim
+.emacs.d/ac-comphist.dat
+.emacs.d/el-get/
+.emacs.d/elpa/
+.emacs.d/tutorial/
