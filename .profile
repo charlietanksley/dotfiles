@@ -25,7 +25,10 @@ function parse_git_branch {
 ## Aliases {{{
 
 # Emacs from Homebrew
+#alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
+#alias memacs="open ~/Applications/Emacs.app"
 alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
+#alias memacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs"
 
 # must have color ls output
 
@@ -104,6 +107,13 @@ altered_ps1_git()
 }
 
 #}}}
+
+## EMACS
+
+function memacs {
+  /usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs $* &
+  osascript -e "tell application \"System Events\" to set frontmost of process \"Emacs\" to true"
+}
 
 ## TMUXINATOR
 export EDITOR='vim'
