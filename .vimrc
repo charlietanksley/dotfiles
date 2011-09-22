@@ -66,6 +66,20 @@ let g:LatexBox_latexmk_options = '-pvc'
 let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\(\[.*\]\)\{0,2}\*\?\_\s*{'
 
 " LatexBox }}}
+" vim_flog {{{
+Bundle 'fousa/vim-flog.git'
+
+silent exe 'g:flog_enable'
+
+" vim_flog }}}
+" taglist {{{
+Bundle 'vim-scripts/taglist.vim'
+
+nnoremap <silent> <leader>mtl :TlistToggle<CR>
+let Tlist_GainFocus_On_ToggleOpen=1
+
+" taglist }}}
+
 
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-commentary.git'
