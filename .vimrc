@@ -159,6 +159,7 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 let mapleader = "\\"
 let g:mapleader = "\\"
 
+
 " END GLOBAL/GENERIC SETTINGS }}}
 " GLOBAL/GENERIC (NON-PLUGIN SPECIFIC) KEYBINDINGS {{{
 
@@ -274,15 +275,16 @@ nmap <C-h> <C-w>h
 "map <leader>e :edit %%
 "map <leader>v :view %%
 "
-"" Make the current window big, but leave others context
-"set winwidth=84
-"" We have to have a winheight bigger than we want to set winminheight. But if
-"" we set winheight to be huge before winminheight, the winminheight set will
-"" fail.
-"set winheight=5
-"set winminheight=5
-"set winheight=999
-"
+
+" Make the current window big, but leave others context
+set winwidth=84
+" We have to have a winheight bigger than we want to set winminheight. But if
+" we set winheight to be huge before winminheight, the winminheight set will
+" fail.
+set winheight=5
+set winminheight=5
+set winheight=999
+
 "" Run only the tests you want while moving around
 "function! RunTests(filename)
 "    " Write the file and run tests for the given filename
