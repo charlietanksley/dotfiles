@@ -56,6 +56,19 @@ nnoremap <silent> <leader>mtl :TlistToggle<CR>
 let Tlist_GainFocus_On_ToggleOpen=1
 
 " taglist }}}
+" Lusty (Explorer & Juggler) {{{
+Bundle 'sjbach/lusty.git'
+map <leader>ff :LustyFilesystemExplorerFromHere<CR>
+map <leader>fm :LustyFilesystemExplorer app/models<CR>
+map <leader>fc :LustyFilesystemExplorer app/controllers<CR>
+map <leader>fv :LustyFilesystemExplorer app/views<CR>
+map <leader>fh :LustyFilesystemExplorer app/helpers<CR>
+map <leader>fl :LustyFilesystemExplorer lib<CR>
+map <leader>fp :LustyFilesystemExplorer public<CR>
+map <leader>fs :LustyFilesystemExplorer specs<CR>
+map <leader>ft :LustyFilesystemExplorer test<CR>
+
+" Lusty (Explorer & Juggler) }}}
 
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-commentary.git'
