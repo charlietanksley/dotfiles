@@ -72,10 +72,8 @@ map <leader>ft :LustyFilesystemExplorer test<CR>
 
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-commentary.git'
-" I'm genuinely not sure if I want supertab back or not.  It may be awesome.
-" We'll see.
-"Bundle 'ervandew/supertab.git'
-"Bundle 'vim-scripts/Align.git'
+Bundle 'ervandew/supertab.git'
+Bundle 'vim-scripts/Align.git'
 Bundle 'charlietanksley/snipmate.vim.git'
 Bundle 'tpope/vim-rails.git'
 Bundle 'vim-scripts/bufexplorer.zip.git'
