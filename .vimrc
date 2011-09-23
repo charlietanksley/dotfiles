@@ -94,6 +94,7 @@ Bundle 'juvenn/mustache.vim.git'
 " Colorschemes
 Bundle 'vim-scripts/up.vim.git'
 Bundle 'vim-scripts/ScrollColors.git'
+Bundle 'altercation/vim-colors-solarized'
 
 " END BUNDLES }}}
 " END VUNDLE }}}
