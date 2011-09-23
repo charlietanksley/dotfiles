@@ -34,20 +34,6 @@ nnoremap <Leader>gc :Gcommit<Enter>
 nnoremap <Leader>gC :Gcommit -v<Enter>
 
 " fugitive }}}
-" NERDTree {{{
-Bundle 'scrooloose/nerdtree.git'
-
-let NERDTreeShowLineNumbers=1
-let NERDTreeWinSize=20
-nmap <leader>tr :NERDTree<CR>
-
-" NERDTree }}}
-" easymotion {{{
-Bundle 'Lokaltog/vim-easymotion.git'
-
-let g:EasyMotion_leader_key = '<Leader>e'
-
-" easymotion }}}
 " LatexBox {{{
 " All .tex specific key mappings are in ~/.vim/ftplugin/tex.vim
 Bundle 'vim-scripts/LaTeX-Box.git'
@@ -90,25 +76,16 @@ map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
 
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-commentary.git'
-Bundle 'vim-scripts/Align.git'
-Bundle 'ervandew/supertab.git'
-Bundle 'vim-scripts/bufexplorer.zip.git'
-Bundle 'sjbach/lusty.git'
+"Bundle 'ervandew/supertab.git'
 Bundle 'charlietanksley/snipmate.vim.git'
-Bundle 'charlietanksley/simplefold.git'
-
-" Ruby
 Bundle 'tpope/vim-rails.git'
 
 " HTML, CSS, JavaScript, CoffeeScript
 Bundle 'bbommarito/vim-slim'
-Bundle 'tpope/vim-ragtag'
-Bundle 'kchmck/vim-coffee-script.git'
 Bundle 'pangloss/vim-javascript'
 Bundle 'juvenn/mustache.vim.git'
 
 " Colorschemes
-Bundle 'vim-scripts/up.vim.git'
 Bundle 'vim-scripts/ScrollColors.git'
 Bundle 'altercation/vim-colors-solarized'
 
