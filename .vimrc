@@ -76,6 +76,8 @@ map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
 
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-commentary.git'
+" I'm genuinely not sure if I want supertab back or not.  It may be awesome.
+" We'll see.
 "Bundle 'ervandew/supertab.git'
 Bundle 'charlietanksley/snipmate.vim.git'
 Bundle 'tpope/vim-rails.git'
@@ -157,7 +159,6 @@ set foldmethod=marker "alternatives: indent, syntax, marker (uses `{{{` to open 
 " Git stuff "
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-
 
 let mapleader = ","
 let g:mapleader = ","
@@ -273,7 +274,7 @@ nmap <C-h> <C-w>h
 "map <leader>gR :call ShowRoutes()<cr>
 "
 "" Edit or view files in same directory as current file
-"cnoremap %% <C-R>=expand('%:h').'/'<cr>
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
 "map <leader>e :edit %%
 "map <leader>v :view %%
 "
