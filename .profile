@@ -1,6 +1,4 @@
-#export PATH=$PATH:~/.cabal/bin:~/.bin
 export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin:/usr/local/share/npm/bin:~/.git-achievements:~/bin
-#export PATH=/usr/local/bin:$PATH:~/.cabal/bin/:~/.bin/:/usr/local/sbin:~/.git-achievements
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
 export RBXOPT=-Xrbc.db=$HOME/.rbx
 
@@ -18,8 +16,8 @@ function parse_git_branch {
   [[ $branch ]] && echo "[$branch$(parse_git_dirty)]"
 }
 
-#export PS1='\n\[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)\n$ '
-#export PS2='more => '
+export PS1='\n\[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)\n$ '
+export PS2='more => '
 
 # }}}
 ## Aliases {{{
@@ -122,9 +120,5 @@ export EDITOR='vim'
 ## DEVELOPMENT
 export ADMIN_PASSWORD='password'
 
-## RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-source "$rvm_path/contrib/ps1_functions"
-export PS1='\n[$(ps1_rvm)] $(altered_ps1_git)$(ps1_git_status)\n\[\033[1;33m\]\w\[\033[0m\]\n$ ' 
-export PS2='more => '
+#export PS1='\n$(altered_ps1_git)$(ps1_git_status)\n\[\033[1;33m\]\w\[\033[0m\]\n$ ' 
+#export PS2='more => '
