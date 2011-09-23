@@ -26,12 +26,12 @@ Bundle 'gmarik/vundle.git'
 " http://github.com/motemen/git-vim/blob/master/plugin/git.vim
 Bundle 'tpope/vim-fugitive.git'
 
-nnoremap <Leader>gd :Gdiff!<Enter>
-nnoremap <Leader>gs :Gstatus<Enter>
-nnoremap <Leader>gl :Glog<Enter>
-nnoremap <Leader>ga :Git add %<CR><CR>
-nnoremap <Leader>gc :Gcommit<Enter>
-nnoremap <Leader>gC :Gcommit -v<Enter>
+nnoremap <leader>gd :Gdiff!<Enter>
+nnoremap <leader>gs :Gstatus<Enter>
+nnoremap <leader>gl :Glog<Enter>
+nnoremap <leader>ga :Git add %<CR><CR>
+nnoremap <leader>gc :Gcommit<Enter>
+nnoremap <leader>gC :Gcommit -v<Enter>
 
 " fugitive }}}
 " LatexBox {{{
@@ -64,7 +64,7 @@ Bundle 'wincent/Command-T.git'
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 " Open files, limited to the directory of the current file, with <leader>gf
 " This requires the %% mapping found below.
-map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
+map <leader>gt :CommandTFlush<cr>\|:CommandT %%<cr>
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
 "map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
 map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
@@ -79,13 +79,18 @@ Bundle 'tpope/vim-commentary.git'
 " I'm genuinely not sure if I want supertab back or not.  It may be awesome.
 " We'll see.
 "Bundle 'ervandew/supertab.git'
+"Bundle 'vim-scripts/Align.git'
 Bundle 'charlietanksley/snipmate.vim.git'
 Bundle 'tpope/vim-rails.git'
+Bundle 'vim-scripts/bufexplorer.zip.git'
+Bundle 'sjbach/lusty.git'
 
 " HTML, CSS, JavaScript, CoffeeScript
 Bundle 'bbommarito/vim-slim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'juvenn/mustache.vim.git'
+Bundle 'tpope/vim-ragtag'
+Bundle 'kchmck/vim-coffee-script.git'
 
 " Colorschemes
 Bundle 'vim-scripts/ScrollColors.git'
