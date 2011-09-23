@@ -162,7 +162,7 @@ inoremap ;; <Esc>
 noremap <Up> gk 
 noremap <Down> gj
 noremap <silent> <Leader>wl :call ToggleWrap()<CR>
-function ToggleWrap()
+function! ToggleWrap()
   if &wrap
     echo "Wrap OFF"
     setlocal nowrap
