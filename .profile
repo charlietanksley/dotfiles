@@ -52,7 +52,6 @@ altered_ps1_git()
   esac
 
   [[ $color -gt 0 ]] &&
-    #printf "\[\033[${attr}${color}m\](git:${branch}$(ps1_git_status):$sha1)\[\033[0m\] "
     printf "\033[${attr}${color}m(git:${branch}$(ps1_git_status):$sha1)\033[0m "
 }
 
@@ -89,8 +88,14 @@ alias m='mutt'
 
 # make bundle exec easer to use:
 alias be='bundle exec'
-alias bep='bundle exec padrino'
-alias p='padrino'
+
+# Padrino
+if [ -e "$(pwd)/bin/padrino" ]; then
+  alias p="$(pwd)/bin/padrino"
+else
+  alias p="bundle exec padrino"
+fi
+
 
 # Alias git to hub, because Github is our friend
 alias git='hub'
