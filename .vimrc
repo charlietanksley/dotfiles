@@ -69,6 +69,24 @@ map <leader>fs :LustyFilesystemExplorer specs<CR>
 map <leader>ft :LustyFilesystemExplorer test<CR>
 
 " Lusty (Explorer & Juggler) }}}
+" Rainbow Parenthesis {{{
+Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
+
+function! RainbowOn()
+  :call rainbow_parenthsis#LoadRound()
+  :call rainbow_parenthsis#LoadSquare()
+  :call rainbow_parenthsis#LoadBraces()
+  :call rainbow_parenthsis#Activate()
+endfunction
+
+function! RainbowOff()
+  :call rainbow_parenthsis#Clear()
+endfunction
+
+map <leader>mr :call RainbowOn()<CR>
+map <leader>nr :call RainbowOff()<CR>
+
+" Rainbow Parenthesis }}}
 
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-commentary.git'
