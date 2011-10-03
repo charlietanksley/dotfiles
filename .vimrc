@@ -87,6 +87,12 @@ map <leader>mr :call RainbowOn()<CR>
 map <leader>nr :call RainbowOff()<CR>
 
 " Rainbow Parenthesis }}}
+" Slimv {{{
+Bundle 'charlietanksley/slimv.vim.git'
+
+au BufNewFile,BufRead *.scm call PareditInitBuffer()
+
+" Slimv }}}
 
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-commentary.git'
@@ -177,8 +183,8 @@ set foldmethod=marker "alternatives: indent, syntax, marker (uses `{{{` to open 
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = "\\"
+let g:mapleader = "\\"
 
 " END GLOBAL/GENERIC SETTINGS }}}
 " GLOBAL/GENERIC (NON-PLUGIN SPECIFIC) KEYBINDINGS {{{
