@@ -55,6 +55,26 @@
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+; I've installed a few packages via package.el, a few by hand, and a few by el-get.  This could
+; be a disaster.
+
+;;;;;;;;;;;;;;;;;;
+; Chicken Scheme ;
+;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/.emacs.d/packages/swank-chicken/")
+(add-to-list 'load-path "/usr/local/lib/chicken/6/")
+;(load 'swank-chicken)
+;(slime-setup '(slime-fancy slime-banner))   ; If you don't use SLIME already
+                       ; Refer to the SLIME manual for setup instructions
+
+(autoload 'chicken-slime "chicken-slime" "SWANK backend for Chicken" t)
+
+;; If your csi executable is in a non-standard location
+(setq slime-csi-path "/usr/local/bin/csi")
+
+(add-hook 'scheme-mode-hook
+          (lambda ()
+            (slime-mode t)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; My el-get stuff
@@ -80,6 +100,7 @@
                 rainbow-delimiters
                 ri-emacs
                 auto-complete
+                scheme-complete
                 color-theme
                 color-theme-solarized))
 

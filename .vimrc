@@ -44,9 +44,9 @@ let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\(\[.*\]\)\{0,2}\*\?\_\s*{'
 
 " LatexBox }}}
 " vim_flog {{{
-Bundle 'fousa/vim-flog.git'
+"Bundle 'fousa/vim-flog.git'
 
-silent exe 'g:flog_enable'
+"silent exe 'g:flog_enable'
 
 " vim_flog }}}
 " taglist {{{
@@ -93,6 +93,27 @@ Bundle 'charlietanksley/slimv.vim.git'
 au BufNewFile,BufRead *.scm call PareditInitBuffer()
 
 " Slimv }}}
+" HaskellMode {{{
+"Bundle 'ehamberg/haskellmode-vim.git'
+"
+"au Bufenter *.hs compiler ghc
+"" Configure browser for haskell_doc.vim
+"let g:haddock_browser = "open"
+"let g:haddock_browser_callformat = "%s %s"
+
+" END HaskellMode }}}
+" Superior Haskell Interaction Mode {{{
+"Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM.git'
+"
+""let g:shim_quickfix = "true"
+""let g:shim_defaultWindowSize = 15
+"
+"autocmd FileType haskell nmap <C-c><C-l> :GhciRange<CR>
+"autocmd FileType haskell vmap <C-c><C-l> :GhciRange<CR>
+"autocmd FileType haskell nmap <C-c><C-f> :GhciFile<CR>
+"autocmd FileType haskell nmap <C-c><C-r> :GhciReload<CR>
+
+" Superior Haskell Interaction Mode }}}
 
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'tpope/vim-commentary.git'
