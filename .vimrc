@@ -58,17 +58,23 @@ let Tlist_GainFocus_On_ToggleOpen=1
 " taglist }}}
 " Lusty (Explorer & Juggler) {{{
 Bundle 'sjbach/lusty.git'
-map <leader>ff :LustyFilesystemExplorerFromHere<CR>
-map <leader>fm :LustyFilesystemExplorer app/models<CR>
-map <leader>fc :LustyFilesystemExplorer app/controllers<CR>
-map <leader>fv :LustyFilesystemExplorer app/views<CR>
-map <leader>fh :LustyFilesystemExplorer app/helpers<CR>
-map <leader>fl :LustyFilesystemExplorer lib<CR>
-map <leader>fp :LustyFilesystemExplorer public<CR>
-map <leader>fs :LustyFilesystemExplorer specs<CR>
-map <leader>ft :LustyFilesystemExplorer test<CR>
+"map <leader>ff :LustyFilesystemExplorerFromHere<CR>
+"map <leader>fm :LustyFilesystemExplorer app/models<CR>
+"map <leader>fc :LustyFilesystemExplorer app/controllers<CR>
+"map <leader>fv :LustyFilesystemExplorer app/views<CR>
+"map <leader>fh :LustyFilesystemExplorer app/helpers<CR>
+"map <leader>fl :LustyFilesystemExplorer lib<CR>
+"map <leader>fp :LustyFilesystemExplorer public<CR>
+"map <leader>fs :LustyFilesystemExplorer specs<CR>
+"map <leader>ft :LustyFilesystemExplorer test<CR>
 
 " Lusty (Explorer & Juggler) }}}
+" ctrlp {{{
+
+"Bundle 'kien/ctrlp.vim.git'
+"set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+
+" ctrlp }}}
 " Rainbow Parenthesis {{{
 Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
 
@@ -114,9 +120,32 @@ au BufNewFile,BufRead *.scm call PareditInitBuffer()
 "autocmd FileType haskell nmap <C-c><C-r> :GhciReload<CR>
 
 " Superior Haskell Interaction Mode }}}
+" Textile {{{
+Bundle 'vim-scripts/Textile-for-VIM.git'
 
-Bundle 'tpope/vim-unimpaired.git'
+" :TextilePreview     - Render the current buffer to a temp file, and open it in
+" your web browser (OSX only)
+
+" <Leader>rp
+
+" :TextileRenderTab   - ... to a new tab
+
+" <Leader>rt
+
+" :TextileRenderFile  - ... to a file
+
+"   <Leader>rf
+ 
+"
+" Textile }}}
+" Commentary {{{
 Bundle 'tpope/vim-commentary.git'
+autocmd FileType scheme set commentstring=;\ %s
+
+" }}}
+
+Bundle 'charlietanksley/simplefold'
+Bundle 'tpope/vim-unimpaired.git'
 Bundle 'ervandew/supertab.git'
 Bundle 'vim-scripts/Align.git'
 Bundle 'charlietanksley/snipmate.vim.git'

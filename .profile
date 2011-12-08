@@ -60,7 +60,8 @@ function cwt_rbenv_version {
   rbenv version-name
 }
 
-export PS1='\n$(cwt_rbenv_version) \[\033[1;33m\]\W\[\033[0m\] $(altered_ps1_git)\n$ '
+#export PS1='\n$(cwt_rbenv_version) \[\033[1;33m\]\W\[\033[0m\] $(altered_ps1_git)\n$ '
+export PS1='\n$(rbenv version-name) \[\033[1;33m\]\W\[\033[0m\] $(altered_ps1_git)\n$ '
 export PS2='more => '
 
 # }}}
