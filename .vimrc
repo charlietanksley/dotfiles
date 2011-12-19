@@ -207,9 +207,6 @@ set mouse=a
 set guioptions-=m
 set guioptions-=T
 
-" use Perl/Python compatible regex formatting, not Vim's version 
-nnoremap / /\v
-vnoremap / /\v
 " make regex searching work better w/cases--assume mixed case unless using
 " caps in search string
 set ignorecase
@@ -217,6 +214,8 @@ set smartcase
 
 set incsearch
 syntax on
+set hlsearch
+map - :nohl<CR>
 
 set linebreak
 
