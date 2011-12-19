@@ -145,12 +145,6 @@ autocmd FileType scheme set commentstring=;\ %s
 " }}}
 " Experiments
 Bundle "michaeljsmith/vim-indent-object"
-" git-time-lapse {{{
-
-Bundle 'http://www.tidraso.co.uk/repository/vim-plugin/'
-map <leader>gt :call TimeLapse()<cr>
-
-" }}}
 " Gundo {{{
 
 Bundle 'sjl/gundo.vim'
