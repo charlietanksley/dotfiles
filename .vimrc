@@ -143,6 +143,20 @@ Bundle 'tpope/vim-commentary.git'
 autocmd FileType scheme set commentstring=;\ %s
 
 " }}}
+" Experiments
+Bundle "michaeljsmith/vim-indent-object"
+" git-time-lapse {{{
+
+Bundle 'http://www.tidraso.co.uk/repository/vim-plugin/'
+map <leader>gt :call TimeLapse()<cr>
+
+" }}}
+" Gundo {{{
+
+Bundle 'sjl/gundo.vim'
+nnoremap <F5> :GundoToggle<CR>
+
+" }}}
 
 Bundle 'charlietanksley/simplefold'
 Bundle 'tpope/vim-unimpaired.git'
