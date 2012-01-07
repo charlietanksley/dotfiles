@@ -70,7 +70,7 @@ export PS2='more => '
 # Emacs from Homebrew
 #alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
 #alias memacs="open ~/Applications/Emacs.app"
-alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
+# alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
 #alias memacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs"
 
 # must have color ls output
@@ -114,13 +114,23 @@ alias incomplete='bin/mspec tag --list incomplete :files'
 #fi
 
 # }}}
+## EMACS {{{
 
-## EMACS
+function se {
+  /usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs --daemon
+}
 
-function memacs {
-  /usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs $* &
+function me {
+  /usr/local/Cellar/emacs/HEAD/bin/emacsclient -c -n -a '' $* &
   osascript -e "tell application \"System Events\" to set frontmost of process \"Emacs\" to true"
 }
+
+function e {
+  /usr/local/Cellar/emacs/HEAD/bin/emacsclient -c -nw -a '' $*
+}
+
+# }}}
+
 
 ## TMUXINATOR
 export EDITOR='vim'
