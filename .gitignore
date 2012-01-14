@@ -9,3 +9,5 @@ tmp/
 .emacs.d/el-get/
 .emacs.d/elpa/
 .emacs.d/tutorial/
+.emacs.d/auto-save-list/
+.emacs.d/eshell/
