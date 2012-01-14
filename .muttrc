@@ -103,10 +103,10 @@ macro pager @vi "simaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
 macro pager @gi "simaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
 
 ## Move emails to current semester folder; also, navigate there
-macro index @gc "simaps://charlie.tanksley@imap.gmail.com/fall2011<return>"
-macro pager @gc "simaps://charlie.tanksley@imap.gmail.com/fall2011<return>"
-macro index ggc "cimaps://charlie.tanksley@imap.gmail.com/fall2011<return>"
-macro pager ggc "cimaps://charlie.tanksley@imap.gmail.com/fall2011<return>"
+macro index @gc "simaps://charlie.tanksley@imap.gmail.com/spring2011<return>"
+macro pager @gc "simaps://charlie.tanksley@imap.gmail.com/spring2011<return>"
+macro index ggc "cimaps://charlie.tanksley@imap.gmail.com/spring2011<return>"
+macro pager ggc "cimaps://charlie.tanksley@imap.gmail.com/spring2011<return>"
 
 ## Reply all
 bind index gr group-reply
