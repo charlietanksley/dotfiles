@@ -151,6 +151,8 @@ Bundle 'sjl/gundo.vim'
 nnoremap <F5> :GundoToggle<CR>
 
 " }}}
+Bundle 'kikijump/tslime.vim.git'
+Bundle 'jgdavey/vim-turbux.git'
 
 Bundle 'charlietanksley/simplefold'
 Bundle 'tpope/vim-unimpaired.git'

@@ -129,6 +129,10 @@ function e {
   /usr/local/Cellar/emacs/HEAD/bin/emacsclient -c -nw -a '' $*
 }
 
+function ke {
+ kill `ps -A | grep emacs | grep -v grep | awk '{print $1}'`
+}
+
 # }}}
 
 
