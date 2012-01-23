@@ -50,7 +50,8 @@
 ;; Package Management ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
 
-; I'm using both elpa and el-get for package management.  Why not?  What could go wrong?!
+; I'm using both elpa and el-get (and some roll your own!) for package
+; management.  Why not?  What could go wrong?!
 
   ; ELPA
   (require 'package)
@@ -74,6 +75,8 @@
                   color-theme
                   color-theme-solarized
                   color-theme-ir-black
+                  ; CSS and SCSS
+                  scss-mode
                   ; text editing
                   markdown-mode
                   ; Ruby
