@@ -67,14 +67,7 @@ export PS2='more => '
 # }}}
 ## Aliases {{{
 
-# Emacs from Homebrew
-#alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
-#alias memacs="open ~/Applications/Emacs.app"
-# alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
-#alias memacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs"
-
 # must have color ls output
-
 alias ls='ls -G'
 
 # git aliases
@@ -89,6 +82,8 @@ alias m='mutt'
 
 # make bundle exec easer to use:
 alias be='bundle exec'
+# binstubs!
+alias bi='bundle install --binstubs b'
 
 # Padrino
 if [ -e "$(pwd)/bin/padrino" ]; then
