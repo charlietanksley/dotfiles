@@ -173,6 +173,9 @@ Bundle 'kchmck/vim-coffee-script.git'
 " Colorschemes
 Bundle 'vim-scripts/ScrollColors.git'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-scripts/Mustang2.git'
+Bundle 'vim-scripts/Ambient-Color-Scheme.git'
+Bundle 'vim-scripts/BusyBee.git'
 
 " END BUNDLES }}}
 " END VUNDLE }}}
