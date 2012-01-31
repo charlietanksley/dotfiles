@@ -12,3 +12,4 @@ tmp/
 .emacs.d/auto-save-list/
 .emacs.d/eshell/
 .emacs.d/swank/
+.emacs.d/url/
