@@ -1,0 +1,9 @@
+#!/bin/sh
+
+args=$*
+cp $args ~/Documents/web/charlietanksley_net/source/pdfs/logic/
+
+cd ~/Documents/web/charlietanksley_net
+git add source/pdfs/logic/
+git commit -m "add $args to site"
+rake deploy
