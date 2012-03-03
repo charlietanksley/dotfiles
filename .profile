@@ -70,6 +70,9 @@ export PS2='more => '
 # must have color ls output
 alias ls='ls -G'
 
+# When do you not want tig --all
+alias tig='tig --all'
+
 # git aliases
 alias gl='git log --oneline'
 alias gln='git log --oneline --name-only'
