@@ -143,6 +143,15 @@ Bundle 'tpope/vim-commentary.git'
 autocmd FileType scheme set commentstring=;\ %s
 
 " }}}
+" Ack {{{
+Bundle 'mileszs/ack.vim.git'
+
+" }}}
+" Buffergator {{{
+Bundle 'jeetsukumaran/vim-buffergator.git'
+
+" }}}
+
 " Experiments
 Bundle "michaeljsmith/vim-indent-object"
 " Gundo {{{
@@ -160,7 +169,7 @@ Bundle 'ervandew/supertab.git'
 Bundle 'vim-scripts/Align.git'
 Bundle 'charlietanksley/snipmate.vim.git'
 Bundle 'tpope/vim-rails.git'
-Bundle 'vim-scripts/bufexplorer.zip.git'
+" Bundle 'vim-scripts/bufexplorer.zip.git'
 Bundle 'sjbach/lusty.git'
 
 " HTML, CSS, JavaScript, CoffeeScript
