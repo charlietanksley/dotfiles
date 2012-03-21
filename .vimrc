@@ -43,12 +43,6 @@ let g:LatexBox_latexmk_options = '-pvc'
 let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\(\[.*\]\)\{0,2}\*\?\_\s*{'
 
 " LatexBox }}}
-" vim_flog {{{
-"Bundle 'fousa/vim-flog.git'
-
-"silent exe 'g:flog_enable'
-
-" vim_flog }}}
 " taglist {{{
 Bundle 'vim-scripts/taglist.vim'
 
@@ -69,12 +63,6 @@ Bundle 'sjbach/lusty.git'
 "map <leader>ft :LustyFilesystemExplorer test<CR>
 
 " Lusty (Explorer & Juggler) }}}
-" ctrlp {{{
-
-"Bundle 'kien/ctrlp.vim.git'
-"set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
-
-" ctrlp }}}
 " Rainbow Parenthesis {{{
 Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
 
@@ -99,27 +87,6 @@ Bundle 'charlietanksley/slimv.vim.git'
 au BufNewFile,BufRead *.scm call PareditInitBuffer()
 
 " Slimv }}}
-" HaskellMode {{{
-"Bundle 'ehamberg/haskellmode-vim.git'
-"
-"au Bufenter *.hs compiler ghc
-"" Configure browser for haskell_doc.vim
-"let g:haddock_browser = "open"
-"let g:haddock_browser_callformat = "%s %s"
-
-" END HaskellMode }}}
-" Superior Haskell Interaction Mode {{{
-"Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM.git'
-"
-""let g:shim_quickfix = "true"
-""let g:shim_defaultWindowSize = 15
-"
-"autocmd FileType haskell nmap <C-c><C-l> :GhciRange<CR>
-"autocmd FileType haskell vmap <C-c><C-l> :GhciRange<CR>
-"autocmd FileType haskell nmap <C-c><C-f> :GhciFile<CR>
-"autocmd FileType haskell nmap <C-c><C-r> :GhciReload<CR>
-
-" Superior Haskell Interaction Mode }}}
 " Textile {{{
 Bundle 'vim-scripts/Textile-for-VIM.git'
 
@@ -163,14 +130,12 @@ nnoremap <F5> :GundoToggle<CR>
 Bundle 'kikijump/tslime.vim.git'
 Bundle 'jgdavey/vim-turbux.git'
 
-Bundle 'charlietanksley/simplefold'
+" Bundle 'charlietanksley/simplefold'
 Bundle 'tpope/vim-unimpaired.git'
-Bundle 'ervandew/supertab.git'
+" Bundle 'ervandew/supertab.git'
 Bundle 'vim-scripts/Align.git'
 Bundle 'charlietanksley/snipmate.vim.git'
 Bundle 'tpope/vim-rails.git'
-" Bundle 'vim-scripts/bufexplorer.zip.git'
-Bundle 'sjbach/lusty.git'
 
 " HTML, CSS, JavaScript, CoffeeScript
 Bundle 'bbommarito/vim-slim'
