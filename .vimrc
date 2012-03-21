@@ -306,17 +306,16 @@ noremap  <buffer> <silent> $ g$
 " map for omnicomplete
 inoremap <F9> <C-X><C-O>
 
-"" These all come from http://jetpackweb.com/blog/2010/02/15/vim-tips-for-ruby/
-" bind control-l to hashrocket
-imap <C-l> <Space>=><Space>
-" convert word into ruby symbol
-imap <C-k> <C-o>b:<Esc>Ea
-nmap <C-k> lbi:<Esc>E
-
-" Easier non-interactive command insertion
-nnoremap <Space> :
-
+" Clean those paragraphs easily
 nmap Q gwip
+
+" Why doesn't Y work like D and C?
+nmap Y y$
+
+" I think $ should work like g_
+nnoremap $ g_
+
+" Easier split navigation
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
