@@ -105,6 +105,13 @@
 (setq org-directory "~/Dropbox/org")
 (setq org-mobile-inbox-for-pull "~/Dropbox/org/inbox.org")
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+(require 'org-install)
+(require 'org-habit)
+;(require 'org-drill)
 
 
 ;;;;;;;;;
@@ -280,7 +287,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files nil))
+ '(org-agenda-files nil)
+ '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-drill))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

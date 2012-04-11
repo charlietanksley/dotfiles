@@ -12,7 +12,7 @@ source $alias_file
 #--------------#
 # Basic config
 #--------------#
-set editor = vim#"/Applications/MacVim.app/Contents/MacOS/Vim"
+set editor = vim
 set edit_headers = yes  # show headers in vim when editing
                           # mail.vim function puts cursor below this, however
 set mark_old = no       # no distinction between new unread and old unread
@@ -23,7 +23,7 @@ set sendmail_wait=-1    # Don't wait around for sendmail.
 set mail_check = 60     # Check for new mail every 60 seconds
 set strict_threads
 set imap_list_subscribed = no
-set signature="~/.mutt/.signature"
+# set signature="~/.mutt/.signature"
 
 #-----------------------------#
 # Collapse threads by default #
@@ -103,10 +103,10 @@ macro pager @vi "simaps://cwt7h@virginia.edu@imap.gmail.com/INBOX<return>"
 macro pager @gi "simaps://charlie.tanksley@imap.gmail.com/INBOX<return>"
 
 ## Move emails to current semester folder; also, navigate there
-macro index @gc "simaps://charlie.tanksley@imap.gmail.com/spring2011<return>"
-macro pager @gc "simaps://charlie.tanksley@imap.gmail.com/spring2011<return>"
-macro index ggc "cimaps://charlie.tanksley@imap.gmail.com/spring2011<return>"
-macro pager ggc "cimaps://charlie.tanksley@imap.gmail.com/spring2011<return>"
+macro index @gc "simaps://charlie.tanksley@imap.gmail.com/spring2012<return>"
+macro pager @gc "simaps://charlie.tanksley@imap.gmail.com/spring2012<return>"
+macro index ggc "cimaps://charlie.tanksley@imap.gmail.com/spring2012<return>"
+macro pager ggc "cimaps://charlie.tanksley@imap.gmail.com/spring2012<return>"
 
 ## Reply all
 bind index gr group-reply

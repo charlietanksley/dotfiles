@@ -115,7 +115,16 @@ Bundle 'mileszs/ack.vim.git'
 
 " }}}
 " Buffergator {{{
-Bundle 'jeetsukumaran/vim-buffergator.git'
+" Bundle 'jeetsukumaran/vim-buffergator.git'
+
+" }}}
+" Bufexplorer {{{
+Bundle 'thisivan/vim-bufexplorer.git'
+
+" }}}
+" IO {{{
+
+Bundle 'vim-scripts/Io-programming-language-syntax.git'
 
 " }}}
 
@@ -143,6 +152,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'juvenn/mustache.vim.git'
 Bundle 'tpope/vim-ragtag'
 Bundle 'kchmck/vim-coffee-script.git'
+Bundle 'mattn/zencoding-vim.git'
 
 " Colorschemes
 Bundle 'vim-scripts/ScrollColors.git'
