@@ -226,6 +226,19 @@ set foldcolumn=4
 set foldmethod=syntax "alternatives: indent, syntax, marker (uses `{{{` to open and `}}}` to close)
 autocmd FileType tex set foldmethod=marker
 
+" Public: Toggle between syntax and marker foldmethods.
+let b:currently_using_synatx_folding=1
+function! ToggleFoldMethod()
+  if exists("b:currently_using_synatx_folding")
+    set foldmethod=marker
+    unlet b:currently_using_synatx_folding
+  else
+    set foldmethod=syntax
+    let b:currently_using_synatx_folding=1
+  endif
+endfunction
+noremap <silent> <Leader>mf :call ToggleFoldMethod()<CR>
+
 " Git stuff "
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
