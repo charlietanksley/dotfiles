@@ -160,6 +160,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/Mustang2.git'
 Bundle 'vim-scripts/Ambient-Color-Scheme.git'
 Bundle 'vim-scripts/BusyBee.git'
+Bundle 'sjl/badwolf'
 
 " END BUNDLES }}}
 " END VUNDLE }}}
