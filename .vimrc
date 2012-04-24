@@ -127,6 +127,17 @@ Bundle 'thisivan/vim-bufexplorer.git'
 Bundle 'vim-scripts/Io-programming-language-syntax.git'
 
 " }}}
+" Vroom test runner {{{
+Bundle 'skalnik/vim-vroom.git'
+
+" unset existing mappings
+let g:vroom_map_keys=0
+
+" set some mappings
+nmap <leader>tr :call vroom#RunTestFile()<CR>
+nmap <leader>tR :call vroom#RunNearestTest()<CR>
+
+" }}}
 
 " Experiments
 Bundle "michaeljsmith/vim-indent-object"
