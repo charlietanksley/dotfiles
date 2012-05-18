@@ -132,6 +132,8 @@ Bundle 'skalnik/vim-vroom.git'
 
 " unset existing mappings
 let g:vroom_map_keys=0
+let g:vroom_use_binstubs=1
+let g:vroom_binstubs_path='./b'
 
 " set some mappings
 nmap <leader>tr :call vroom#RunTestFile()<CR>
