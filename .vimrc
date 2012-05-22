@@ -4,6 +4,9 @@
 set nocompatible
 filetype off
 
+let mapleader = ";"
+let g:mapleader = ";"
+
 "set rtp +=~/.dotfiles/.vim/vundle.git/
 set rtp +=~/.dotfiles/.vim/bundle/vundle/
 call vundle#rc()
@@ -257,15 +260,15 @@ noremap <silent> <Leader>mf :call ToggleFoldMethod()<CR>
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-let mapleader = "\\"
-let g:mapleader = "\\"
+" let mapleader = "\\"
+" let g:mapleader = "\\"
 
 " END GLOBAL/GENERIC SETTINGS }}}
 " GLOBAL/GENERIC (NON-PLUGIN SPECIFIC) KEYBINDINGS {{{
 
 nmap <leader>si :set list!<CR>
 
-inoremap ;; <Esc>
+" inoremap ;; <Esc>
 
 " Cursor movement in word wrap stuff {{{
 noremap <Up> gk 
