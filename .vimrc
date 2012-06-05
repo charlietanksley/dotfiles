@@ -267,9 +267,6 @@ noremap <silent> <Leader>mf :call ToggleFoldMethod()<CR>
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-" let mapleader = "\\"
-" let g:mapleader = "\\"
-
 " END GLOBAL/GENERIC SETTINGS }}}
 " GLOBAL/GENERIC (NON-PLUGIN SPECIFIC) KEYBINDINGS {{{
 
