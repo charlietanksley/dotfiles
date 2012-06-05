@@ -142,6 +142,11 @@ let g:vroom_binstubs_path='./b'
 nmap <leader>tr :call vroom#RunTestFile()<CR>
 nmap <leader>tR :call vroom#RunNearestTest()<CR>
 
+" nmap <leader>td :call vroom#RunTestFileCustom("--drb")<CR>
+" nmap <leader>td :call vroom#RunTestFileCustom(['rspec', 'cucumber'], '--drb')<CR>
+" nmap <leader>tD :call vroom#RunNearestTestCustom(['rspec', 'cucumber'], '--drb')<CR>
+nmap <leader>td :call vroom#RunTestFileDrb()<CR>
+nmap <leader>tD :call vroom#RunNearestTestDrb()<CR>
 " }}}
 
 " Experiments
