@@ -81,7 +81,7 @@ function! RainbowOff()
 endfunction
 
 map <leader>mr :call RainbowOn()<CR>
-map <leader>nr :call RainbowOff()<CR>
+" map <leader>nr :call RainbowOff()<CR>
 
 " Rainbow Parenthesis }}}
 " Slimv {{{
@@ -148,11 +148,10 @@ nmap <leader>tR :call vroom#RunNearestTest()<CR>
 nmap <leader>td :call vroom#RunTestFileDrb()<CR>
 nmap <leader>tD :call vroom#RunNearestTestDrb()<CR>
 " }}}
-" Workflowish {{{
-Bundle 'lukaszkorecki/workflowish.git'
 
-" Workflowish }}}
 " Experiments
+Bundle 'lukaszkorecki/workflowish.git'
+Bundle 'chrisbra/NrrwRgn.git'
 Bundle "michaeljsmith/vim-indent-object"
 " Gundo {{{
 
