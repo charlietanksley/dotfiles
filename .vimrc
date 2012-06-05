@@ -193,7 +193,7 @@ Bundle 'sjl/badwolf'
 filetype plugin indent on
 
 " Use a colorscheme
-colorscheme desert
+colorscheme badwolf
 
 " Non-relative line numbers
 set number
