@@ -117,10 +117,6 @@ autocmd FileType scheme set commentstring=;\ %s
 Bundle 'mileszs/ack.vim.git'
 
 " }}}
-" Buffergator {{{
-" Bundle 'jeetsukumaran/vim-buffergator.git'
-
-" }}}
 " Bufexplorer {{{
 Bundle 'thisivan/vim-bufexplorer.git'
 
@@ -150,6 +146,7 @@ nmap <leader>tD :call vroom#RunNearestTestDrb()<CR>
 " }}}
 
 " Experiments
+Bundle 'kien/ctrlp.vim.git'
 Bundle 'lukaszkorecki/workflowish.git'
 Bundle 'chrisbra/NrrwRgn.git'
 Bundle "michaeljsmith/vim-indent-object"
