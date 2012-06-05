@@ -148,7 +148,10 @@ nmap <leader>tR :call vroom#RunNearestTest()<CR>
 nmap <leader>td :call vroom#RunTestFileDrb()<CR>
 nmap <leader>tD :call vroom#RunNearestTestDrb()<CR>
 " }}}
+" Workflowish {{{
+Bundle 'lukaszkorecki/workflowish.git'
 
+" Workflowish }}}
 " Experiments
 Bundle "michaeljsmith/vim-indent-object"
 " Gundo {{{
