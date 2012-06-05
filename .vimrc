@@ -263,6 +263,9 @@ function! ToggleFoldMethod()
 endfunction
 noremap <silent> <Leader>mf :call ToggleFoldMethod()<CR>
 
+" Open todo list
+nmap <leader>md :e ~/Dropbox/todo.wofl<CR>
+
 " Git stuff "
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
