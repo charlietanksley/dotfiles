@@ -81,7 +81,7 @@ function! RainbowOff()
 endfunction
 
 map <leader>mr :call RainbowOn()<CR>
-map <leader>nr :call RainbowOff()<CR>
+" map <leader>nr :call RainbowOff()<CR>
 
 " Rainbow Parenthesis }}}
 " Slimv {{{
@@ -142,9 +142,16 @@ let g:vroom_binstubs_path='./b'
 nmap <leader>tr :call vroom#RunTestFile()<CR>
 nmap <leader>tR :call vroom#RunNearestTest()<CR>
 
+" nmap <leader>td :call vroom#RunTestFileCustom("--drb")<CR>
+" nmap <leader>td :call vroom#RunTestFileCustom(['rspec', 'cucumber'], '--drb')<CR>
+" nmap <leader>tD :call vroom#RunNearestTestCustom(['rspec', 'cucumber'], '--drb')<CR>
+nmap <leader>td :call vroom#RunTestFileDrb()<CR>
+nmap <leader>tD :call vroom#RunNearestTestDrb()<CR>
 " }}}
 
 " Experiments
+Bundle 'lukaszkorecki/workflowish.git'
+Bundle 'chrisbra/NrrwRgn.git'
 Bundle "michaeljsmith/vim-indent-object"
 " Gundo {{{
 
@@ -185,7 +192,7 @@ Bundle 'sjl/badwolf'
 filetype plugin indent on
 
 " Use a colorscheme
-colorscheme desert
+colorscheme badwolf
 
 " Non-relative line numbers
 set number
