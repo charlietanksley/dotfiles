@@ -181,6 +181,7 @@ Bundle 'vim-scripts/Mustang2.git'
 Bundle 'vim-scripts/Ambient-Color-Scheme.git'
 Bundle 'vim-scripts/BusyBee.git'
 Bundle 'sjl/badwolf'
+Bundle 'chriskempson/vim-tomorrow-theme.git'
 
 " END BUNDLES }}}
 " END VUNDLE }}}
