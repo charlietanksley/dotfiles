@@ -117,10 +117,6 @@ autocmd FileType scheme set commentstring=;\ %s
 Bundle 'mileszs/ack.vim.git'
 
 " }}}
-" Buffergator {{{
-" Bundle 'jeetsukumaran/vim-buffergator.git'
-
-" }}}
 " Bufexplorer {{{
 Bundle 'thisivan/vim-bufexplorer.git'
 
@@ -150,6 +146,7 @@ nmap <leader>tD :call vroom#RunNearestTestDrb()<CR>
 " }}}
 
 " Experiments
+Bundle 'kien/ctrlp.vim.git'
 Bundle 'lukaszkorecki/workflowish.git'
 Bundle 'chrisbra/NrrwRgn.git'
 Bundle "michaeljsmith/vim-indent-object"
@@ -184,6 +181,7 @@ Bundle 'vim-scripts/Mustang2.git'
 Bundle 'vim-scripts/Ambient-Color-Scheme.git'
 Bundle 'vim-scripts/BusyBee.git'
 Bundle 'sjl/badwolf'
+Bundle 'chriskempson/vim-tomorrow-theme.git'
 
 " END BUNDLES }}}
 " END VUNDLE }}}
@@ -263,12 +261,12 @@ function! ToggleFoldMethod()
 endfunction
 noremap <silent> <Leader>mf :call ToggleFoldMethod()<CR>
 
+" Open todo list
+nmap <leader>md :e ~/Dropbox/todo.wofl<CR>
+
 " Git stuff "
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-
-" let mapleader = "\\"
-" let g:mapleader = "\\"
 
 " END GLOBAL/GENERIC SETTINGS }}}
 " GLOBAL/GENERIC (NON-PLUGIN SPECIFIC) KEYBINDINGS {{{
