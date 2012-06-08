@@ -5,11 +5,21 @@ compinit
 # Navigation completion with arrow keys?
 zstyle ':completion:*' menu select
 
-# complete commandline switches
-setopt completealiases
 
-# use emacs keybindings
-bindkey -e
+setopt completealiases                    # complete commandline switches
+
+# CHANGING DIRECTORIES
+setopt autocd                             # `dir` works like `cd dr`
+setopt autopushd                          # make cd push directories onto stack
+setopt pushdignoredups                    # don't push dirs multiple times
+setopt pushdsilent                        # omit printing directory stack
+alias d='dirs -v'
+
+# HISTORY
+setopt histfindnodups                     # don't show duplicates in history search
+
+# KEYBINDINGS
+bindkey -e                                # use emacs keybindings
 
 
 # ZSH! WITH ANTIGEN {{{
