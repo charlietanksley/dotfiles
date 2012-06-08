@@ -66,7 +66,7 @@ function cwt_ruby_version() {
 }
 
 setopt prompt_subst
-PROMPT='%F{blue}%c${vcs_info_msg_0_}%F{blue} %(?/%F{blue}/%F{red})%% %{$reset_color%}'
+PROMPT='%F{yellow}%c${vcs_info_msg_0_}%F{blue} %(?/%F{blue}/%F{red})%% %{$reset_color%}'
 RPROMPT='$(cwt_ruby_version)'
 
 # PROMPT }}}
