@@ -1,6 +1,10 @@
 autoload -U compinit
 compinit
 
+autoload -Uz vcs_info
+
+# autoload -Uz compinstall
+
 
 # Navigation completion with arrow keys?
 zstyle ':completion:*' menu select
@@ -48,26 +52,30 @@ export PATH=~/.git-achievements:$PATH
 
 # PATH }}}
 # PROMPT {{{
-autoload -U promptinit
-promptinit
+
+# Git in the prompt (http://briancarper.net/blog/570/git-info-in-your-zsh-prompt)
+autoload -Uz vcs_info
+ 
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' stagedstr '%F{28}*'
+zstyle ':vcs_info:*' unstagedstr '%F{11}!'
+# zstyle ':vsc_info:git' formats " (%s)-[%b]%u%c-"
+zstyle ':vcs_info:*' enable git
+
+setopt prompt_subst
+PROMPT='%F{blue}%c
+${vcs_info_msg_0_}%F{blue} %(?/%F{blue}/%F{red})%% %{$reset_color%}'
+
+
+# zstyle ':vcs_info:(svn|bzr):*' branchformat '%b%{'${fg[yellow]}'%}:%r'
+
+# autoload -U promptinit
+# promptinit
 
 
 # function cwt_rbenv_version {
 #   rbenv version-name
 # }
-PROMPT='$ '
-# PROMPT='\n$(rbenv version-name) '
-# \[\033[1;33m\]\W\[\033[0m\] $(altered_ps1_git)\n$ '
-
-# %{$fg_bold[green]%}%p%{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
-# # $ '
-# #RPROMPT='$(rbenv version-name)'
-# RPROMPT='%{$fg[green]%}$(rbenv version-name)%{$reset_color%}'
-
-# ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
-# ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-# ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}*%{$reset_color%}"
-# ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 # PROMPT }}}
 ## ALIASES {{{
@@ -88,6 +96,14 @@ alias bi='bundle install --binstubs b'
 ## END VARIOUS COMMANDS }}}
 # RBENV {{{
 
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # RBENV }}}
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _complete _ignored _approximate
+zstyle :compinstall filename '/Users/charlietanksley/.zshrc'
+
+# autoload -Uz compinit
+# compinit
+# End of lines added by compinstall
