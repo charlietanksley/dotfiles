@@ -1,10 +1,6 @@
 autoload -U compinit
 compinit
 
-autoload -Uz vcs_info
-
-# autoload -Uz compinstall
-
 
 # Navigation completion with arrow keys?
 zstyle ':completion:*' menu select
@@ -37,8 +33,6 @@ bundle-apply
 # ANTIGEN }}}
 # PATH {{{
 
-# RBENV
-export PATH=$HOME/.rbenv/bin:$PATH
 # HOMEBREW
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # HASKELL
@@ -56,26 +50,24 @@ export PATH=~/.git-achievements:$PATH
 # Git in the prompt (http://briancarper.net/blog/570/git-info-in-your-zsh-prompt)
 autoload -Uz vcs_info
  
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' stagedstr '%F{28}*'
-zstyle ':vcs_info:*' unstagedstr '%F{11}!'
-# zstyle ':vsc_info:git' formats " (%s)-[%b]%u%c-"
 zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr         '%F{28}*%F{blue}'
+zstyle ':vcs_info:git:*' unstagedstr       '%F{11}!%F{blue}'
+zstyle ':vcs_info:git:*' formats           ' %s(%b%c%u)'
+zstyle ':vcs_info:git:*' actionformats     ' [%b|%a]'
+
+precmd () {
+  vcs_info
+}
+
+function cwt_ruby_version() {
+  echo $(rbenv version-name)
+}
 
 setopt prompt_subst
-PROMPT='%F{blue}%c
-${vcs_info_msg_0_}%F{blue} %(?/%F{blue}/%F{red})%% %{$reset_color%}'
-
-
-# zstyle ':vcs_info:(svn|bzr):*' branchformat '%b%{'${fg[yellow]}'%}:%r'
-
-# autoload -U promptinit
-# promptinit
-
-
-# function cwt_rbenv_version {
-#   rbenv version-name
-# }
+PROMPT='%F{blue}%c${vcs_info_msg_0_}%F{blue} %(?/%F{blue}/%F{red})%% %{$reset_color%}'
+RPROMPT='$(cwt_ruby_version)'
 
 # PROMPT }}}
 ## ALIASES {{{
@@ -96,7 +88,7 @@ alias bi='bundle install --binstubs b'
 ## END VARIOUS COMMANDS }}}
 # RBENV {{{
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # RBENV }}}
 # The following lines were added by compinstall
