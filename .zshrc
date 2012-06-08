@@ -1,4 +1,37 @@
-## PATH {{{
+autoload -U compinit
+compinit
+
+
+# Navigation completion with arrow keys?
+zstyle ':completion:*' menu select
+
+# complete commandline switches
+setopt completealiases
+
+# use emacs keybindings
+bindkey -e
+
+
+# ZSH! WITH ANTIGEN {{{
+
+source ~/.zsh/antigen/antigen.zsh
+
+# A few choice bits from the oh-my-zsh library:
+# bundle https://github.com/robbyrussell/oh-my-zsh.git lib/git.zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+bundle heroku
+bundle brew
+bundle gem
+
+# Syntax highlighting bundle.
+bundle zsh-users/zsh-syntax-highlighting
+
+# Tell antigen that you're done.
+bundle-apply
+
+# ANTIGEN }}}
+# PATH {{{
 
 # RBENV
 export PATH=$HOME/.rbenv/bin:$PATH
@@ -13,21 +46,21 @@ export PATH=~/.bin/:~/bin:$PATH
 # GIT ACHIEVEMENTS
 export PATH=~/.git-achievements:$PATH
 
-## END PATH }}}
+# PATH }}}
+# PROMPT {{{
+autoload -U promptinit
+promptinit
 
-source "$HOME/.zsh/bundle/zundle/rc"
 
-Bundle 'matschaffer/zsh-git'
-Bundle 'matschaffer/zsh-heroku'
-Bundle 'matschaffer/zsh-history'
-
-LoadBundles
-
+# function cwt_rbenv_version {
+#   rbenv version-name
+# }
 PROMPT='$ '
+# PROMPT='\n$(rbenv version-name) '
+# \[\033[1;33m\]\W\[\033[0m\] $(altered_ps1_git)\n$ '
 
-# PROMPT='
-# %{$fg_bold[green]%}%p%{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}
-# $ '
+# %{$fg_bold[green]%}%p%{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+# # $ '
 # #RPROMPT='$(rbenv version-name)'
 # RPROMPT='%{$fg[green]%}$(rbenv version-name)%{$reset_color%}'
 
@@ -35,40 +68,8 @@ PROMPT='$ '
 # ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 # ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}*%{$reset_color%}"
 # ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
-# # Path to your oh-my-zsh configuration.
-# ZSH=$HOME/.oh-my-zsh
 
-# # Set name of the theme to load.
-# # Look in ~/.oh-my-zsh/themes/
-# # Optionally, if you set this to "random", it'll load a random theme each
-# # time that oh-my-zsh is loaded.
-# #ZSH_THEME="robbyrussell"
-# ZSH_THEME="charlietanksley"
-
-# # Set to this to use case-sensitive completion
-# # CASE_SENSITIVE="true"
-
-# # Comment this out to disable weekly auto-update checks
-# # DISABLE_AUTO_UPDATE="true"
-
-# # Uncomment following line if you want to disable colors in ls
-# # DISABLE_LS_COLORS="true"
-
-# # Uncomment following line if you want to disable autosetting terminal title.
-# # DISABLE_AUTO_TITLE="true"
-
-# # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# # Example format: plugins=(rails git textmate ruby lighthouse)
-# plugins=(brew heroku git)
-
-# source $ZSH/oh-my-zsh.sh
-# #source $HOME/.git-completion.bash
-
-# # Customize to your needs...
-
+# PROMPT }}}
 ## ALIASES {{{
 
 alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
@@ -78,16 +79,15 @@ alias git='hub'
 alias m='mutt'
 
 # make bundle exec easer to use:
-alias be='bundle exec'
+alias bi='bundle install --binstubs b'
 
 ## END ALIASES }}}
 ## VARIOUS COMMANDS {{{
 
-if [ -f `brew --prefix`/etc/profile.d/z.sh ]; then
-  . `brew --prefix`/etc/profile.d/z.sh
-fi
-
 
 ## END VARIOUS COMMANDS }}}
-# RBENV
+# RBENV {{{
+
 eval "$(rbenv init -)"
+
+# RBENV }}}
