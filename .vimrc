@@ -268,6 +268,12 @@ nmap <leader>md :e ~/Dropbox/todo.wofl<CR>
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+" Shell
+" For some reason commands like Fugitive commands are stupid slow using zsh
+" for me.  So use bash for now.
+
+set shell=/bin/bash
+
 " END GLOBAL/GENERIC SETTINGS }}}
 " GLOBAL/GENERIC (NON-PLUGIN SPECIFIC) KEYBINDINGS {{{
 
