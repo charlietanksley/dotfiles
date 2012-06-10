@@ -19,6 +19,9 @@ setopt histfindnodups                     # don't show duplicates in history sea
 # KEYBINDINGS
 bindkey -e                                # use emacs keybindings
 
+alias ls='ls -G'
+
+setopt auto_resume
 
 # ZSH! WITH ANTIGEN {{{
 
@@ -74,7 +77,7 @@ function cwt_ruby_version() {
 }
 
 setopt prompt_subst
-PROMPT='%F{yellow}%c${vcs_info_msg_0_}%F{blue} $ %{$reset_color%}'
+PROMPT='%F{yellow}%c${vcs_info_msg_0_}%F{blue} $ %F{green}%F{white}'
 RPROMPT='$(cwt_ruby_version)'
 
 # color changing prompt!: %(?/%F{blue}/%F{red})%%
