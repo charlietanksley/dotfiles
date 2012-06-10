@@ -1,10 +1,8 @@
 autoload -U compinit
 compinit
 
-
 # Navigation completion with arrow keys?
 zstyle ':completion:*' menu select
-
 
 setopt completealiases                    # complete commandline switches
 
