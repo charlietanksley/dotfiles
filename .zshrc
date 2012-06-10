@@ -19,9 +19,9 @@ setopt histfindnodups                     # don't show duplicates in history sea
 # KEYBINDINGS
 bindkey -e                                # use emacs keybindings
 
-alias ls='ls -G'
+alias ls='ls -G'                          # always use colors in ls
 
-setopt auto_resume
+setopt auto_resume                        # resume bg jobs by name
 
 # ZSH! WITH ANTIGEN {{{
 
@@ -104,6 +104,15 @@ alias bi='bundle install --binstubs b'
 # if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # RBENV }}}
+# ZAW {{{
+
+source ~/.zsh/zaw/zaw.zsh
+zstyle ':filter-select:highlight' matched fg=yellow,standout
+zstyle ':filter-select' max-lines 10      # use 10 lines for filter-select
+zstyle ':filter-select' max-lines -10     # use $LINES - 10 for filter-select
+zstyle ':filter-select' case-insensitive yes # enable case-insensitive search
+
+# ZAW }}}
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored _approximate
