@@ -31,15 +31,16 @@ source ~/.zsh/antigen/antigen.zsh
 # bundle https://github.com/robbyrussell/oh-my-zsh.git lib/git.zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-bundle heroku
-bundle brew
-bundle gem
+antigen-bundle heroku
+antigen-bundle brew
+antigen-bundle gem
+# antigen-bundle zsh-users/zsh-completions.git bundle
 
 # Syntax highlighting bundle.
-bundle zsh-users/zsh-syntax-highlighting
+antigen-bundle zsh-users/zsh-syntax-highlighting
 
 # Tell antigen that you're done.
-bundle-apply
+antigen-apply
 
 # ANTIGEN }}}
 # PATH {{{
