@@ -138,11 +138,10 @@ let g:vroom_binstubs_path='./b'
 nmap <leader>tr :call vroom#RunTestFile()<CR>
 nmap <leader>tR :call vroom#RunNearestTest()<CR>
 
-" nmap <leader>td :call vroom#RunTestFileCustom("--drb")<CR>
-" nmap <leader>td :call vroom#RunTestFileCustom(['rspec', 'cucumber'], '--drb')<CR>
-" nmap <leader>tD :call vroom#RunNearestTestCustom(['rspec', 'cucumber'], '--drb')<CR>
-nmap <leader>td :call vroom#RunTestFileDrb()<CR>
-nmap <leader>tD :call vroom#RunNearestTestDrb()<CR>
+let cwt_use_spin = {'runner':'spin push'}
+nmap <leader>td :call vroom#RunTestFile(cwt_use_spin)<CR>
+nmap <leader>tD :call vroom#RunNearestTest(cwt_use_spin)<CR>
+
 " }}}
 
 " Experiments
@@ -267,6 +266,12 @@ nmap <leader>md :e ~/Dropbox/todo.wofl<CR>
 " Git stuff "
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" Shell
+" For some reason commands like Fugitive commands are stupid slow using zsh
+" for me.  So use bash for now.
+
+set shell=/bin/bash
 
 " END GLOBAL/GENERIC SETTINGS }}}
 " GLOBAL/GENERIC (NON-PLUGIN SPECIFIC) KEYBINDINGS {{{

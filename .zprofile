@@ -1,8 +1,10 @@
 autoload -U compinit
 compinit
 
+
 # Navigation completion with arrow keys?
 zstyle ':completion:*' menu select
+
 
 setopt completealiases                    # complete commandline switches
 
@@ -19,9 +21,6 @@ setopt histfindnodups                     # don't show duplicates in history sea
 # KEYBINDINGS
 bindkey -e                                # use emacs keybindings
 
-alias ls='ls -G'                          # always use colors in ls
-
-setopt auto_resume                        # resume bg jobs by name
 
 # ZSH! WITH ANTIGEN {{{
 
@@ -31,16 +30,15 @@ source ~/.zsh/antigen/antigen.zsh
 # bundle https://github.com/robbyrussell/oh-my-zsh.git lib/git.zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen-bundle heroku
-antigen-bundle brew
-antigen-bundle gem
-# antigen-bundle zsh-users/zsh-completions.git bundle
+bundle heroku
+bundle brew
+bundle gem
 
 # Syntax highlighting bundle.
-antigen-bundle zsh-users/zsh-syntax-highlighting
+bundle zsh-users/zsh-syntax-highlighting
 
 # Tell antigen that you're done.
-antigen-apply
+bundle-apply
 
 # ANTIGEN }}}
 # PATH {{{
@@ -61,7 +59,7 @@ export PATH=~/.git-achievements:$PATH
 
 # Git in the prompt (http://briancarper.net/blog/570/git-info-in-your-zsh-prompt)
 autoload -Uz vcs_info
- 
+
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr         '%F{28}*%F{blue}'
@@ -78,7 +76,7 @@ function cwt_ruby_version() {
 }
 
 setopt prompt_subst
-PROMPT='%F{yellow}%c${vcs_info_msg_0_}%F{blue} $ %F{green}%F{white}'
+PROMPT='%F{yellow}%c${vcs_info_msg_0_}%F{blue} $ %{$reset_color%}'
 RPROMPT='$(cwt_ruby_version)'
 
 # color changing prompt!: %(?/%F{blue}/%F{red})%%
@@ -105,15 +103,6 @@ alias bi='bundle install --binstubs b'
 # if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # RBENV }}}
-# ZAW {{{
-
-source ~/.zsh/zaw/zaw.zsh
-zstyle ':filter-select:highlight' matched fg=yellow,standout
-zstyle ':filter-select' max-lines 10      # use 10 lines for filter-select
-zstyle ':filter-select' max-lines -10     # use $LINES - 10 for filter-select
-zstyle ':filter-select' case-insensitive yes # enable case-insensitive search
-
-# ZAW }}}
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored _approximate
@@ -122,3 +111,4 @@ zstyle :compinstall filename '/Users/charlietanksley/.zshrc'
 # autoload -Uz compinit
 # compinit
 # End of lines added by compinstall
+
