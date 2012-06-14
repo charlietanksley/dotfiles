@@ -57,6 +57,11 @@ export PATH=~/.bin/:~/bin:$PATH
 export PATH=~/.git-achievements:$PATH
 
 # PATH }}}
+# VARIABLES {{{
+
+export EDITOR='vim'
+
+# VARIABLES }}}
 # PROMPT {{{
 
 # Git in the prompt (http://briancarper.net/blog/570/git-info-in-your-zsh-prompt)
