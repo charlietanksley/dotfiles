@@ -139,8 +139,8 @@ nmap <leader>tr :call vroom#RunTestFile()<CR>
 nmap <leader>tR :call vroom#RunNearestTest()<CR>
 
 let cwt_use_spin = {'runner':'spin push'}
-nmap <leader>tD :call vroom#RunNearestTest(cwt_use_spin)<CR>
 nmap <leader>td :call vroom#RunTestFile(cwt_use_spin)<CR>
+nmap <leader>tD :call vroom#RunNearestTest(cwt_use_spin)<CR>
 
 " }}}
 

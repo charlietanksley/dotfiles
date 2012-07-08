@@ -10,10 +10,10 @@
 ; No startup message
 (setq inhibit-startup-message t)
 ; Quiet that bell!
-(setq visual-bell 1)
+(setq visible-bell 1)
 
 ; show the line numbers
-(global-linum-mode 1)
+;(global-linum-mode 1)
 ; if you don't want it to come on in some places, turn it on selectively 
 ; (add-hook 'sh-mode-hook
 ;           '(lambda ()
@@ -39,7 +39,7 @@
 (set-fringe-style -1)
 (tooltip-mode -1)
 
-(set-frame-font "Inconsolata-18")
+;(set-frame-font "Inconsolata-18")
 (load-theme 'tango-dark)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -88,6 +88,8 @@
                   ; Scheme, Clojure, and Lisp
                   rainbow-delimiters
                   paredit
+                  sicp ; SICP
+                  geiser
                   ; slime ; this didn't work right.
                   ; Scheme
                   scheme-complete
@@ -103,8 +105,8 @@
 ;; Org-mode ;;
 ;;;;;;;;;;;;;;
 (setq org-directory "~/Dropbox/org")
-(setq org-mobile-inbox-for-pull "~/Dropbox/org/inbox.org")
-(setq org-mobile-directory "~/Dropbox/MobileOrg")
+;; (setq org-mobile-inbox-for-pull "~/Dropbox/org/inbox.org")
+;; (setq org-mobile-directory "~/Dropbox/MobileOrg")
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
@@ -163,6 +165,11 @@
 ;;           (lambda ()                                                          ;;
 ;;             (slime-mode t)))                                                  ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+; (load-file "~/.emacs.d/packages/elisp-geiser-chicken.el")
+; (require 'geiser-chicken)
+; (setq geiser-active-implementations '(chicken))
 
 (setenv "CHICKEN_DOC_REPOSITORY" "~/.chicken/chicken-doc/")
 ;; This elisp snippet will look up the word at point and display its
