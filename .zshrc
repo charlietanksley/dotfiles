@@ -2,7 +2,8 @@ autoload -U compinit
 compinit
 
 # Navigation completion with arrow keys?
-zstyle ':completion:*' menu select
+# zstyle ':completion:*' menu select
+# zstyle ':completion::complete:*:git:*' ignored-patterns directories files
 
 setopt completealiases                    # complete commandline switches
 
