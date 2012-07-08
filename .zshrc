@@ -35,7 +35,7 @@ source ~/.zsh/antigen/antigen.zsh
 antigen-bundle heroku
 antigen-bundle brew
 antigen-bundle gem
-# antigen-bundle zsh-users/zsh-completions.git bundle
+antigen-bundle zsh-users/zsh-completions.git
 
 # Syntax highlighting bundle.
 antigen-bundle zsh-users/zsh-syntax-highlighting
@@ -104,6 +104,26 @@ alias bi='bundle install --binstubs b'
 ## END ALIASES }}}
 ## VARIOUS COMMANDS {{{
 
+## EMACS {{{
+
+function se {
+  /usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs --daemon
+}
+
+function me {
+  /usr/local/Cellar/emacs/HEAD/bin/emacsclient -c -n -a '' $* &
+  osascript -e "tell application \"System Events\" to set frontmost of process \"Emacs\" to true"
+}
+
+function e {
+  /usr/local/Cellar/emacs/HEAD/bin/emacsclient -c -nw -a '' $*
+}
+
+function ke {
+ kill `ps -A | grep emacs | grep -v grep | awk '{print $1}'`
+}
+
+# }}}
 
 ## END VARIOUS COMMANDS }}}
 # RBENV {{{
