@@ -144,7 +144,9 @@ nmap <leader>tD :call vroom#RunNearestTest(cwt_use_spin)<CR>
 
 " }}}
 
+
 " Experiments
+Bundle 'vim-scripts/HyperList.git'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'lukaszkorecki/workflowish.git'
 Bundle 'chrisbra/NrrwRgn.git'
