@@ -101,6 +101,11 @@ alias m='mutt'
 # make bundle exec easer to use:
 alias bi='bundle install --binstubs b'
 
+# TMUX!!!
+
+# alias tmux-buffer-to-clipboard='tmux save-buffer -|pbcopy'
+# alias tmux-buffer-from-clipboard='tmux set-buffer "$(pbpaste)"'
+
 ## END ALIASES }}}
 ## VARIOUS COMMANDS {{{
 

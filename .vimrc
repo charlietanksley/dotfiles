@@ -362,4 +362,4 @@ set winheight=999
 
 " END STUFF I GRABBED FROM DESTROY ALL SOFTWARE }}}
 "
-set clipboard=unnamed
+" set clipboard=unnamed
