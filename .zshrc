@@ -148,3 +148,5 @@ zstyle :compinstall filename '/Users/charlietanksley/.zshrc'
 # autoload -Uz compinit
 # compinit
 # End of lines added by compinstall
+#
+export PLUGIN_DIRECTORY_PATH='/Users/charlietanksley/.dotfiles/.vim/bundle'
