@@ -264,7 +264,7 @@ endfunction
 noremap <silent> <Leader>mf :call ToggleFoldMethod()<CR>
 
 " Open todo list
-nmap <leader>md :e ~/Dropbox/todo.wofl<CR>
+nmap <leader>md :e ~/todo.hl<CR>
 
 " Git stuff "
 set laststatus=2
