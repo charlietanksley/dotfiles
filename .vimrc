@@ -46,26 +46,12 @@ let g:LatexBox_latexmk_options = '-pvc'
 let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\(\[.*\]\)\{0,2}\*\?\_\s*{'
 
 " LatexBox }}}
-" taglist {{{
-Bundle 'vim-scripts/taglist.vim'
+" tagbar {{{
+Bundle 'majutsushi/tagbar.git'
 
-nnoremap <silent> <leader>mtl :TlistToggle<CR>
-let Tlist_GainFocus_On_ToggleOpen=1
+nnoremap <silent> <leader>mtl :TagbarToggle<CR>
 
-" taglist }}}
-" Lusty (Explorer & Juggler) {{{
-Bundle 'sjbach/lusty.git'
-"map <leader>ff :LustyFilesystemExplorerFromHere<CR>
-"map <leader>fm :LustyFilesystemExplorer app/models<CR>
-"map <leader>fc :LustyFilesystemExplorer app/controllers<CR>
-"map <leader>fv :LustyFilesystemExplorer app/views<CR>
-"map <leader>fh :LustyFilesystemExplorer app/helpers<CR>
-"map <leader>fl :LustyFilesystemExplorer lib<CR>
-"map <leader>fp :LustyFilesystemExplorer public<CR>
-"map <leader>fs :LustyFilesystemExplorer specs<CR>
-"map <leader>ft :LustyFilesystemExplorer test<CR>
-
-" Lusty (Explorer & Juggler) }}}
+" tagbar }}}
 " Rainbow Parenthesis {{{
 Bundle 'charlietanksley/Rainbow-Parenthsis-Bundle.git'
 
@@ -84,30 +70,6 @@ map <leader>mr :call RainbowOn()<CR>
 " map <leader>nr :call RainbowOff()<CR>
 
 " Rainbow Parenthesis }}}
-" Slimv {{{
-Bundle 'charlietanksley/slimv.vim.git'
-
-au BufNewFile,BufRead *.scm call PareditInitBuffer()
-
-" Slimv }}}
-" Textile {{{
-Bundle 'vim-scripts/Textile-for-VIM.git'
-
-" :TextilePreview     - Render the current buffer to a temp file, and open it in
-" your web browser (OSX only)
-
-" <Leader>rp
-
-" :TextileRenderTab   - ... to a new tab
-
-" <Leader>rt
-
-" :TextileRenderFile  - ... to a file
-
-"   <Leader>rf
- 
-"
-" Textile }}}
 " Commentary {{{
 Bundle 'tpope/vim-commentary.git'
 autocmd FileType scheme set commentstring=;\ %s
@@ -148,10 +110,21 @@ nmap <leader>tD :call vroom#RunNearestTest(cwt_use_spin)<CR>
 " Experiments
 Bundle 'b4winckler/vim-angry.git'
 Bundle 'vim-scripts/HyperList.git'
-Bundle 'kien/ctrlp.vim.git'
-Bundle 'lukaszkorecki/workflowish.git'
 Bundle 'chrisbra/NrrwRgn.git'
 Bundle "michaeljsmith/vim-indent-object"
+" ctrlp {{{
+
+Bundle 'kien/ctrlp.vim.git'
+let g:ctrlp_custom_ignore = 'b$\|coverage$\|log$\|tmp$\|\.git$\|app/assets$'
+let g:ctrlp_max_files = 10000 " this is the default
+let g:ctrlp_map = ''
+
+nmap <leader>ff :CtrlPLastMode<CR>
+nmap <leader>fp :CtrlP<CR>
+nmap <leader>fb :CtrlPBuffer<CR>
+nmap <leader>fm :CtrlPMRU<CR>
+
+" ctrlp }}}
 " Gundo {{{
 
 Bundle 'sjl/gundo.vim'
@@ -161,9 +134,7 @@ nnoremap <F5> :GundoToggle<CR>
 Bundle 'kikijump/tslime.vim.git'
 Bundle 'jgdavey/vim-turbux.git'
 
-" Bundle 'charlietanksley/simplefold'
 Bundle 'tpope/vim-unimpaired.git'
-" Bundle 'ervandew/supertab.git'
 Bundle 'vim-scripts/Align.git'
 Bundle 'charlietanksley/snipmate.vim.git'
 Bundle 'tpope/vim-rails.git'
@@ -192,7 +163,7 @@ Bundle 'chriskempson/vim-tomorrow-theme.git'
 filetype plugin indent on
 
 " Use a colorscheme
-colorscheme badwolf
+colorscheme Tomorrow-Night
 
 " Non-relative line numbers
 set number
@@ -366,3 +337,46 @@ set winheight=999
 " END STUFF I GRABBED FROM DESTROY ALL SOFTWARE }}}
 "
 " set clipboard=unnamed
+
+" PIVOTAL TRACKER INTEGRATION {{{
+
+" This is getting somewhere.  What I want to do is
+" * store this pivotal_token in a config file somewhere.
+" * store the project id inside the project somewhere (maybe at the top level
+"   of the project in a .pivimital file for something)
+" * refactor what I have now in the CwtGetStories into something clean
+" * do something like a substitute call to basically grab each id and story
+"   name
+" * write some way to choose one of those via a window and store it as a
+"   script level variable
+" * write a bit o' code to let you insert that.
+let g:pivotal_token = 'a4e02acfc62140be804417c61c43b680'
+let g:wrek = '612773'
+let g:highgroove = '126757'
+
+function! CwtGetStories(project_id)
+  let colon = '%3A'
+  let sc = '%22'
+  let space = '%20'
+  let and = '%26'
+  let coma = '%2C'
+
+  let interesting = 'state' . colon . 'unscheduled' . coma . 'unstarted' .  coma . 'started' . coma . 'finished' . coma . 'delivered'
+  let opts = '?filter=owner' . colon . sc . 'Charlie%20Tanksley' . sc . space . interesting
+  let command = "curl -H 'X-TrackerToken: " . g:pivotal_token . "' -X GET 'https://www.pivotaltracker.com/services/v3/projects/" . a:project_id . "/stories'" . opts
+  return system(command)
+endfunction
+
+let g:test_string = "<project><id>1</id><person><id>not</id></person></project><project><id>1</id><person><id>not</id></person></project>"
+
+function! CwtGetId()
+  let r = substitute(g:test_string, 'project', 'bs', '')
+  echo r
+endfunction
+
+function! Cwt()
+  " echo CwtGetProjects(g:wrek)
+  echo CwtGetStories(g:highgroove)
+endfunction
+
+" PIVOTAL TRACKER INTEGRATION }}}
