@@ -46,16 +46,21 @@ antigen-apply
 # ANTIGEN }}}
 # PATH {{{
 
-# HOMEBREW
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # HASKELL
-export PATH=~/.cabal/bin/:$PATH
+export PATH=~/.cabal/bin:$PATH
 # NODE
-export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local/share/npm/bin:/usr/local/lib/node_modules:$PATH
 # VARIOUS EXECUTABLES
-export PATH=~/.bin/:~/bin:$PATH
+export PATH=~/.bin:~/bin:$PATH
 # GIT ACHIEVEMENTS
 export PATH=~/.git-achievements:$PATH
+
+# POSTGRESQL.APP
+export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+# HOMEBREW
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+# RBENV
+# export PATH="$HOME/.rbenv/bin:$PATH"
 
 # PATH }}}
 # VARIABLES {{{
@@ -101,6 +106,9 @@ alias m='mutt'
 # make bundle exec easer to use:
 alias bi='bundle install --binstubs b'
 
+# I never use tig without the --all
+alias tig='tig --all'
+
 # TMUX!!!
 
 # alias tmux-buffer-to-clipboard='tmux save-buffer -|pbcopy'
@@ -126,6 +134,10 @@ function e {
 
 function ke {
  kill `ps -A | grep emacs | grep -v grep | awk '{print $1}'`
+}
+
+function gpw {
+  git push origin $* && git push highgroove $*
 }
 
 # }}}
