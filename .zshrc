@@ -139,6 +139,9 @@ function gpw {
   git push origin $* && git push highgroove $*
 }
 
+function notify {
+  terminal-notifier -message $* -title 'Notification'
+}
 # }}}
 
 ## END VARIOUS COMMANDS }}}
