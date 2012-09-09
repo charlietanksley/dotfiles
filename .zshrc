@@ -97,7 +97,6 @@ RPROMPT='$(cwt_ruby_version)'
 # PROMPT }}}
 ## ALIASES {{{
 
-alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
 alias git='hub'
 
 # Shortcut command aliases, generic
@@ -120,16 +119,16 @@ alias tig='tig --all'
 ## EMACS {{{
 
 function se {
-  /usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs --daemon
+  /usr/local/Cellar/emacs/24.2/Emacs.app/Contents/MacOS/Emacs --daemon
 }
 
 function me {
-  /usr/local/Cellar/emacs/HEAD/bin/emacsclient -c -n -a '' $* &
+  /usr/local/Cellar/emacs/24.2/bin/emacsclient -c -n -a '' $* &
   osascript -e "tell application \"System Events\" to set frontmost of process \"Emacs\" to true"
 }
 
 function e {
-  /usr/local/Cellar/emacs/HEAD/bin/emacsclient -c -nw -a '' $*
+  /usr/local/Cellar/emacs/24.2/bin/emacsclient -c -nw -a '' $*
 }
 
 function ke {
