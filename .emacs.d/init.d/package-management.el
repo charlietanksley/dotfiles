@@ -42,7 +42,11 @@
                 ; slime ; this didn't work right.
                 ; Scheme
                 scheme-complete
-                quack))
+                quack
+               ; EXPERIMENTS
+                wanderlust
+;                e2wm
+                ))
                 ; Clojure
                 ; clojure-mode
                 ; ; durendal?

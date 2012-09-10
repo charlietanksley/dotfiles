@@ -14,6 +14,14 @@
 ; (load "~/.emacs.d/init.d/j.el")
 ; (load "~/.emacs.d/init.d/clojure.el")
 
+; irc
+(load "~/.emacs.d/init.d/rcirc.el")
+; experiments
+;(global-set-key (kbd "M-+") 'e2wm:start-management)
+
+; Windmove
+(when (fboundp 'windmove-default-keybindings)
+      (windmove-default-keybindings))
 
 ; Try:
 ; - ido-hacks

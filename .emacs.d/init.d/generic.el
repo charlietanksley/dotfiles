@@ -1,5 +1,8 @@
 ; Generic emacs configuration
 
+; Indent on RETURN automatically
+(define-key global-map (kbd "RET") 'newline-and-indent)
+
 ; We don't need any extra backup files
 (setq make-backup-files nil)
 ; Don't save every file-visiting buffer
@@ -14,9 +17,9 @@
 ; show the line numbers
 ;(global-linum-mode 1)
 ; if you don't want it to come on in some places, turn it on selectively 
-; (add-hook 'sh-mode-hook
-;           '(lambda ()
-;             (linum-on)))
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+            (linum-on)))
 
 ; Advanced stuff Emacs disables by default
 (put 'narrow-to-region 'disabled nil)
