@@ -24,26 +24,26 @@ alias ls='ls -G'                          # always use colors in ls
 
 setopt auto_resume                        # resume bg jobs by name
 
-# ZSH! WITH ANTIGEN {{{
+# # ZSH! WITH ANTIGEN {{{
 
-source ~/.zsh/antigen/antigen.zsh
+# source ~/.zsh/antigen/antigen.zsh
 
-# A few choice bits from the oh-my-zsh library:
-# bundle https://github.com/robbyrussell/oh-my-zsh.git lib/git.zsh
+# # A few choice bits from the oh-my-zsh library:
+# # bundle https://github.com/robbyrussell/oh-my-zsh.git lib/git.zsh
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen-bundle heroku
-antigen-bundle brew
-antigen-bundle gem
-antigen-bundle zsh-users/zsh-completions.git
+# # Bundles from the default repo (robbyrussell's oh-my-zsh).
+# antigen-bundle heroku
+# antigen-bundle brew
+# antigen-bundle gem
+# antigen-bundle zsh-users/zsh-completions.git
 
-# Syntax highlighting bundle.
-antigen-bundle zsh-users/zsh-syntax-highlighting
+# # Syntax highlighting bundle.
+# antigen-bundle zsh-users/zsh-syntax-highlighting
 
-# Tell antigen that you're done.
-antigen-apply
+# # Tell antigen that you're done.
+# antigen-apply
 
-# ANTIGEN }}}
+# # ANTIGEN }}}
 # PATH {{{
 
 # HASKELL
@@ -142,6 +142,7 @@ function gpw {
 function notify {
   terminal-notifier -message $* -title 'Notification'
 }
+
 # }}}
 
 ## END VARIOUS COMMANDS }}}
