@@ -7,19 +7,28 @@
 (setq make-backup-files nil)
 ; Don't save every file-visiting buffer
 (setq auto-save-default nil)
-; Use spaces, not tabs
-(setq-default indent-tabs-mode nil)
+
+(set-default 'indent-tabs-mode nil)
+(set-default 'indicate-empty-lines t)
+(set-default 'imenu-auto-rescan t)
+
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(add-hook 'text-mode-hook 'turn-on-flyspell)
 ; No startup message
 (setq inhibit-startup-message t)
 ; Quiet that bell!
 (setq visible-bell 1)
 
+; Whitespace
+(setq whitespace-style '(face trailing lines-tail tabs)
+      whitespace-line-column 80)
+
 ; show the line numbers
 ;(global-linum-mode 1)
 ; if you don't want it to come on in some places, turn it on selectively 
-(add-hook 'ruby-mode-hook
-          '(lambda ()
-            (linum-on)))
+;; (add-hook 'ruby-mode-hook
+;;           '(lambda ()
+;;             (linum-on)))
 
 ; Advanced stuff Emacs disables by default
 (put 'narrow-to-region 'disabled nil)
@@ -41,6 +50,7 @@
 (set-fringe-style -1)
 (tooltip-mode -1)
 
-;(set-frame-font "Inconsolata-18")
-(load-theme 'tango-dark)
+(set-frame-font "Inconsolata-16")
+;(load-theme 'tango-dark)
+; (load-theme 'twilight-anti-bright-theme)
 

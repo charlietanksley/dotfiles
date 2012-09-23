@@ -18,12 +18,19 @@
 
 (el-get 'sync '(magit
                 auto-complete
-                ;gist
+                keywiz ; keybinding drill
+                ;auto-complete-ruby ; auto complte ruby!
+                ruby-mode ; ruby mode!
+                ; Enhanced-Ruby-Mode ; for 1.9?
+                ruby-test-mode ; IDK!
+                perspective
+                tomorrow-night-paradise-theme
+                tomorrow-theme
+                twilight-bright-theme
+                twilight-anti-bright-theme
+                zenburn-theme
+                                        ;gist
                 ; minimap
-                ; colors
-                ; color-theme
-                ; color-theme-solarized
-                ; color-theme-ir-black
                 ; CSS and SCSS
                 scss-mode
                 ; text editing
@@ -52,3 +59,9 @@
                 ; ; durendal?
                 ; midje-mode
                 ; swank-clojure))
+
+
+;; Load Perspective
+(require 'perspective)
+;; Toggle the perspective mode
+(persp-mode)
