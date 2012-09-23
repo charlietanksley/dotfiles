@@ -163,7 +163,7 @@ Bundle 'chriskempson/vim-tomorrow-theme.git'
 filetype plugin indent on
 
 " Use a colorscheme
-colorscheme Tomorrow-Night
+colorscheme badwolf
 
 " Non-relative line numbers
 set number
