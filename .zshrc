@@ -16,6 +16,7 @@ alias d='dirs -v'
 
 # HISTORY
 setopt histfindnodups                     # don't show duplicates in history search
+setopt share_history                      # share history among shell instances
 
 # KEYBINDINGS
 bindkey -e                                # use emacs keybindings
