@@ -1,3 +1,71 @@
+; I'm only using el-get, but I think I need to specify where to find the stuff
+; from elpa and marmalade
+
+; ELPA
+(require 'package)
+;; Add the original Emacs Lisp Package Archive
+(add-to-list 'package-archives
+             '("elpa" . "http://tromey.com/elpa/"))
+;; Add the user-contributed repository
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+
+; This el-get install stuff is borrowed from
+; https://github.com/dimitri/emacs-kicker/blob/master/init.el
+(require 'cl)       ; common lisp goodies, loop
+
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+(unless (require 'el-get nil t)
+  (url-retrieve
+   "https://github.com/dimitri/el-get/raw/master/el-get-install.el"
+   (lambda (s)
+     (end-of-buffer)
+     (eval-print-last-sexp))))
+
+;; now either el-get is `require'd already, or have been `load'ed by the
+;; el-get installer.
+
+;; set local recipes
+(setq
+ el-get-sources
+ '((:name smex                  ; like ido, but for M-x
+    :after (lambda ()
+       (setq smex-save-file "~/.emacs.d/.smex-items")
+       (global-set-key (kbd "M-x") 'smex)
+       (global-set-key (kbd "M-X") 'smex-major-mode-commands)))
+
+   (:name magit                 ; git
+    :after (lambda ()
+       (global-set-key (kbd "C-x g") 'magit-status)))
+
+   (:name perspective           ; workspaces
+    :after (lambda ()
+      (persp-mode)))))
+
+;; now set our own packages
+(setq
+ my:el-get-packages
+ '(el-get                       ; el-get is self-hosting
+   auto-complete                ; complete as you type with overlays
+   twilight-anti-bright-theme   ; colors
+   zenburn-theme                ; moar!
+   keywiz                       ; keybinding drill
+   guru-mode                    ; learn those keybindings
+   perspective                  ; workspaces
+   ri-emacs                     ; documentation in ruby
+   rainbow-delimiters           ; make parens managable
+   paredit))                    ; raw paren power
+
+(setq my:el-get-packages
+      (append
+       my:el-get-packages
+       (loop for src in el-get-sources collect (el-get-source-name src))))
+
+;; install new packages and init already installed packages
+(el-get 'sync my:el-get-packages)
 (push "/usr/local/bin" exec-path)
 
 (load "~/.emacs.d/init.d/generic.el")
