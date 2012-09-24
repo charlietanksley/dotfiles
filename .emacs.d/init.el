@@ -66,33 +66,86 @@
 
 ;; install new packages and init already installed packages
 (el-get 'sync my:el-get-packages)
+
+; Generic emacs configuration
+
+; We don't need any extra backup files
+(setq make-backup-files nil)
+; Don't save every file-visiting buffer
+(setq auto-save-default nil)
+
+(set-default 'indent-tabs-mode nil)
+(set-default 'indicate-empty-lines t)
+(set-default 'imenu-auto-rescan t)
+
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(add-hook 'text-mode-hook 'turn-on-flyspell)
+; No startup message
+(setq inhibit-startup-message t)
+; Quiet that bell!
+(setq visible-bell 1)
+
+; Whitespace
+(setq whitespace-style '(face trailing lines-tail tabs)
+      whitespace-line-column 80)
+
+; Advanced stuff Emacs disables by default
+(put 'narrow-to-region 'disabled nil)
+
+; This is a tricky one.  I want for the right (and only the right) command key to function as a control key
+(setq mac-right-command-modifier 'control)
+
+; Abbreviate 'yes or no' prompt to 'y or n'
+(fset 'yes-or-no-p 'y-or-n-p)
+
+; (delete-selection-mode t)
+; Appearance stuff: no scroll bars or tool bars, make cursor blink
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(blink-cursor-mode t)
+; Show/highlight matching paren
+(show-paren-mode t)
+; No clue what these two do
+(set-fringe-style -1)
+(tooltip-mode -1)
+
+(set-frame-font "Inconsolata-16")
+;(load-theme 'tango-dark)
+; (load-theme 'twilight-anti-bright-theme)
+
+
 (push "/usr/local/bin" exec-path)
 
-(load "~/.emacs.d/init.d/generic.el")
-(load "~/.emacs.d/init.d/package-management.el")
-(load "~/.emacs.d/init.d/secret.el")
+; I want to be sure to use the right keybindings
+(require 'guru-mode)
 
-; plugins
-(load "~/.emacs.d/init.d/org-mode.el")
-(load "~/.emacs.d/init.d/ido.el")
-(load "~/.emacs.d/init.d/paredit.el")
+(load "~/.emacs.d/init.d")
 
-; languages
-(load "~/.emacs.d/init.d/scheme.el")
-; (load "~/.emacs.d/init.d/j.el")
-; (load "~/.emacs.d/init.d/clojure.el")
+(require 'my-ruby)
 
-; irc
-(load "~/.emacs.d/init.d/rcirc.el")
+; (load "~/.emacs.d/init.d/generic.el")
+; (load "~/.emacs.d/init.d/package-management.el")
+; (load "~/.emacs.d/init.d/secret.el")
+; 
+; ; plugins
+; (load "~/.emacs.d/init.d/org-mode.el")
+; (load "~/.emacs.d/init.d/ido.el")
+; (load "~/.emacs.d/init.d/paredit.el")
+; 
+; ; languages
+; (load "~/.emacs.d/init.d/scheme.el")
+; ; (load "~/.emacs.d/init.d/j.el")
+; ; (load "~/.emacs.d/init.d/clojure.el")
+; 
+; ; irc
+; (load "~/.emacs.d/init.d/rcirc.el")
 ; experiments
 ;(global-set-key (kbd "M-+") 'e2wm:start-management)
 
 ; Windmove
-(when (fboundp 'windmove-default-keybindings)
-      (windmove-default-keybindings))
+; (when (fboundp 'windmove-default-keybindings)
+;       (windmove-default-keybindings))
 
-; guru
-(require 'guru-mode)
 
 ; (require 'org-drill)
 
@@ -112,36 +165,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-
-;; ; I stole this from Gary Bernhardt.  It doesn't work here yet, but it will!
-;; ; GRB: open temporary buffers in a dedicated window split
-;; (setq special-display-regexps
-;;         '("^\\*Completions\\*$"
-;;           "^\\*Help\\*$"
-;;           "^\\*grep\\*$"
-;;           "^\\*Apropos\\*$"
-;;           "^\\*elisp macroexpansion\\*$"
-;;           "^\\*local variables\\*$"
-;;           "^\\*Compile-Log\\*$"
-;;           "^\\*Quail Completions\\*$"
-;;           "^\\*Occur\\*$"
-;;           "^\\*frequencies\\*$"
-;;           "^\\*compilation\\*$"
-;;           "^\\*Locate\\*$"
-;;           "^\\*Colors\\*$"
-;;           "^\\*tumme-display-image\\*$"
-;;           "^\\*SLIME Description\\*$"
-;;           "^\\*.* output\\*$"           ; tex compilation buffer
-;;           "^\\*TeX Help\\*$"
-;;           "^\\*Shell Command Output\\*$"
-;;           "^\\*Async Shell Command\\*$"
-;;           "^\\*Backtrace\\*$"))
-;; (setq grb-temporary-window (nth 2 (window-list)))
-;; (defun grb-special-display (buffer &optional data)
-;;   (let ((window grb-temporary-window))
-;;     (with-selected-window window
-;;       (switch-to-buffer buffer)
-;;       window)))
-;; (setq special-display-function #'grb-special-display)
-
