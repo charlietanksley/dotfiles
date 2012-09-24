@@ -9,6 +9,60 @@
 ;; Add the user-contributed repository
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/"))
+
+; copied from
+; http://batsov.com/articles/2012/02/19/package-management-in-emacs-the-good-the-bad-and-the-ugly/
+; with some minor updates
+;(require 'cl)       ; common lisp goodies, loop
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+;;; Add in your own as you wish:
+;(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings)
+;  "A list of packages to ensure are installed at launch.")
+
+(defvar my-packages
+  '(inf-ruby
+    guru-mode
+    magit
+    smex
+    paredit
+    rainbow-mode
+    perspective
+    idle-highlight-mode
+    find-file-in-project
+    ido-ubiquitous)
+  ;'(ack-and-a-half auctex clojure-mode coffee-mode deft expand-region
+  ;                 gist groovy-mode haml-mode haskell-mode inf-ruby
+  ;                 magit magithub markdown-mode paredit projectile python
+  ;                 sass-mode rainbow-mode scss-mode solarized-theme
+  ;                 volatile-highlights yaml-mode yari zenburn-theme)
+  "A list of packages to ensure are installed at launch.")
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
+
+;(defun my-packages-installed-p ()
+;  (loop for p in my-packages
+;        when (not (my-installed-p p)) do (return nil)
+;        finally (return t)))
+;
+;(unless (my-packages-installed-p)
+;  ;; check for new packages (package versions)
+;  (message "%s" "Emacs Prelude is now refreshing its package database...")
+;  (package-refresh-contents)
+;  (message "%s" " done.")
+;  ;; install the missing packages
+;  (dolist (p my-packages)
+;    (when (not (package-installed-p p))
+;      (package-install p))))
+
+;(provide 'prelude-packages)
+;;; prelude-packages.el ends here
+
 (package-initialize)
 
 
