@@ -1,3 +1,4 @@
+(push "/usr/local/bin" exec-path)
 ; I'm only using el-get, but I think I need to specify where to find the stuff
 ; from elpa and marmalade
 
@@ -12,115 +13,76 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/"))
 
-; copied from
-; http://batsov.com/articles/2012/02/19/package-management-in-emacs-the-good-the-bad-and-the-ugly/
-; with some minor updates
-;(require 'cl)       ; common lisp goodies, loop
-(when (not package-archive-contents)
-  (package-refresh-contents))
-
-;;; Add in your own as you wish:
-;(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings)
-;  "A list of packages to ensure are installed at launch.")
-
-(defvar my-packages
-  '(inf-ruby
-    guru-mode
-    magit
-    smex
-    paredit
-    rainbow-mode
-    perspective
-    idle-highlight-mode
-    find-file-in-project
-    ido-ubiquitous)
-  ;'(ack-and-a-half auctex clojure-mode coffee-mode deft expand-region
-  ;                 gist groovy-mode haml-mode haskell-mode inf-ruby
-  ;                 magit magithub markdown-mode paredit projectile python
-  ;                 sass-mode rainbow-mode scss-mode solarized-theme
-  ;                 volatile-highlights yaml-mode yari zenburn-theme)
-  "A list of packages to ensure are installed at launch.")
-
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
-
-;(defun my-packages-installed-p ()
-;  (loop for p in my-packages
-;        when (not (my-installed-p p)) do (return nil)
-;        finally (return t)))
-;
-;(unless (my-packages-installed-p)
-;  ;; check for new packages (package versions)
-;  (message "%s" "Emacs Prelude is now refreshing its package database...")
-;  (package-refresh-contents)
-;  (message "%s" " done.")
-;  ;; install the missing packages
-;  (dolist (p my-packages)
-;    (when (not (package-installed-p p))
-;      (package-install p))))
-
-;(provide 'prelude-packages)
-;;; prelude-packages.el ends here
-
+  ;'(inf-ruby
+  ;  guru-mode
+  ;  magit
+  ;  smex
+  ;  paredit
+  ;  rainbow-mode
+  ;  perspective
+  ;  idle-highlight-mode
+  ;  find-file-in-project
+  ;  ido-ubiquitous)
 (package-initialize)
 
 
 ; This el-get install stuff is borrowed from
 ; https://github.com/dimitri/emacs-kicker/blob/master/init.el
 ;(require 'cl)       ; common lisp goodies, loop
-;
-;(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-;
-;(unless (require 'el-get nil t)
-;  (url-retrieve
-;   "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
-;   (lambda (s)
-;     (goto-char (point-max))
-;     (eval-print-last-sexp))))
-;
-;;; now either el-get is `require'd already, or have been `load'ed by the
-;;; el-get installer.
-;
-;;; set local recipes
-;(setq el-get-sources
-; '((:name smex                  ; like ido, but for M-x
-;    :after (lambda ()
-;       (setq smex-save-file "~/.emacs.d/.smex-items")
-;       (global-set-key (kbd "M-x") 'smex)
-;       (global-set-key (kbd "M-X") 'smex-major-mode-commands)))
-;
-;   (:name magit                 ; git
-;    :after (lambda ()
-;       (global-set-key (kbd "C-x g") 'magit-status)))
-;
-;   (:name guru-mode             ; learn those keybindings
-;    :type elpa)
-;
-;   (:name perspective           ; workspaces
-;    :after (lambda ()
-;      (persp-mode)))))
-;
-;;; now set our own packages
-;(setq my:el-get-packages
-; '(el-get                       ; el-get is self-hosting
-;   auto-complete                ; complete as you type with overlays
-;   twilight-anti-bright-theme   ; colors
-;   zenburn-theme                ; moar!
-;   keywiz                       ; keybinding drill
-;   perspective                  ; workspaces
-;   ri-emacs                     ; documentation in ruby
-;   rainbow-delimiters           ; make parens managable
-;   paredit))                    ; raw paren power
-;
-;(setq my:el-get-packages
-;      (append
-;       my:el-get-packages
-;       (mapcar 'el-get-source-name el-get-sources)))
-;      
-;
-;;; install new packages and init already installed packages
-;(el-get 'sync my:el-get-packages)
+
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+(unless (require 'el-get nil t)
+  (url-retrieve
+   "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
+   (lambda (s)
+     (goto-char (point-max))
+     (eval-print-last-sexp))))
+
+;; now either el-get is `require'd already, or have been `load'ed by the
+;; el-get installer.
+
+;; set local recipes
+(setq el-get-sources
+ '((:name smex                  ; like ido, but for M-x
+    :after (progn
+       (setq smex-save-file "~/.emacs.d/.smex-items")
+       (global-set-key (kbd "M-x") 'smex)
+       (global-set-key (kbd "M-X") 'smex-major-mode-commands)))
+
+   (:name magit                 ; git
+    :after (progn
+       (global-set-key (kbd "C-x g") 'magit-status)))
+
+   (:name guru-mode             ; learn those keybindings
+    :type elpa
+    :after (progn
+      (require 'guru-mode))
+
+   (:name perspective           ; workspaces
+    :after (progn
+      (require 'perspective)
+      (persp-mode)))))
+
+;; now set our own packages
+(setq my:el-get-packages
+ '(el-get                       ; el-get is self-hosting
+   auto-complete                ; complete as you type with overlays
+   twilight-anti-bright-theme   ; colors
+   zenburn-theme                ; moar!
+   keywiz                       ; keybinding drill
+   ri-emacs                     ; documentation in ruby
+   rainbow-delimiters           ; make parens managable
+   paredit))                    ; raw paren power
+
+(setq my:el-get-packages
+      (append
+       my:el-get-packages
+       (mapcar 'el-get-source-name el-get-sources)))
+      
+
+;; install new packages and init already installed packages
+(el-get 'sync my:el-get-packages)
 
 ; Generic emacs configuration
 
@@ -133,8 +95,8 @@
 (set-default 'indicate-empty-lines t)
 (set-default 'imenu-auto-rescan t)
 
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
-(add-hook 'text-mode-hook 'turn-on-flyspell)
+;(add-hook 'text-mode-hook 'turn-on-auto-fill)
+;(add-hook 'text-mode-hook 'turn-on-flyspell)
 ; No startup message
 (setq inhibit-startup-message t)
 ; Quiet that bell!
@@ -169,54 +131,52 @@
 ; (load-theme 'twilight-anti-bright-theme)
 
 
-(push "/usr/local/bin" exec-path)
-
 ; I want to be sure to use the right keybindings
 ;(require 'guru-mode)
-
-(load "~/.emacs.d/init.d")
-
-(require 'my-ruby)
-
-; (load "~/.emacs.d/init.d/generic.el")
-; (load "~/.emacs.d/init.d/package-management.el")
-; (load "~/.emacs.d/init.d/secret.el")
-; 
-; ; plugins
-; (load "~/.emacs.d/init.d/org-mode.el")
-; (load "~/.emacs.d/init.d/ido.el")
-; (load "~/.emacs.d/init.d/paredit.el")
-; 
-; ; languages
-; (load "~/.emacs.d/init.d/scheme.el")
-; ; (load "~/.emacs.d/init.d/j.el")
-; ; (load "~/.emacs.d/init.d/clojure.el")
-; 
-; ; irc
-; (load "~/.emacs.d/init.d/rcirc.el")
-; experiments
-;(global-set-key (kbd "M-+") 'e2wm:start-management)
-
-; Windmove
-; (when (fboundp 'windmove-default-keybindings)
-;       (windmove-default-keybindings))
-
-
-; (require 'org-drill)
-
-; Try:
-; - ido-hacks
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("159bb8f86836ea30261ece64ac695dc490e871d57107016c09f286146f0dae64" "fca8ce385e5424064320d2790297f735ecfde494674193b061b9ac371526d059" "4aafea32abe07a9658d20aadcae066e9c7a53f8e3dfbd18d8fa0b26c24f9082c" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" "8281168b824a806489ca7d22e60bb15020bf6eecd64c25088c85b3fd806fc341" default)))
- '(org-agenda-files nil)
- '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;
+;(load "~/.emacs.d/init.d")
+;
+;(require 'my-ruby)
+;
+;; (load "~/.emacs.d/init.d/generic.el")
+;; (load "~/.emacs.d/init.d/package-management.el")
+;; (load "~/.emacs.d/init.d/secret.el")
+;; 
+;; ; plugins
+;; (load "~/.emacs.d/init.d/org-mode.el")
+;; (load "~/.emacs.d/init.d/ido.el")
+;; (load "~/.emacs.d/init.d/paredit.el")
+;; 
+;; ; languages
+;; (load "~/.emacs.d/init.d/scheme.el")
+;; ; (load "~/.emacs.d/init.d/j.el")
+;; ; (load "~/.emacs.d/init.d/clojure.el")
+;; 
+;; ; irc
+;; (load "~/.emacs.d/init.d/rcirc.el")
+;; experiments
+;;(global-set-key (kbd "M-+") 'e2wm:start-management)
+;
+;; Windmove
+;; (when (fboundp 'windmove-default-keybindings)
+;;       (windmove-default-keybindings))
+;
+;
+;; (require 'org-drill)
+;
+;; Try:
+;; - ido-hacks
+;(custom-set-variables
+; ;; custom-set-variables was added by Custom.
+; ;; If you edit it by hand, you could mess it up, so be careful.
+; ;; Your init file should contain only one such instance.
+; ;; If there is more than one, they won't work right.
+; '(custom-safe-themes (quote ("159bb8f86836ea30261ece64ac695dc490e871d57107016c09f286146f0dae64" "fca8ce385e5424064320d2790297f735ecfde494674193b061b9ac371526d059" "4aafea32abe07a9658d20aadcae066e9c7a53f8e3dfbd18d8fa0b26c24f9082c" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" "8281168b824a806489ca7d22e60bb15020bf6eecd64c25088c85b3fd806fc341" default)))
+; '(org-agenda-files nil)
+; '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m))))
+;(custom-set-faces
+; ;; custom-set-faces was added by Custom.
+; ;; If you edit it by hand, you could mess it up, so be careful.
+; ;; Your init file should contain only one such instance.
+; ;; If there is more than one, they won't work right.
+; )
