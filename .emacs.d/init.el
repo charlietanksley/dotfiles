@@ -1,4 +1,6 @@
-(push "/usr/local/bin" exec-path)
+(add-to-list 'load-path "~/.emacs.d/init.d/")
+(require 'my-paths)
+
 ; I'm only using el-get, but I think I need to specify where to find the stuff
 ; from elpa and marmalade
 
@@ -20,8 +22,7 @@
   ;  paredit
   ;  rainbow-mode
   ;  perspective
-  ;  idle-highlight-mode
-  ;  find-file-in-project
+
   ;  ido-ubiquitous)
 (package-initialize)
 
@@ -67,6 +68,11 @@
 ;; now set our own packages
 (setq my:el-get-packages
  '(el-get                       ; el-get is self-hosting
+   ido-ubiquitous               ; ido everwhere
+   idle-highlight-mode          ; show word under cursor everywhere
+   find-file-in-project         ; scope find by projects
+   inf-ruby                     ; ruby in your buffers
+   ssh                          ; ssh from within emacs
    auto-complete                ; complete as you type with overlays
    twilight-anti-bright-theme   ; colors
    zenburn-theme                ; moar!
@@ -79,7 +85,6 @@
       (append
        my:el-get-packages
        (mapcar 'el-get-source-name el-get-sources)))
-      
 
 ;; install new packages and init already installed packages
 (el-get 'sync my:el-get-packages)
@@ -103,8 +108,14 @@
 (setq visible-bell 1)
 
 ; Whitespace
+
 (setq whitespace-style '(face trailing lines-tail tabs)
       whitespace-line-column 80)
+
+; Windmove
+(when (fboundp 'windmove-default-keybindings)
+      (windmove-default-keybindings))
+
 
 ; Advanced stuff Emacs disables by default
 (put 'narrow-to-region 'disabled nil)
@@ -126,12 +137,26 @@
 (set-fringe-style -1)
 (tooltip-mode -1)
 
-(set-frame-font "Inconsolata-16")
+(setq custom-safe-themes t)
+;(set-frame-font "Inconsolata-16")
 ;(load-theme 'tango-dark)
-(load-theme 'twilight-anti-bright)
+;(load-theme 'twilight-anti-bright)
+(load-theme 'zenburn)
 
+; (load-theme 'solarized-dark t)
+;; (after-load "color-theme"
+;;             '(progn
+;;                (load-theme 'zenburn)))
+(mapc 'require '(my-paredit
+                 my-ido
+                 my-ruby
+                 my-secrets
+                 my-rcirc))
 
-; I want to be sure to use the right keybindings
+;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
+;; (require 'auto-complete-config)
+;; (ac-config-default)
+;  want to be sure to use the right keybindings
 ;(require 'guru-mode)
 ;
 ;(load "~/.emacs.d/init.d")
@@ -157,9 +182,6 @@
 ;; experiments
 ;;(global-set-key (kbd "M-+") 'e2wm:start-management)
 ;
-;; Windmove
-;; (when (fboundp 'windmove-default-keybindings)
-;;       (windmove-default-keybindings))
 ;
 ;
 ;; (require 'org-drill)
@@ -185,7 +207,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("159bb8f86836ea30261ece64ac695dc490e871d57107016c09f286146f0dae64" default))))
+ '(custom-safe-themes (quote ("d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" "159bb8f86836ea30261ece64ac695dc490e871d57107016c09f286146f0dae64" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
