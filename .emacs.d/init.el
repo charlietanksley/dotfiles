@@ -60,26 +60,33 @@
     :after (progn
       (require 'guru-mode))
 
-   (:name perspective           ; workspaces
-    :after (progn
-      (require 'perspective)
-      (persp-mode))))))
+    ; why is this not installing?
+    (:name znc                  ; znc + erc
+           :type marmalade)
+
+    (:name perspective          ; workspaces
+           :after (progn
+                    (require 'perspective)
+                    (persp-mode))))))
 
 ;; now set our own packages
 (setq my:el-get-packages
  '(el-get                       ; el-get is self-hosting
-   ido-ubiquitous               ; ido everwhere
-   idle-highlight-mode          ; show word under cursor everywhere
-   find-file-in-project         ; scope find by projects
-   inf-ruby                     ; ruby in your buffers
-   ssh                          ; ssh from within emacs
    auto-complete                ; complete as you type with overlays
+   color-theme                  ; all the colors?!
+   crontab-mode                 ; edit those crontabs
+   find-file-in-project         ; scope find by projects
+   idle-highlight-mode          ; show word under cursor everywhere
+   ido-ubiquitous               ; ido everwhere
+   inf-ruby                     ; ruby in your buffers
+   keywiz                       ; keybinding drill
+   paredit                      ; raw paren power
+   rainbow-delimiters           ; make parens managable
+   ri-emacs                     ; documentation in ruby
+   ssh                          ; ssh from within emacs
    twilight-anti-bright-theme   ; colors
    zenburn-theme                ; moar!
-   keywiz                       ; keybinding drill
-   ri-emacs                     ; documentation in ruby
-   rainbow-delimiters           ; make parens managable
-   paredit))                    ; raw paren power
+))
 
 (setq my:el-get-packages
       (append
