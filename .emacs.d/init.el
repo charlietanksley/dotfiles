@@ -49,21 +49,27 @@
    (:name guru-mode             ; learn those keybindings
     :type elpa
     :after (progn
-      (require 'guru-mode))
+             (require 'guru-mode))
+
+    (:name rsense
+           :type elpa)
+
 
     ; why is this not installing?
-    (:name znc                  ; znc + erc
-           :type marmalade)
+    ; I think I installed this via packages.el (well, I tried to, whether it worked or not I don't know)
+    ;; (:name znc                  ; znc + erc
+    ;;        :type elpa)
 
     (:name perspective          ; workspaces
            :after (progn
                     (require 'perspective)
-                    (persp-mode))))))
+                    (persp-mode t))))))
 
 ;; now set our own packages
 (setq my:el-get-packages
  '(el-get                       ; el-get is self-hosting
    auto-complete                ; complete as you type with overlays
+;   auto-complete-ruby           ; auto-complete for ruby
    color-theme                  ; all the colors?!
    crontab-mode                 ; edit those crontabs
    find-file-in-project         ; scope find by projects
@@ -72,7 +78,8 @@
    inf-ruby                     ; ruby in your buffers
    keywiz                       ; keybinding drill
    paredit                      ; raw paren power
-   rainbow-delimiters           ; make parens managable
+;   predictive                   ; auto-complete?
+   rainbox-delimeters           ; rainbow parens!
    ri-emacs                     ; documentation in ruby
    ssh                          ; ssh from within emacs
    twilight-anti-bright-theme   ; colors
@@ -98,6 +105,49 @@
 (set-default 'indicate-empty-lines t)
 (set-default 'imenu-auto-rescan t)
 
+; A few things from Emacs Rocks
+;; Auto refresh buffers
+(global-auto-revert-mode 1)
+
+;; Also auto refresh dired, but be quiet about it
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
+;; org-mode: Don't ruin S-arrow to switch windows please (use M-+ and M-- instead to toggle)
+(setq org-replace-disputed-keys t)
+
+;; Fontify org-mode code blocks
+(setq org-src-fontify-natively t)
+
+;; Represent undo-history as an actual tree (visualize with C-x u)
+;; (setq undo-tree-mode-lighter "")
+;; (require 'undo-tree)
+;; (global-undo-tree-mode)
+
+;; Sentences do not need double spaces to end. Period.
+(set-default 'sentence-end-double-space nil)
+
+;; Add parts of each file's directory to the buffer name if not unique
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+
+; Subtler highlight
+;; (set-face-background 'magit-item-highlight "#121212")
+;; (set-face-foreground 'diff-context "#666666")
+;; (set-face-foreground 'diff-added "#00cc33")
+;; (set-face-foreground 'diff-removed "#ff0000")
+
+;; I don't need to kill emacs that easily
+;; the mnemonic is C-x REALLY QUIT
+(global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
+(global-set-key (kbd "C-x C-c") 'delete-frame)
+
+; back to me
+
+;; (require 'perspective)
+
+;; ;; Enable perspective mode
+;; (persp-mode t)
+
 ;(add-hook 'text-mode-hook 'turn-on-auto-fill)
 ;(add-hook 'text-mode-hook 'turn-on-flyspell)
 ; No startup message
@@ -110,6 +160,20 @@
 (setq whitespace-style '(face trailing lines-tail tabs)
       whitespace-line-column 80)
 
+; Experiments in applying modes just to programming modes...
+(defun my-linum-mode ()
+  (linum-mode t))
+(defun my-idle-highlight-mode ()
+  (require 'idle-highlight-mode)
+  (idle-highlight-mode t))
+(defun my-rainbow-mode ()
+  (rainbow-delimiters-mode t))
+
+(add-hook 'prog-mode-hook 'my-idle-highlight-mode)
+(add-hook 'prog-mode-hook 'whitespace-mode)
+(add-hook 'prog-mode-hook 'my-linum-mode)
+(add-hook 'prog-mode-hook 'my-rainbow-mode)
+
 ; Windmove
 (when (fboundp 'windmove-default-keybindings)
       (windmove-default-keybindings))
@@ -120,6 +184,7 @@
 
 ; This is a tricky one.  I want for the right (and only the right) command key to function as a control key
 (setq mac-right-command-modifier 'control)
+(setq mac-allow-anti-aliasing t)
 
 ; Abbreviate 'yes or no' prompt to 'y or n'
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -134,12 +199,8 @@
 ; No clue what these two do
 (set-fringe-style -1)
 (tooltip-mode -1)
+(global-auto-revert-mode t)
 
-(setq custom-safe-themes t)
-;(set-frame-font "Inconsolata-16")
-;(load-theme 'tango-dark)
-;(load-theme 'twilight-anti-bright)
-(load-theme 'zenburn)
 
 ; (load-theme 'solarized-dark t)
 ;; (after-load "color-theme"
@@ -149,6 +210,10 @@
                  my-ido
                  my-ruby
                  my-secrets
+                 my-styles
+                 my-irc
+                 my-mu4e
+                 my-org
                  my-rcirc))
 
 ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
