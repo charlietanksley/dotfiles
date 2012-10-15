@@ -1,0 +1,15 @@
+(progn
+  (setq org-directory "~/Dropbox/org")
+  ;; (setq org-mobile-inbox-for-pull "~/Dropbox/org/inbox.org")
+  ;; (setq org-mobile-directory "~/Dropbox/MobileOrg")
+  (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+  ;(setq org-src-fontify-natively t)
+  (global-set-key "\C-cl" 'org-store-link)
+  (global-set-key "\C-ca" 'org-agenda)
+  (global-set-key "\C-cb" 'org-iswitchb)
+  (require 'org-install)
+  (require 'org-habit)
+  ;(require 'org-drill)
+  )
+
+(provide 'my-org)
