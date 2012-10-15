@@ -119,22 +119,22 @@ alias tig='tig --all'
 
 ## EMACS {{{
 
-function se {
-  /usr/local/Cellar/emacs/24.2/Emacs.app/Contents/MacOS/Emacs --daemon
-}
+# function se {
+#   /usr/local/Cellar/emacs/24.2/Emacs.app/Contents/MacOS/Emacs --daemon
+# }
 
-function me {
-  /usr/local/Cellar/emacs/24.2/bin/emacsclient -c -n -a '' $* &
-  osascript -e "tell application \"System Events\" to set frontmost of process \"Emacs\" to true"
-}
+# function me {
+#   /usr/local/Cellar/emacs/24.2/bin/emacsclient -c -n -a '' $* &
+#   osascript -e "tell application \"System Events\" to set frontmost of process \"Emacs\" to true"
+# }
 
-function e {
-  /usr/local/Cellar/emacs/24.2/bin/emacsclient -c -nw -a '' $*
-}
+# function e {
+#   /usr/local/Cellar/emacs/24.2/bin/emacsclient -c -nw -a '' $*
+# }
 
-function ke {
- kill `ps -A | grep emacs | grep -v grep | awk '{print $1}'`
-}
+# function ke {
+#  kill `ps -A | grep emacs | grep -v grep | awk '{print $1}'`
+# }
 
 function gpw {
   git push origin $* && git push highgroove $*
