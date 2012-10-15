@@ -34,12 +34,6 @@
 (setq pcomplete-cycle-completions nil)
 (setq erc-reuse-buffers t)
 
-                                        ;(ignore-errors
-                                        ;  (load (expand-file-name "~/.chorts.el"))
-                                        ;
-                                        ;  (setq erc-nickserv-passwords
-                                        ;        `((freenode (("technomancy" . ,freenode)
-                                        ;                     ("TeXnomancy" . ,freenode))))))
 
 (defun clean-message (s)
   (let* ((s (replace-regexp-in-string ">" "&gt;" s))
