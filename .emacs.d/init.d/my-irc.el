@@ -14,8 +14,8 @@
            erc-nick '("charlietanksley")
            ;erc-autojoin-timing :ident
            erc-flood-protect nil
-           ;erc-autojoin-channels-alist
-           ;'(("freenode.net" "#emacs" "#clojure" "#leiningen"))
+           erc-autojoin-channels-alist
+           '(("freenode" "#emacs" "#rspec" "#atlrug"))
            erc-prompt-for-nickserv-password nil)
 
      (require 'erc-services)
@@ -32,13 +32,14 @@
      (set-face-foreground 'erc-my-nick-face "blue")))
 
 (setq pcomplete-cycle-completions nil)
+(setq erc-reuse-buffers t)
 
-;(ignore-errors
-;  (load (expand-file-name "~/.chorts.el"))
-;
-;  (setq erc-nickserv-passwords
-;        `((freenode (("technomancy" . ,freenode)
-;                     ("TeXnomancy" . ,freenode))))))
+                                        ;(ignore-errors
+                                        ;  (load (expand-file-name "~/.chorts.el"))
+                                        ;
+                                        ;  (setq erc-nickserv-passwords
+                                        ;        `((freenode (("technomancy" . ,freenode)
+                                        ;                     ("TeXnomancy" . ,freenode))))))
 
 (defun clean-message (s)
   (let* ((s (replace-regexp-in-string ">" "&gt;" s))
@@ -69,3 +70,5 @@
 
 (autoload 'erc-tls "erc" "" t)
 (autoload 'erc-ssl "erc" "" t)
+
+(provide 'my-irc)
