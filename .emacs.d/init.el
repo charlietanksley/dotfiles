@@ -79,7 +79,7 @@
    keywiz                       ; keybinding drill
    paredit                      ; raw paren power
 ;   predictive                   ; auto-complete?
-   rainbox-delimeters           ; rainbow parens!
+   rainbow-delimiters           ; rainbow parens!
    ri-emacs                     ; documentation in ruby
    ssh                          ; ssh from within emacs
    twilight-anti-bright-theme   ; colors
