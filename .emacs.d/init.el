@@ -15,15 +15,6 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/"))
 
-  ;'(inf-ruby
-  ;  guru-mode
-  ;  magit
-  ;  smex
-  ;  paredit
-  ;  rainbow-mode
-  ;  perspective
-
-  ;  ido-ubiquitous)
 (package-initialize)
 
 
