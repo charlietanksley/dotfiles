@@ -68,4 +68,6 @@
 ;                        rcirc-default-full-name
 ;                        channels)))))
 
+)
+
 (provide 'my-rcirc)
