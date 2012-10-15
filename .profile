@@ -1,9 +1,32 @@
-export PATH=$PATH:/usr/local/bin:~/.cabal/bin:~/.bin:/usr/local/sbin:/usr/local/share/npm/bin:~/.git-achievements:~/bin
-export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
-export RBXOPT=-Xrbc.db=$HOME/.rbx
-export NODE_PATH=/usr/local/lib/node_modules:$PATH
+# PATH {{{
+# HASKELL
+export PATH=~/.cabal/bin:$PATH
+# NODE
+export PATH=/usr/local/share/npm/bin:/usr/local/lib/node_modules:$PATH
+# VARIOUS EXECUTABLES
+export PATH=~/.bin:~/bin:$PATH
+# GIT ACHIEVEMENTS
+export PATH=~/.git-achievements:$PATH
 
-source ~/.git-completion.bash
+# POSTGRESQL.APP
+export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+# HOMEBREW
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+# RBENV
+# export PATH="$HOME/.rbenv/bin:$PATH"
+
+# PATH }}}
+# VARIABLES {{{
+
+export EDITOR='vim'
+
+# VARIABLES }}}
+# export PATH=$PATH:/usr/local/bin:~/.cabal/bin:~/.bin:/usr/local/sbin:/usr/local/share/npm/bin:~/.git-achievements:~/bin
+# export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
+# export RBXOPT=-Xrbc.db=$HOME/.rbx
+# export NODE_PATH=/usr/local/lib/node_modules:$PATH
+
+# source ~/.git-completion.bash
 source ~/.inputrc
 
 ## Prompt {{{
@@ -96,6 +119,7 @@ else
   alias p="bundle exec padrino"
 fi
 
+# alias cd='my-cd'
 
 # Alias git to hub, because Github is our friend
 alias git='hub'
@@ -105,6 +129,9 @@ alias git='hub'
 alias failing='bin/mspec tag --list fails :files'
 alias incomplete='bin/mspec tag --list incomplete :files'
 
+function znc_webadmin {
+  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --explicitly-allowed-ports=6666
+}
 # }}}
 ## Various commands {{{
 
@@ -113,31 +140,21 @@ alias incomplete='bin/mspec tag --list incomplete :files'
 #fi
 
 # }}}
-## EMACS {{{
+# OPTIONS {{{
 
-function se {
-  /usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs --daemon
-}
+shopt -s autocd
+shopt -s histappend
 
-function me {
-  /usr/local/Cellar/emacs/HEAD/bin/emacsclient -c -n -a '' $* &
-  osascript -e "tell application \"System Events\" to set frontmost of process \"Emacs\" to true"
-}
+# export CDPATH=~/code/demandbase:~/code:$CDPATH
 
-function e {
-  /usr/local/Cellar/emacs/HEAD/bin/emacsclient -c -nw -a '' $*
-}
-
-function ke {
- kill `ps -A | grep emacs | grep -v grep | awk '{print $1}'`
-}
-
-# }}}
-
-
-## TMUXINATOR
-export EDITOR='vim'
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+# }}
 
 ## DEVELOPMENT
 export ADMIN_PASSWORD='password'
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
