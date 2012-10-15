@@ -13,6 +13,6 @@ tmp/
 .emacs.d/eshell/
 .emacs.d/swank/
 .emacs.d/url/
-.emacs.d/init.d/secret.el
+.emacs.d/init.d/my-secrets.el
 .emacs.d/.#*.*
 .emacs.d/.smex-items
