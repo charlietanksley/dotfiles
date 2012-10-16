@@ -15,8 +15,21 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/"))
 
+
 (package-initialize)
 
+
+(when (null package-archive-contents)
+  (package-refresh-contents))
+
+(defvar my-packages '(ack-and-a-half
+                      auto-complete
+                      markdown-mode
+                      yaml-mode))
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
 
 ; This el-get install stuff is borrowed from
 ; https://github.com/dimitri/emacs-kicker/blob/master/init.el
@@ -54,6 +67,19 @@
     (:name rsense
            :type elpa)
 
+    ; (:name ack-and-a-half
+    ;        :type elpa
+    ;        :after (progn
+    ;                 (add-to-list 'load-path "/path/to/ack-and-a-half")
+    ;                 (autoload 'ack-and-a-half-same "ack-and-a-half" nil t)
+    ;                 (autoload 'ack-and-a-half "ack-and-a-half" nil t)
+    ;                 (autoload 'ack-and-a-half-find-file-samee "ack-and-a-half" nil t)
+    ;                 (autoload 'ack-and-a-half-find-file "ack-and-a-half" nil t)
+    ;                 ;; Create shorter aliases
+    ;                 (defalias 'ack 'ack-and-a-half)
+    ;                 (defalias 'ack-same 'ack-and-a-half-same)
+    ;                 (defalias 'ack-find-file 'ack-and-a-half-find-file)
+    ;                 (defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)))
 
     ; why is this not installing?
     ; I think I installed this via packages.el (well, I tried to, whether it worked or not I don't know)
@@ -68,7 +94,7 @@
 ;; now set our own packages
 (setq my:el-get-packages
  '(el-get                       ; el-get is self-hosting
-   auto-complete                ; complete as you type with overlays
+;   auto-complete                ; complete as you type with overlays
 ;   auto-complete-ruby           ; auto-complete for ruby
    color-theme                  ; all the colors?!
    crontab-mode                 ; edit those crontabs
