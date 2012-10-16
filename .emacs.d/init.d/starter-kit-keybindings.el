@@ -120,5 +120,5 @@
       (let ((case-fold-search isearch-case-fold-search))
         (occur (if isearch-regexp isearch-string (regexp-quote isearch-string)))))))
 
-(provide 'starter-kit-bindings)
+(provide 'starter-kit-keybindings)
 ;;; starter-kit-bindings.el ends here
