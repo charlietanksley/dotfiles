@@ -131,12 +131,6 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
-; Subtler highlight
-;; (set-face-background 'magit-item-highlight "#121212")
-;; (set-face-foreground 'diff-context "#666666")
-;; (set-face-foreground 'diff-added "#00cc33")
-;; (set-face-foreground 'diff-removed "#ff0000")
-
 ;; I don't need to kill emacs that easily
 ;; the mnemonic is C-x REALLY QUIT
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
@@ -208,6 +202,7 @@
 (mapc 'require '(my-paredit
                  my-cucumber
                  my-ido
+                 my-magit
                  my-ruby
                  my-secrets
                  my-styles
