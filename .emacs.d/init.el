@@ -216,7 +216,8 @@
                  my-irc
                  my-mu4e
                  my-org
-                 my-rcirc))
+                 my-rcirc
+                 starter-kit-keybindings))
 
 ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
 ;; (require 'auto-complete-config)
