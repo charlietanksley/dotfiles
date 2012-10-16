@@ -24,13 +24,61 @@
 
 (defvar my-packages '(ack-and-a-half
                       auto-complete
+                      color-theme
+                      crontab-mode
+                      find-file-in-project
+                      guru-mode
+                      idle-highlight-mode
+                      ido-ubiquitous
+                      inf-ruby
+                      feature-mode
+                      keywiz
+                      magit
                       markdown-mode
-                      yaml-mode))
+                      paredit
+                      perspective
+                      rainbow-delimiters
+;                      ri-emacs
+                      smex
+                      ssh
+                      twilight-theme
+                      twittering-mode
+                      window-number
+                      yaml-mode
+                      yari ; ri interface
+                      zen-and-art-theme
+                      zenburn-theme))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
 
+(require 'guru-mode)
+
+(setq smex-save-file "~/.emacs.d/.smex-items")
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+
+(autoload 'ack-and-a-half-same "ack-and-a-half" nil t)
+(autoload 'ack-and-a-half "ack-and-a-half" nil t)
+(autoload 'ack-and-a-half-find-file-samee "ack-and-a-half" nil t)
+(autoload 'ack-and-a-half-find-file "ack-and-a-half" nil t)
+;; Create shorter aliases
+(defalias 'ack 'ack-and-a-half)
+(defalias 'ack-same 'ack-and-a-half-same)
+(defalias 'ack-find-file 'ack-and-a-half-find-file)
+(defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
+
+(require 'perspective)
+(persp-mode t)
+
+
+;(require 'auto-complete)
+; (auto-complete-mode)
+; (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
+; (require 'auto-complete-config)
+; (ac-config-default)
+;(auto-complete-mode t)
 ; This el-get install stuff is borrowed from
 ; https://github.com/dimitri/emacs-kicker/blob/master/init.el
 ;(require 'cl)       ; common lisp goodies, loop
@@ -49,23 +97,23 @@
 
 ;; set local recipes
 (setq el-get-sources
- '((:name smex                  ; like ido, but for M-x
-    :after (progn
-       (setq smex-save-file "~/.emacs.d/.smex-items")
-       (global-set-key (kbd "M-x") 'smex)
-       (global-set-key (kbd "M-X") 'smex-major-mode-commands)))
+ '(; (:name smex                  ; like ido, but for M-x
+   ;  :after (progn
+   ;     (setq smex-save-file "~/.emacs.d/.smex-items")
+   ;     (global-set-key (kbd "M-x") 'smex)
+   ;     (global-set-key (kbd "M-X") 'smex-major-mode-commands)))
 
-   (:name magit                 ; git
-    :after (progn
-       (global-set-key (kbd "C-x g") 'magit-status)))
+   ; (:name magit                 ; git
+   ;  :after (progn
+   ;     (global-set-key (kbd "C-x g") 'magit-status)))
 
-   (:name guru-mode             ; learn those keybindings
-    :type elpa
-    :after (progn
-             (require 'guru-mode))
+   ; (:name guru-mode             ; learn those keybindings
+   ;  :type elpa
+   ;  :after (progn
+   ;           (require 'guru-mode))
 
-    (:name rsense
-           :type elpa)
+    ; (:name rsense
+    ;        :type elpa)
 
     ; (:name ack-and-a-half
     ;        :type elpa
@@ -86,31 +134,32 @@
     ;; (:name znc                  ; znc + erc
     ;;        :type elpa)
 
-    (:name perspective          ; workspaces
-           :after (progn
-                    (require 'perspective)
-                    (persp-mode t))))))
+    ; (:name perspective          ; workspaces
+    ;        :after (progn
+    ;                 (require 'perspective)
+    ;                 (persp-mode t))))
+                    ))
 
 ;; now set our own packages
 (setq my:el-get-packages
  '(el-get                       ; el-get is self-hosting
 ;   auto-complete                ; complete as you type with overlays
 ;   auto-complete-ruby           ; auto-complete for ruby
-   color-theme                  ; all the colors?!
-   crontab-mode                 ; edit those crontabs
-   find-file-in-project         ; scope find by projects
-   idle-highlight-mode          ; show word under cursor everywhere
-   ido-ubiquitous               ; ido everwhere
-   inf-ruby                     ; ruby in your buffers
-   feature-mode                 ; cukes
-   keywiz                       ; keybinding drill
-   paredit                      ; raw paren power
-;   predictive                   ; auto-complete?
-   rainbow-delimiters           ; rainbow parens!
-   ri-emacs                     ; documentation in ruby
-   ssh                          ; ssh from within emacs
-   twilight-anti-bright-theme   ; colors
-   zenburn-theme                ; moar!
+   ;; color-theme                  ; all the colors?!
+;;    crontab-mode                 ; edit those crontabs
+;;    find-file-in-project         ; scope find by projects
+;;    idle-highlight-mode          ; show word under cursor everywhere
+;;    ido-ubiquitous               ; ido everwhere
+;;    inf-ruby                     ; ruby in your buffers
+;;    feature-mode                 ; cukes
+;;    keywiz                       ; keybinding drill
+;;    paredit                      ; raw paren power
+;; ;   predictive                   ; auto-complete?
+;;    rainbow-delimiters           ; rainbow parens!
+;;    ri-emacs                     ; documentation in ruby
+;;    ssh                          ; ssh from within emacs
+;;    twilight-anti-bright-theme   ; colors
+;;    zenburn-theme                ; moar!
 ))
 
 (setq my:el-get-packages
