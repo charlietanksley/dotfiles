@@ -76,6 +76,7 @@
    idle-highlight-mode          ; show word under cursor everywhere
    ido-ubiquitous               ; ido everwhere
    inf-ruby                     ; ruby in your buffers
+   feature-mode                 ; cukes
    keywiz                       ; keybinding drill
    paredit                      ; raw paren power
 ;   predictive                   ; auto-complete?
@@ -205,6 +206,7 @@
 
 
 (mapc 'require '(my-paredit
+                 my-cucumber
                  my-ido
                  my-ruby
                  my-secrets
