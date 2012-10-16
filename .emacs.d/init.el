@@ -204,10 +204,6 @@
 (global-auto-revert-mode t)
 
 
-; (load-theme 'solarized-dark t)
-;; (after-load "color-theme"
-;;             '(progn
-;;                (load-theme 'zenburn)))
 (mapc 'require '(my-paredit
                  my-ido
                  my-ruby
@@ -222,52 +218,7 @@
 ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
 ;; (require 'auto-complete-config)
 ;; (ac-config-default)
-;  want to be sure to use the right keybindings
-;(require 'guru-mode)
-;
-;(load "~/.emacs.d/init.d")
-;
-;(require 'my-ruby)
-;
-;; (load "~/.emacs.d/init.d/generic.el")
-;; (load "~/.emacs.d/init.d/package-management.el")
-;; (load "~/.emacs.d/init.d/secret.el")
-;; 
-;; ; plugins
-;; (load "~/.emacs.d/init.d/org-mode.el")
-;; (load "~/.emacs.d/init.d/ido.el")
-;; (load "~/.emacs.d/init.d/paredit.el")
-;; 
-;; ; languages
-;; (load "~/.emacs.d/init.d/scheme.el")
-;; ; (load "~/.emacs.d/init.d/j.el")
-;; ; (load "~/.emacs.d/init.d/clojure.el")
-;; 
-;; ; irc
-;; (load "~/.emacs.d/init.d/rcirc.el")
-;; experiments
-;;(global-set-key (kbd "M-+") 'e2wm:start-management)
-;
-;
-;
-;; (require 'org-drill)
-;
-;; Try:
-;; - ido-hacks
-;(custom-set-variables
-; ;; custom-set-variables was added by Custom.
-; ;; If you edit it by hand, you could mess it up, so be careful.
-; ;; Your init file should contain only one such instance.
-; ;; If there is more than one, they won't work right.
-; '(custom-safe-themes (quote ("159bb8f86836ea30261ece64ac695dc490e871d57107016c09f286146f0dae64" "fca8ce385e5424064320d2790297f735ecfde494674193b061b9ac371526d059" "4aafea32abe07a9658d20aadcae066e9c7a53f8e3dfbd18d8fa0b26c24f9082c" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" "8281168b824a806489ca7d22e60bb15020bf6eecd64c25088c85b3fd806fc341" default)))
-; '(org-agenda-files nil)
-; '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m))))
-;(custom-set-faces
-; ;; custom-set-faces was added by Custom.
-; ;; If you edit it by hand, you could mess it up, so be careful.
-; ;; Your init file should contain only one such instance.
-; ;; If there is more than one, they won't work right.
-; )
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
