@@ -24,9 +24,14 @@
 
 (defvar my-packages '(ack-and-a-half
                       auto-complete
+                      browse-kill-ring
                       color-theme
                       crontab-mode
+                      ctags ; a ctags browser
+                      ctags-update ; auto-update those tags
                       find-file-in-project
+                      gist ; gist
+                      git-blame ; git blame ;)
                       guru-mode
                       idle-highlight-mode
                       ido-ubiquitous
@@ -37,12 +42,14 @@
                       markdown-mode
                       paredit
                       perspective
+                      pomodoro ; a pomodoro timer
                       rainbow-delimiters
 ;                      ri-emacs
                       smex
                       ssh
                       twilight-theme
                       twittering-mode
+                      undo-tree
                       window-number
                       yaml-mode
                       yari ; ri interface
@@ -195,9 +202,9 @@
 (setq org-src-fontify-natively t)
 
 ;; Represent undo-history as an actual tree (visualize with C-x u)
-;; (setq undo-tree-mode-lighter "")
-;; (require 'undo-tree)
-;; (global-undo-tree-mode)
+(setq undo-tree-mode-lighter "")
+(require 'undo-tree)
+(global-undo-tree-mode)
 
 ;; Sentences do not need double spaces to end. Period.
 (set-default 'sentence-end-double-space nil)
