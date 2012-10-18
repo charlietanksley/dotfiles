@@ -54,7 +54,8 @@
                       yaml-mode
                       yari ; ri interface
                       zen-and-art-theme
-                      zenburn-theme))
+                      zenburn-theme
+                      znc))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
