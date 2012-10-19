@@ -61,6 +61,14 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
+; A few extra packages
+(add-to-list 'load-path "~/.emacs.d/packages/")
+(require 'auto-complete-etags)
+(require 'auto-complete-ruby)
+
+(require 'ctags)
+(setq ctags-command "/usr/local/bin/ctags -e -R ")
+
 (require 'guru-mode)
 
 (setq smex-save-file "~/.emacs.d/.smex-items")
@@ -81,11 +89,13 @@
 (persp-mode t)
 
 
-;(require 'auto-complete)
+;; (require 'auto-complete)
+;; (auto-complete-mode)
+
 ; (auto-complete-mode)
 ; (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
-; (require 'auto-complete-config)
-; (ac-config-default)
+(require 'auto-complete-config)
+(ac-config-default)
 ;(auto-complete-mode t)
 ; This el-get install stuff is borrowed from
 ; https://github.com/dimitri/emacs-kicker/blob/master/init.el
