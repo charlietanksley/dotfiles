@@ -16,3 +16,4 @@ tmp/
 .emacs.d/init.d/my-secrets.el
 .emacs.d/.#*.*
 .emacs.d/.smex-items
+.emacs.d/init.d/emacs-custom.el
