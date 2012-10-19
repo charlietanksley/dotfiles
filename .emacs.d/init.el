@@ -156,9 +156,11 @@
 (setq visible-bell 1)
 
 ; Whitespace
-
 (setq whitespace-style '(face trailing lines-tail tabs)
       whitespace-line-column 80)
+
+; Use iswitchb
+(iswitchb-mode t)
 
 ; Experiments in applying modes just to programming modes...
 (defun my-linum-mode ()
