@@ -2,6 +2,9 @@
 (require 'my-paths)
 (require 'my-packages)
 
+;; We need this to make some other packages work right.
+(require 'cl)
+
 (require 'guru-mode)
 (turn-on-guru-mode)
 
