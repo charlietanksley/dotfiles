@@ -15,9 +15,7 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/"))
 
-
 (package-initialize)
-
 
 (when (null package-archive-contents)
   (package-refresh-contents))
@@ -28,7 +26,7 @@
                       color-theme
                       crontab-mode
                       ctags ; a ctags browser
-                      ctags-update ; auto-update those tags
+                      expand-region
                       find-file-in-project
                       gist ; gist
                       git-blame ; git blame ;)
@@ -43,7 +41,9 @@
                       paredit
                       perspective
                       pomodoro ; a pomodoro timer
+                      projectile
                       rainbow-delimiters
+                      rspec-mode
 ;                      ri-emacs
                       smex
                       ssh
@@ -51,6 +51,9 @@
                       twittering-mode
                       undo-tree
                       window-number
+                      w3
+                      w3m
+                      wrap-region
                       yaml-mode
                       yari ; ri interface
                       zen-and-art-theme
@@ -63,13 +66,21 @@
 
 ; A few extra packages
 (add-to-list 'load-path "~/.emacs.d/packages/")
-(require 'auto-complete-etags)
-(require 'auto-complete-ruby)
+;; (require 'auto-complete-etags)
+;; (require 'auto-complete-ruby)
+(require 'campfire)
 
-(require 'ctags)
-(setq ctags-command "/usr/local/bin/ctags -e -R ")
+
+
+; config that doesn't really belong here
+(require 'window-number)
+(window-number-meta-mode t)
+
+(require 'projectile)
+(projectile-global-mode t)
 
 (require 'guru-mode)
+(guru-mode t)
 
 (setq smex-save-file "~/.emacs.d/.smex-items")
 (global-set-key (kbd "M-x") 'smex)
@@ -88,14 +99,21 @@
 (require 'perspective)
 (persp-mode t)
 
+;; region manipulation
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+(require 'wrap-region)
+(wrap-region-mode t)
+
+
 
 ;; (require 'auto-complete)
 ;; (auto-complete-mode)
 
 ; (auto-complete-mode)
 ; (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
-(require 'auto-complete-config)
-(ac-config-default)
+;; (require 'auto-complete-config)
+;; (ac-config-default)
 ;(auto-complete-mode t)
 ; This el-get install stuff is borrowed from
 ; https://github.com/dimitri/emacs-kicker/blob/master/init.el
@@ -296,6 +314,7 @@
                  my-cucumber
                  my-ido
                  my-magit
+                 my-markdown
                  my-ruby
                  my-secrets
                  my-styles
@@ -303,6 +322,7 @@
                  my-mu4e
                  my-org
                  my-rcirc
+                 my-ssh
                  starter-kit-keybindings))
 
 ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
