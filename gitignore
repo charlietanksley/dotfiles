@@ -2,3 +2,5 @@ b/
 .bundle/
 .rspec
 .rbenv-version
+.DS_Store
+tmp/
