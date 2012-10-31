@@ -20,6 +20,12 @@
   (require 'org-install)
   (require 'org-habit)
 
+  ;; org-mode: Don't ruin S-arrow to switch windows please (use M-+ and M-- instead to toggle)
+  (setq org-replace-disputed-keys t)
+
+  ;; Fontify org-mode code blocks
+  (setq org-src-fontify-natively t)
+
   ;; I really thought these things should all be in there to begin
   ;; with, but they clearly aren't. :( So require them myself!
   (add-to-list 'load-path "~/.emacs.d/packages/org-contrib/lisp")
