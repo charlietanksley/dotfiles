@@ -3,7 +3,7 @@
 (require 'my-packages)
 
 (require 'guru-mode)
-(guru-mode t)
+(turn-on-guru-mode)
 
 (setq smex-save-file "~/.emacs.d/.smex-items")
 (global-set-key (kbd "M-x") 'smex)
@@ -34,8 +34,6 @@
 ;; the mnemonic is C-x REALLY QUIT
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
 (global-set-key (kbd "C-x C-c") 'delete-frame)
-
-; back to me
 
 (mapc 'require '(my-paredit
                  my-cucumber
