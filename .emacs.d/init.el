@@ -2,9 +2,6 @@
 (require 'my-paths)
 (require 'my-packages)
 
-
-;; (require 'auto-complete-etags)
-;; (require 'auto-complete-ruby)
 (require 'campfire)
 
 ; config that doesn't really belong here
@@ -40,15 +37,6 @@
 (require 'wrap-region)
 (wrap-region-mode t)
 
-
-;; (require 'auto-complete)
-;; (auto-complete-mode)
-
-; (auto-complete-mode)
-; (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
-;; (require 'auto-complete-config)
-;; (ac-config-default)
-;(auto-complete-mode t)
 ; This el-get install stuff is borrowed from
 ; https://github.com/dimitri/emacs-kicker/blob/master/init.el
 ;(require 'cl)       ; common lisp goodies, loop
@@ -258,10 +246,6 @@
                  my-rcirc
                  my-ssh
                  starter-kit-keybindings))
-
-;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
-;; (require 'auto-complete-config)
-;; (ac-config-default)
 
 (setq custom-file "~/.emacs.d/init.d/emacs-custom.el")
 (load custom-file 'noerror)
