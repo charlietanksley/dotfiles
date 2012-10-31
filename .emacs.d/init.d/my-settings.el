@@ -1,4 +1,7 @@
 (progn
+
+  (setq smex-save-file "~/.emacs.d/.smex-items")
+
   ; No startup message
   (setq inhibit-startup-message t)
   ; Quiet that bell!
