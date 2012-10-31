@@ -11,11 +11,12 @@
            erc-track-exclude-types (append '("324" "329" "332" "333"
                                              "353" "477" "MODE")
                                            erc-hide-list)
-           erc-nick '("charlietanksley")
+           ;erc-nick '("charlietanksley")
            ;erc-autojoin-timing :ident
            erc-flood-protect nil
            erc-autojoin-channels-alist
-           '(("freenode" "#emacs" "#rspec" "#atlrug"))
+           '(("freenode" "#emacs" "#rspec" "#atlrug")
+             ("CamperVan" "#serious_business_" "#playground" "#serious_coding_" "#team_car_ram_rod"))
            erc-prompt-for-nickserv-password nil)
 
      (require 'erc-services)
@@ -24,7 +25,45 @@
      (require 'erc-hl-nicks)
      ; http://www.emacswiki.org/emacs-en/ErcZNC
      (require 'znc)
+     (require 'erc-inline)
+     (erc-inline-image-mode 1)
+     ;(erc-image-mode 1)
      (erc-services-mode 1)
+
+     (add-to-list 'erc-noncommands-list 'erc-cmd-NAMES)
+     (setq erc-keywords '("\\bcharlie_tanksley\\b"
+                          "\\bct\\b"
+                          "\\bct:\\b"
+                          "\\bCT\\b"
+                          "\\bCT:\\b"
+                          "\\bCharlie T.\\b"
+                          "\\bCharlie T.:\\b"))
+
+     ;; (defvar terminal-notify (executable-find "terminal-notifier") "The path to terminal-notifier")
+
+     ;; (defun terminal-notify (title message)
+     ;;   "Shows a message through the notification system using
+     ;;  `terminal-notifier` as the program."
+     ;;   (flet ((encfn (s) (encode-coding-string s (keyboard-coding-system))) )
+     ;;     (let* ((process (start-process "terminal-notiy" nil
+     ;;                                    terminal-notify
+     ;;                                    (encfn title)
+     ;;                                    "-title" "Emacs")))
+     ;;       (process-send-string process (encfn message))
+     ;;       (process-send-string process "\n")
+     ;;       (process-send-eof process)))
+     ;;   t)
+
+     ;; (defun my-erc-notify-hook (match-type nick message)
+     ;;   "Shows a growl notification, when user's nick was mentioned. If the buffer is currently not visible, makes it sticky."
+     ;;   (unless (posix-string-match "^\\** *Users on #" message)
+     ;;     (terminal-notify
+     ;;      (concat "ERC: name mentioned on: " (buffer-name (current-buffer)))
+     ;;      message
+     ;;      )))
+
+     ;; (add-hook 'erc-text-matched-hook 'my-erc-notify-hook)
+
      (add-to-list 'erc-modules 'hl-nicks 'spelling)
      (add-hook 'erc-connect-pre-hook (lambda (x) (erc-update-modules)))
      (add-hook 'erc-insert-post-hook 'erc-truncate-buffer)
