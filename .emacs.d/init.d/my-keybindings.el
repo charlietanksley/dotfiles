@@ -15,4 +15,7 @@
 (global-set-key (kbd "C-.") 'hippie-expand)
 (global-set-key (kbd "C-:") 'hippie-expand-lines)
 
+(require 'idomenu)
+(global-set-key (kbd "C-x C-i") 'idomenu)
+
 (provide 'my-keybindings)
