@@ -1,8 +1,10 @@
 (progn
   (autoload 'markdown-mode "markdown-mode"
     "Major mode for editing markdown files" t)
-  (setq auto-mode-alist
-        (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
+  (add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
+  (add-to-list 'auto-mode-alist '("\\.mkd" . markdown-mode))
+  (add-to-list 'auto-mode-alist '("\\.markdown" . markdown-mode))
 
   (defun my-markdown-custom ()
     "markdown-mode-hook"
