@@ -6,9 +6,6 @@
 
 ; config that doesn't really belong here
 
-(require 'projectile)
-(projectile-global-mode t)
-
 (require 'guru-mode)
 (guru-mode t)
 
@@ -94,20 +91,6 @@
 ; Use iswitchb
 (iswitchb-mode t)
 
-; Experiments in applying modes just to programming modes...
-(defun my-linum-mode ()
-  (linum-mode t))
-(defun my-idle-highlight-mode ()
-  (require 'idle-highlight-mode)
-  (idle-highlight-mode t))
-(defun my-rainbow-mode ()
-  (rainbow-delimiters-mode t))
-
-(add-hook 'prog-mode-hook 'my-idle-highlight-mode)
-(add-hook 'prog-mode-hook 'whitespace-mode)
-(add-hook 'prog-mode-hook 'my-linum-mode)
-(add-hook 'prog-mode-hook 'my-rainbow-mode)
-
 ; Advanced stuff Emacs disables by default
 (put 'narrow-to-region 'disabled nil)
 
@@ -142,6 +125,7 @@
                  my-irc
                  my-mu4e
                  my-org
+                 my-programming
                  my-rcirc
                  my-ssh
                  my-workspaces-and-buffers
