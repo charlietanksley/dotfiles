@@ -37,6 +37,7 @@
 
 (mapc 'require '(my-paredit
                  my-cucumber
+                 my-hippie
                  my-ido
                  my-magit
                  my-markdown
