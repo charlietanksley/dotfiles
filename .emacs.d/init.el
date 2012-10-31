@@ -5,8 +5,6 @@
 (require 'campfire)
 
 ; config that doesn't really belong here
-(require 'window-number)
-(window-number-meta-mode t)
 
 (require 'projectile)
 (projectile-global-mode t)
@@ -27,9 +25,6 @@
 (defalias 'ack-same 'ack-and-a-half-same)
 (defalias 'ack-find-file 'ack-and-a-half-find-file)
 (defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
-
-(require 'perspective)
-(persp-mode t)
 
 ;; region manipulation
 (require 'expand-region)
@@ -113,11 +108,6 @@
 (add-hook 'prog-mode-hook 'my-linum-mode)
 (add-hook 'prog-mode-hook 'my-rainbow-mode)
 
-; Windmove
-(when (fboundp 'windmove-default-keybindings)
-      (windmove-default-keybindings))
-
-
 ; Advanced stuff Emacs disables by default
 (put 'narrow-to-region 'disabled nil)
 
@@ -154,6 +144,7 @@
                  my-org
                  my-rcirc
                  my-ssh
+                 my-workspaces-and-buffers
                  starter-kit-keybindings))
 
 (setq custom-file "~/.emacs.d/init.d/emacs-custom.el")
