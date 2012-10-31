@@ -12,6 +12,11 @@
   (defun my-rainbow-mode ()
     (rainbow-delimiters-mode t))
 
+  (defun my-auto-wrap-comments ()
+    (setq comment-auto-fill-only-comments t)
+    (auto-fill-mode t))
+
+  (add-hook 'prog-mode-hook 'my-auto-wrap-comments)
   (add-hook 'prog-mode-hook 'my-idle-highlight-mode)
   (add-hook 'prog-mode-hook 'whitespace-mode)
   (add-hook 'prog-mode-hook 'my-linum-mode)
