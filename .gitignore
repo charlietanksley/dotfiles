@@ -17,3 +17,7 @@ tmp/
 .emacs.d/.#*.*
 .emacs.d/.smex-items
 .emacs.d/init.d/emacs-custom.el
+.emacs.d/projectile.cache
+/.emacs.d/.org-id-locations
+/.emacs.d/bookmarks
+/.emacs.d/tramp
