@@ -28,23 +28,23 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
-(mapc 'require '(my-paredit
-                 my-cucumber
+(mapc 'require '(my-cucumber
                  my-hippie
                  my-ido
+                 my-irc
                  my-keybindings
                  my-magit
                  my-markdown
+                 my-mu4e
+                 my-org
+                 my-paredit
+                 my-programming
+                 my-rcirc
                  my-ruby
                  my-secrets
                  my-settings
-                 my-styles
-                 my-irc
-                 my-mu4e
-                 my-org
-                 my-programming
-                 my-rcirc
                  my-ssh
+                 my-styles
                  my-workspaces-and-buffers
                  starter-kit-keybindings))
 
