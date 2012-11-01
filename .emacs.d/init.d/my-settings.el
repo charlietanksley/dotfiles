@@ -12,7 +12,7 @@
         whitespace-line-column 80)
 
   ; Use iswitchb
-  (iswitchb-mode t)
+  ;(iswitchb-mode t)
 
   ; Advanced stuff Emacs disables by default
   (put 'narrow-to-region 'disabled nil)
