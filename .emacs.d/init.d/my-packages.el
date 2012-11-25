@@ -17,11 +17,16 @@
   (defvar my-packages '(ack-and-a-half
                         auto-complete
                         browse-kill-ring
+                        cljdoc ; eldoc clojure
+                        clojure-mode
+                        clojure-test-mode
                         color-theme
                         crontab-mode
                         ctags ; a ctags browser
+                        elein
                         expand-region
                         find-file-in-project
+                        geiser
                         gist ; gist
                         git-blame ; git blame ;)
                         guru-mode
@@ -32,14 +37,15 @@
                         keywiz
                         magit
                         markdown-mode
+                        midje-mode
+                        nrepl
+                        pandoc-mode
                         paredit
                         perspective
                         pomodoro ; a pomodoro timer
                         projectile
                         rainbow-delimiters
-                        rspec-mode
                         smex
-                        ssh
                         twilight-theme
                         twittering-mode
                         undo-tree

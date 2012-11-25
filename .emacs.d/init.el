@@ -28,7 +28,8 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
-(mapc 'require '(my-cucumber
+(mapc 'require '(my-clojure
+                 my-cucumber
                  my-hippie
                  my-ido
                  my-irc
