@@ -8,7 +8,7 @@
 
   (defun my-markdown-custom ()
     "markdown-mode-hook"
-        (setq markdown-command "multimarkdown"))
+        (setq markdown-command "pandoc"))
   (add-hook 'markdown-mode-hook 'my-markdown-custom))
 
 (provide 'my-markdown)

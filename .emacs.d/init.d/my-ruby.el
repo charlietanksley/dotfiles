@@ -47,7 +47,12 @@
        ;; work around possible elpa bug
        (ignore-errors (require 'ruby-compilation))
        (setq ruby-use-encoding-map nil)
-       (add-hook 'ruby-mode-hook 'inf-ruby-keys)
+       (autoload 'inf-ruby "inf-ruby" "Run an inferior Ruby process" t)
+       (autoload 'inf-ruby-setup-keybindings "inf-ruby" "" t)
+
+       (add-hook 'ruby-mode-hook 'inf-ruby-setup-keybindings)
+;       (add-hook 'ruby-mode-hook 'inf-ruby-keys)
+
        (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
        (define-key ruby-mode-map (kbd "C-M-h") 'backward-kill-word)
        (define-key ruby-mode-map (kbd "<f1>") 'yari)))

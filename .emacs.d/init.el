@@ -2,6 +2,7 @@
 (require 'my-paths)
 (require 'my-packages)
 
+(add-to-list 'load-path "~/.emacs.d/packages/pivotal-tracker")
 ;; We need this to make some other packages work right.
 (require 'cl)
 
@@ -30,6 +31,8 @@
 
 (mapc 'require '(my-clojure
                  my-cucumber
+                 my-erlang
+                 my-github
                  my-hippie
                  my-ido
                  my-irc
@@ -42,6 +45,7 @@
                  my-programming
                  my-rcirc
                  my-ruby
+                 my-scheme
                  my-secrets
                  my-settings
                  my-ssh

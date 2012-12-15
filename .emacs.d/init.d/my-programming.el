@@ -16,10 +16,16 @@
     (setq comment-auto-fill-only-comments t)
     (auto-fill-mode t))
 
+  (defun my-blank-mode ()
+    (autoload 'blank-mode-on "blank-mode"
+      "Turn on blank visualisation" t))
+
   (add-hook 'prog-mode-hook 'my-auto-wrap-comments)
   (add-hook 'prog-mode-hook 'my-idle-highlight-mode)
   (add-hook 'prog-mode-hook 'whitespace-mode)
   (add-hook 'prog-mode-hook 'my-linum-mode)
-  (add-hook 'prog-mode-hook 'my-rainbow-mode))
+  (add-hook 'prog-mode-hook 'my-rainbow-mode)
+  ;(add-hook 'prog-mode-hook 'my-blank-mode)
+  )
 
 (provide 'my-programming)

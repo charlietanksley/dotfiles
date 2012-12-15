@@ -16,6 +16,7 @@
 
   (defvar my-packages '(ack-and-a-half
                         auto-complete
+                        blank-mode
                         browse-kill-ring
                         cljdoc ; eldoc clojure
                         clojure-mode
@@ -23,7 +24,10 @@
                         color-theme
                         crontab-mode
                         ctags ; a ctags browser
+                        egg ; emacs got git
+                        eieio ; need for gist
                         elein
+                        erlang
                         expand-region
                         find-file-in-project
                         geiser
@@ -38,14 +42,18 @@
                         magit
                         markdown-mode
                         midje-mode
+                        multi-eshell
+                        multiple-cursors
                         nrepl
                         pandoc-mode
                         paredit
                         perspective
                         pomodoro ; a pomodoro timer
                         projectile
+                        quack
                         rainbow-delimiters
                         smex
+                        tabulated-list ; need for gist.el
                         twilight-theme
                         twittering-mode
                         undo-tree
@@ -57,11 +65,17 @@
                         yari ; ri interface
                         zen-and-art-theme
                         zenburn-theme
-                        znc))
+                        znc
+                        zossima))
 
   (dolist (p my-packages)
     (when (not (package-installed-p p))
       (package-install p)))
+
+  ; gist.el related stuff
+  (add-to-list 'load-path "~/.emacs.d/packages/logito")
+  (add-to-list 'load-path "~/.emacs.d/packages/pcache")
+  (add-to-list 'load-path "~/.emacs.d/packages/gh.el")
 
                                         ; A few extra packages
   (add-to-list 'load-path "~/.emacs.d/packages/"))

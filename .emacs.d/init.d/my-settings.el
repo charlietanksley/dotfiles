@@ -35,6 +35,7 @@
   (tooltip-mode -1)
   (global-auto-revert-mode t)
 
+  (column-number-mode t)
   ; We don't need any extra backup files
   (setq make-backup-files nil)
   ; Don't save every file-visiting buffer
