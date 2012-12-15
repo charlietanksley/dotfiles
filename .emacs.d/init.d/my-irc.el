@@ -11,12 +11,10 @@
            erc-track-exclude-types (append '("324" "329" "332" "333"
                                              "353" "477" "MODE")
                                            erc-hide-list)
-           ;erc-nick '("charlietanksley")
-           ;erc-autojoin-timing :ident
            erc-flood-protect nil
            erc-autojoin-channels-alist
-           '(("freenode" "#emacs" "#rspec" "#atlrug")
-             ("CamperVan" "#serious_business_" "#playground" "#serious_coding_" "#team_car_ram_rod"))
+           '(("freenode" "#emacs" "#rspec" "#atlrug" "#bnr" "#clojure" "#rubyspec" "#erlang")
+             ("CamperVan" "#serious_business" "#team_car_ram_rod" "#demandbase" "#people_s_liberation_front_of_big_nerd_ranch"))
            erc-prompt-for-nickserv-password nil)
 
      (require 'erc-services)
@@ -26,7 +24,8 @@
      ; http://www.emacswiki.org/emacs-en/ErcZNC
      (require 'znc)
      (require 'erc-inline)
-     (erc-inline-image-mode 1)
+     (require 'erc-nicklist)
+     ;(erc-inline-image-mode 1)
      ;(erc-image-mode 1)
      (erc-services-mode 1)
 
