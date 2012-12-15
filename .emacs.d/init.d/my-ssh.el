@@ -2,7 +2,8 @@
   (defun my-ssh-mode ()
     (shell-dirtrack-mode t)
     (setq ssh-directory-tracking-mode 'ftp)
-    (setq dirtrackp nil))
+    (setq dirtrackp nil)
+    (setq tramp-default-method "scpc"))
 
   (add-hook 'ssh-mode-hook 'my-ssh-mode)
 
