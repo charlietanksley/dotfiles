@@ -65,7 +65,7 @@
                         yari ; ri interface
                         zen-and-art-theme
                         zenburn-theme
-                        znc
+;                        znc
                         zossima))
 
   (dolist (p my-packages)
@@ -73,9 +73,9 @@
       (package-install p)))
 
   ; gist.el related stuff
-  (add-to-list 'load-path "~/.emacs.d/packages/logito")
-  (add-to-list 'load-path "~/.emacs.d/packages/pcache")
-  (add-to-list 'load-path "~/.emacs.d/packages/gh.el")
+  ;(add-to-list 'load-path "~/.emacs.d/packages/logito")
+  ;(add-to-list 'load-path "~/.emacs.d/packages/pcache")
+  ;(add-to-list 'load-path "~/.emacs.d/packages/gh.el")
 
                                         ; A few extra packages
   (add-to-list 'load-path "~/.emacs.d/packages/"))

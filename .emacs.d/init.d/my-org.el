@@ -17,7 +17,7 @@
   (global-set-key "\C-cl" 'org-store-link)
   (global-set-key "\C-ca" 'org-agenda)
   (global-set-key "\C-cb" 'org-iswitchb)
-  (require 'org-install)
+  (require 'org)
   (require 'org-habit)
 
   ;; org-mode: Don't ruin S-arrow to switch windows please (use M-+ and M-- instead to toggle)

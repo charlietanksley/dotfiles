@@ -4,7 +4,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/packages/pivotal-tracker")
 ;; We need this to make some other packages work right.
-(require 'cl)
+(require 'cl-lib)
 
 (require 'guru-mode)
 (turn-on-guru-mode)
@@ -32,7 +32,6 @@
 (mapc 'require '(my-clojure
                  my-cucumber
                  my-erlang
-                 my-github
                  my-hippie
                  my-ido
                  my-irc
