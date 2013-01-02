@@ -218,7 +218,7 @@ set tabstop=2 shiftwidth=2 expandtab
 
 " Folds
 set foldcolumn=4
-set foldmethod=syntax "alternatives: indent, syntax, marker (uses `{{{` to open and `}}}` to close)
+set foldmethod=marker "alternatives: indent, syntax, marker (uses `{{{` to open and `}}}` to close)
 autocmd FileType tex set foldmethod=marker
 
 " Public: Toggle between syntax and marker foldmethods.
