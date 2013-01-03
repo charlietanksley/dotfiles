@@ -21,3 +21,4 @@ tmp/
 /.emacs.d/.org-id-locations
 /.emacs.d/bookmarks
 /.emacs.d/tramp
+old-emacs-init-files/
