@@ -23,7 +23,6 @@
   (add-hook 'prog-mode-hook 'my-auto-wrap-comments)
   (add-hook 'prog-mode-hook 'my-idle-highlight-mode)
   (add-hook 'prog-mode-hook 'whitespace-mode)
-  (add-hook 'prog-mode-hook 'my-linum-mode)
   (add-hook 'prog-mode-hook 'my-rainbow-mode)
   ;(add-hook 'prog-mode-hook 'my-blank-mode)
   )
