@@ -79,6 +79,7 @@
   ;(add-to-list 'load-path "~/.emacs.d/packages/logito")
   ;(add-to-list 'load-path "~/.emacs.d/packages/pcache")
   ;(add-to-list 'load-path "~/.emacs.d/packages/gh.el")
+  (add-to-list 'load-path "~/.emacs.d/packages/ZNC.el")
 
                                         ; A few extra packages
   (add-to-list 'load-path "~/.emacs.d/packages/"))
