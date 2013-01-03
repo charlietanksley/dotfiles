@@ -54,6 +54,8 @@
                         quack
                         rainbow-delimiters
                         smex
+                        solarized-theme
+                        subatomic-theme
                         tabulated-list ; need for gist.el
                         twilight-theme
                         twittering-mode
