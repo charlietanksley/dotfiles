@@ -14,7 +14,7 @@
            erc-flood-protect nil
            erc-autojoin-channels-alist
            '(("freenode" "#emacs" "#rspec" "#atlrug" "#bnr" "#clojure" "#rubyspec" "#erlang")
-             ("CamperVan" "#serious_business" "#team_car_ram_rod" "#demandbase" "#people_s_liberation_front_of_big_nerd_ranch"))
+             ("Unknown" "#serious_business" "#team_car_ram_rod" "#demandbase" "#people_s_liberation_front_of_big_nerd_ranch"))
            erc-prompt-for-nickserv-password nil)
 
      (require 'erc-services)
@@ -25,7 +25,7 @@
      (require 'znc)
      (require 'erc-inline)
      (require 'erc-nicklist)
-     ;(erc-inline-image-mode 1)
+     (erc-inline-image-mode 1)
      ;(erc-image-mode 1)
      (erc-services-mode 1)
 
