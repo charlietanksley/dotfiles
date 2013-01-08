@@ -55,7 +55,6 @@
 
        (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
        (define-key ruby-mode-map (kbd "C-M-h") 'backward-kill-word)
-       (define-key ruby-mode-map (kbd "<f1>") 'yari)
        (setq ruby-deep-indent-paren nil)))
 
   ; (define-key 'help-command (kbd "S-r") 'ri)
