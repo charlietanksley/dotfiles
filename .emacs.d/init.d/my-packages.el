@@ -18,6 +18,7 @@
                         auto-complete
                         blank-mode
                         browse-kill-ring
+                        circe
                         cl-lib
                         cljdoc ; eldoc clojure
                         clojure-mode
