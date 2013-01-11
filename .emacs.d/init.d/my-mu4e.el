@@ -24,13 +24,13 @@
 
   ;; something about ourselves
   (setq
-   user-mail-address "charlie@highgroove.com"
+   user-mail-address "charlietanksley@bignerdranch.com"
    user-full-name  "Charlie Tanksley"
    message-signature
     (concat
       "Charlie Tanksley\n"
       "Software Developer\n"
-      "http://www.highgroove.com"))
+      "http://www.bignerdranch.com"))
 
   (setq message-send-mail-function 'message-send-mail-with-sendmail)
   (setq sendmail-program "/usr/local/bin/msmtp")
