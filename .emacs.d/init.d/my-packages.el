@@ -36,6 +36,7 @@
                         idle-highlight-mode
                         ido-ubiquitous
                         inf-ruby
+                        j-mode
                         feature-mode
                         keywiz
                         magit
