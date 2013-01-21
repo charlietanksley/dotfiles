@@ -26,14 +26,11 @@
                         color-theme
                         crontab-mode
                         ctags ; a ctags browser
-                        egg ; emacs got git
-                        eieio ; need for gist
                         elein
                         erlang
                         expand-region
                         find-file-in-project
                         geiser
-                        gist ; gist
                         git-blame ; git blame ;)
                         guru-mode
                         idle-highlight-mode
