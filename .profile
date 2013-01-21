@@ -10,6 +10,8 @@ export PATH=~/.git-achievements:$PATH
 
 # POSTGRESQL.APP
 export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+# TEXLIVE
+export PATH=/usr/texbin:$PATH
 # HOMEBREW
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # RBENV
