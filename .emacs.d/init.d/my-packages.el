@@ -33,6 +33,7 @@
                         geiser
                         git-blame ; git blame ;)
                         guru-mode
+                        haskell-mode
                         idle-highlight-mode
                         ido-ubiquitous
                         inf-ruby

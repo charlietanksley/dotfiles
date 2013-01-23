@@ -32,6 +32,7 @@
 (mapc 'require '(my-clojure
                  my-cucumber
                  my-erlang
+                 my-haskell
                  my-hippie
                  my-ido
                  my-irc
