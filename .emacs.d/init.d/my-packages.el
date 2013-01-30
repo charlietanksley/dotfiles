@@ -15,6 +15,7 @@
     (package-refresh-contents))
 
   (defvar my-packages '(ack-and-a-half
+                        anti-zenburn-theme
                         auto-complete
                         blank-mode
                         browse-kill-ring
@@ -53,6 +54,7 @@
                         projectile
                         quack
                         rainbow-delimiters
+                        sicp
                         smex
                         solarized-theme
                         subatomic-theme
