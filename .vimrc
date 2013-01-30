@@ -326,13 +326,13 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 "
 
 " Make the current window big, but leave others context
-set winwidth=84
-" We have to have a winheight bigger than we want to set winminheight. But if
-" we set winheight to be huge before winminheight, the winminheight set will
-" fail.
-set winheight=5
-set winminheight=5
-set winheight=999
+" set winwidth=84
+" " We have to have a winheight bigger than we want to set winminheight. But if
+" " we set winheight to be huge before winminheight, the winminheight set will
+" " fail.
+" set winheight=5
+" set winminheight=5
+" set winheight=999
 
 " END STUFF I GRABBED FROM DESTROY ALL SOFTWARE }}}
 "
