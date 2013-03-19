@@ -106,6 +106,7 @@ nmap <leader>tD :call vroom#RunNearestTest(cwt_use_spin)<CR>
 
 " }}}
 
+Bundle 'kana/vim-vspec.git'
 
 " Experiments
 Bundle 'b4winckler/vim-angry.git'
