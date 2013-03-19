@@ -79,7 +79,8 @@ altered_ps1_git()
   esac
 
   [[ $color -gt 0 ]] &&
-    printf "\033[${attr}${color}m(git:${branch}$(ps1_git_status):$sha1)\033[0m "
+    # printf "\033[${attr}${color}m(git:${branch}$(ps1_git_status):$sha1)\033[0m "
+    printf "\033[${attr}${color}m${branch}$(ps1_git_status)\033[0m "
 }
 
 #}}}
@@ -87,7 +88,8 @@ function cwt_rbenv_version {
   rbenv version-name
 }
 
-export PS1='\n$(rbenv version-name) \[\033[1;33m\]\W\[\033[0m\] $(altered_ps1_git)\n$ '
+# export PS1='\n$(rbenv version-name) \[\033[1;33m\]\W\[\033[0m\] $(altered_ps1_git)\n$ '
+export PS1='\n\[\033[1;33m\]\W\[\033[0m\] $(altered_ps1_git)\n$ '
 export PS2='more => '
 
 # }}}
