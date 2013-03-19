@@ -29,6 +29,7 @@
 ;; Don't screw up key bindings in magit-mode
 (add-to-list 'wrap-region-except-modes 'magit-status-mode)
 
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
 ;; Represent undo-history as an actual tree (visualize with C-x u)
 (setq undo-tree-mode-lighter "")
 (require 'undo-tree)
