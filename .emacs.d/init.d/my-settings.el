@@ -17,8 +17,10 @@
   ; Advanced stuff Emacs disables by default
   (put 'narrow-to-region 'disabled nil)
 
-  ; This is a tricky one.  I want for the right (and only the right) command key to function as a control key
-  (setq mac-right-command-modifier 'control)
+  ; Set my command keys to meta keys.
+  (setq mac-command-modifier 'meta)
+  (setq mac-right-option-modifier 'super)
+
   (setq mac-allow-anti-aliasing t)
 
   ; Abbreviate 'yes or no' prompt to 'y or n'

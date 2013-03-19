@@ -13,30 +13,37 @@
                                            erc-hide-list)
            erc-flood-protect nil
            erc-autojoin-channels-alist
-           '(("freenode" "#emacs" "#rspec" "#atlrug" "#bnr" "#clojure" "#rubyspec" "#erlang")
-             ("Unknown" "#serious_business" "#team_car_ram_rod" "#demandbase" "#people_s_liberation_front_of_big_nerd_ranch"))
+           '(("freenode"
+              "#emacs"
+              "#rspec"
+              "#atlrug"
+              "#bnr"
+              "#clojure"
+              "#rubyspec"
+              "#erlang")
+             ("campfire"
+              "#serious_business"
+              "#people_s_liberation_front_of_big_nerd_ranch"
+              "#serious_coding"
+              "#sc_ienergy"
+              "#playground"
+              "#book_club"))
            erc-prompt-for-nickserv-password nil)
 
      (require 'erc-services)
      (require 'erc-spelling)
      (require 'erc-truncate)
      (require 'erc-hl-nicks)
-     ; http://www.emacswiki.org/emacs-en/ErcZNC
-     (require 'znc)
      (require 'erc-inline)
      (require 'erc-nicklist)
      (erc-inline-image-mode 1)
      ;(erc-image-mode 1)
      (erc-services-mode 1)
 
-     (add-to-list 'erc-noncommands-list 'erc-cmd-NAMES)
+      'erc-noncommands-list 'erc-cmd-NAMES
      (setq erc-keywords '("\\bcharlie_tanksley\\b"
-                          "\\bct\\b"
-                          "\\bct:\\b"
-                          "\\bCT\\b"
-                          "\\bCT:\\b"
-                          "\\bCharlie T.\\b"
-                          "\\bCharlie T.:\\b"))
+                          "\\bCharlie Tanksley\\b"))
+
 
      ;; (defvar terminal-notify (executable-find "terminal-notifier") "The path to terminal-notifier")
 
@@ -52,9 +59,6 @@
      ;;       (process-send-string process "\n")
      ;;       (process-send-eof process)))
      ;;   t)
-
-     ;; (defun my-erc-notify-hook (match-type nick message)
-     ;;   "Shows a growl notification, when user's nick was mentioned. If the buffer is currently not visible, makes it sticky."
      ;;   (unless (posix-string-match "^\\** *Users on #" message)
      ;;     (terminal-notify
      ;;      (concat "ERC: name mentioned on: " (buffer-name (current-buffer)))
@@ -63,11 +67,34 @@
 
      ;; (add-hook 'erc-text-matched-hook 'my-erc-notify-hook)
 
+     ;; From:
+     ;; https://github.com/langmartin/site-lisp/blob/master/rc-erc.el
+     ;; (defun my-erc-notify-hook (match-type nick message)
+     ;;   "Shows a growl notification, when user's nick was mentioned. If the buffer is currently not visible, makes it sticky."
+     (defun notification-center (title message)
+       (start-process "terminal-notifier"
+                      "*terminal-notifier*"
+                      "terminal-notifier"
+                      ;;"/Applications/terminal-notifier.app/Contents/MacOS/terminal-notifier"
+                      "-title" title
+                      "-message" message
+                      "-activate" "org.gnu.Emacs"))
+
+     (defun erc-growl-hook (match-type nick message)
+       "Shows a growl notification, when user's nick was mentioned. If the buffer is currently not visible, makes it sticky."
+       (when (eq match-type 'current-nick)
+         (unless (posix-string-match "^\\** *Users on #" message)
+           (notification-center
+            (concat "ERC " (buffer-name (current-buffer)))
+            message))))
+
+     (add-hook 'erc-text-matched-hook 'erc-growl-hook)
      (add-to-list 'erc-modules 'hl-nicks 'spelling)
      (add-hook 'erc-connect-pre-hook (lambda (x) (erc-update-modules)))
      (add-hook 'erc-insert-post-hook 'erc-truncate-buffer)
      (set-face-foreground 'erc-input-face "dim gray")
-     (set-face-foreground 'erc-my-nick-face "blue")))
+     (set-face-foreground 'erc-my-nick-face "blue")
+
 
 (setq pcomplete-cycle-completions nil)
 (setq erc-reuse-buffers t)
@@ -99,8 +126,11 @@
   (walk-windows (lambda (w) (end-of-buffer))))
 
 (global-set-key (kbd "C-x w") 'window-register-bottom)
-
 (autoload 'erc-tls "erc" "" t)
-(autoload 'erc-ssl "erc" "" t)
+(autoload 'erc-ssl "erc" "" t)))
+
+; http://www.emacswiki.org/emacs-en/ErcZNC
+(require 'znc)
+
 
 (provide 'my-irc)

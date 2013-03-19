@@ -11,7 +11,7 @@
            :host ,znc-server
            :port ,znc-port
            :pass ,znc-campfire-pass
-           :channels ("#serious_business" "#playground" "#people_s_liberation_front_of_big_nerd_ranch" "#team_car_ram_rod" "#demandbase"))))
+           :channels ("#serious_business" "#playground" "#people_s_liberation_front_of_big_nerd_ranch" "#sc_ienergy"))))
 
   ;; (setq lui-flyspell-p t
   ;;     lui-flyspell-alist '((".*" "american"))
@@ -30,6 +30,9 @@
      (concat (propertize (concat (buffer-name) ">")
                          'face 'circe-prompt-face)
              " ")))
+  (setq tracking-ignored-buffers '(("#emacs" circe-highlight-nick-face)
+                                   ("#serious_business" circe-highlight-nick-face)
+                                   ("#playground" circe-highlight-nick-face)))
 
   (setq
    lui-time-stamp-position 'right-margin
@@ -38,6 +41,7 @@
   (add-hook 'lui-mode-hook 'my-circe-set-margin)
   (defun my-circe-set-margin ()
     (setq right-margin-width 5)))
+
 
 (defun c-irc ()
   "Connect to IRC"

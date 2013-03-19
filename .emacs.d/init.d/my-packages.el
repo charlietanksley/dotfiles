@@ -16,7 +16,6 @@
 
   (defvar my-packages '(ack-and-a-half
                         anti-zenburn-theme
-                        auto-complete
                         blank-mode
                         browse-kill-ring
                         circe
@@ -65,6 +64,7 @@
                         window-number
                         w3
                         w3m
+                        workspaces
                         wrap-region
                         yaml-mode
                         yari ; ri interface

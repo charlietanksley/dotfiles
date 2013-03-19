@@ -3,6 +3,11 @@
 (require 'my-packages)
 
 (add-to-list 'load-path "~/.emacs.d/packages/pivotal-tracker")
+(add-to-list 'load-path "~/.emacs.d/packages/emacs-vroom")
+(add-to-list 'load-path "~/.emacs.d/packages/the-stable.el")
+
+(require 'the-stable)
+
 ;; We need this to make some other packages work right.
 (require 'cl-lib)
 
@@ -30,12 +35,15 @@
 (global-undo-tree-mode)
 
 (mapc 'require '(my-clojure
+                 my-c
+                 my-coffeescript
                  my-cucumber
                  my-erlang
                  my-haskell
                  my-hippie
                  my-ido
                  my-irc
+                 my-javascript
                  my-keybindings
                  my-magit
                  my-markdown

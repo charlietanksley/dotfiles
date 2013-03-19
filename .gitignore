@@ -22,3 +22,8 @@ tmp/
 /.emacs.d/bookmarks
 /.emacs.d/tramp
 old-emacs-init-files/
+/.emacs.d/request/
+holding/
+/.emacs.d/.workgroups
+/.emacs.d/packages/emacs-vroom
+/.emacs.d/packages/the-stable.el
