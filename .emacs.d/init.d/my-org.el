@@ -13,6 +13,7 @@
            "* TODO %?\n  %i\n  %a")
           ("j" "Journal" entry (file+datetree "~/Dropbox/org/journal.org")
            "* %?\nEntered on %U\n  %i\n  %a")))
+  (setq org-agenda-files '("~/Dropbox/org/tasks.org"))
 
   (global-set-key "\C-cl" 'org-store-link)
   (global-set-key "\C-ca" 'org-agenda)
