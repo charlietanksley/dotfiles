@@ -11,7 +11,11 @@
            :host ,znc-server
            :port ,znc-port
            :pass ,znc-campfire-pass
-           :channels ("#serious_business" "#playground" "#people_s_liberation_front_of_big_nerd_ranch" "#sc_ienergy"))))
+           :channels ("#serious_business"
+                      "#serious_coding"
+                      "#playground"
+                      "#people_s_liberation_front_of_big_nerd_ranch"
+                      "#sc_ienergy"))))
 
   ;; (setq lui-flyspell-p t
   ;;     lui-flyspell-alist '((".*" "american"))
