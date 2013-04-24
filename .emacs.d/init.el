@@ -5,6 +5,7 @@
 (add-to-list 'load-path "~/.emacs.d/packages/pivotal-tracker")
 (add-to-list 'load-path "~/.emacs.d/packages/emacs-vroom")
 (add-to-list 'load-path "~/.emacs.d/packages/the-stable.el")
+(add-to-list 'load-path "~/code/rails-routes")
 
 (require 'the-stable)
 
