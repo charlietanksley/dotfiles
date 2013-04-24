@@ -27,3 +27,4 @@ holding/
 /.emacs.d/.workgroups
 /.emacs.d/packages/emacs-vroom
 /.emacs.d/packages/the-stable.el
+/.emacs.d/projectile-bookmarks.eld
