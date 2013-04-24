@@ -21,7 +21,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # VARIABLES {{{
 
 export EDITOR='vim'
-export EMACS_VERSION='24.2'
+export EMACS_VERSION='24.3'
 
 # VARIABLES }}}
 # export PATH=$PATH:/usr/local/bin:~/.cabal/bin:~/.bin:/usr/local/sbin:/usr/local/share/npm/bin:~/.git-achievements:~/bin
