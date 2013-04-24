@@ -38,6 +38,8 @@
                         ido-ubiquitous
                         inf-ruby
                         j-mode
+                        js-comint
+                        js2-mode
                         feature-mode
                         keywiz
                         magit
