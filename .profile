@@ -160,5 +160,6 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+chruby 1.9.3-p194
