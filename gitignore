@@ -1,6 +1,16 @@
+# Emacs
+TAGS
+
+# Erlang
+*.beam
+
+# Everything
+.DS_Store
+tmp/
+
+# Ruby
 b/
 .bundle/
 .rspec
 .rbenv-version
-.DS_Store
-tmp/
+.ruby-version

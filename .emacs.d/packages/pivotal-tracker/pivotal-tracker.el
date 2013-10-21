@@ -184,6 +184,9 @@
     (with-current-buffer (get-buffer-create "*pivotal-iteration*")
       (pivotal-mode)
       (delete-region (point-min) (point-max))
+
+      (print "pow")
+
       (switch-to-buffer (current-buffer))
 
       ;; for some reason trying to load an iteration that doesn't

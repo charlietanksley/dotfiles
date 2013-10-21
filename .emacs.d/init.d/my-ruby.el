@@ -110,5 +110,50 @@ exec-to-string command, but it works and seems fast"
   ;;       (list 'mumamo-after-change-major-mode-hook 'dired-mode-hook 'ruby-mode-hook
   ;;             'css-mode-hook 'yaml-mode-hook 'javascript-mode-hook)))
 
+
+;; (setq project-root (locate-dominating-file (buffer-file-name) ".git"))
+
+;; (defun rake-migrate ()
+;;   (interactive)
+;;   (start-process-shell-command
+;;    "migrations"
+;;    "migrations"
+;;    (concat project-root "b/rake db:migrate && b/rake db:rollback && b/rake db:migrate"))
+;;   (start-process-shell-command
+;;    "migrations-test"
+;;    "migrations-test"
+;;    (concat project-root "RAILS_ENV=test b/rake db:migrate && b/rake db:rollback && b/rake db:migrate")))
+
+;; (defun rake-deploy ()
+;;   (interactive)
+;;   (start-process-shell-command
+;;    "rake-deploy"
+;;    "rake deploy"
+;;    (concat project-root "b/rake deploy:staging")))
+
+;; (require 'ansi-color)
+;; (defun colorize-compilation-buffer ()
+;;   (toggle-read-only)
+;;   (ansi-color-apply-on-region (point-min) (point-max))
+;;   (toggle-read-only))
+;; (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
+(defun rake-rspec ()
+  (interactive)
+  (start-process-shell-command
+   "rake-rspec"
+   "rake rspec"
+   (concat project-root "b/rspec spec")))
+
+;; Handle erb templates
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+
+(defun web-mode-hook ()
+  "Hooks for Web mode."
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-indent-style 2)
+  (setq web-mode-code-indent-offset 2)
+  (local-set-key (kbd "RET") 'newline-and-indent))
+(add-hook 'web-mode-hook  'web-mode-hook)
+
 (provide 'my-ruby)
 ;;; my-ruby.el ends here

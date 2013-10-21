@@ -18,4 +18,7 @@
 (require 'idomenu)
 (global-set-key (kbd "C-x C-i") 'idomenu)
 
+;; dash-at-point
+(global-set-key "\C-cd" 'dash-at-point)
+
 (provide 'my-keybindings)

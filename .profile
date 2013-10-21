@@ -16,6 +16,9 @@ export PATH=/usr/texbin:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # RBENV
 # export PATH="$HOME/.rbenv/bin:$PATH"
+# GO
+export GOPATH=~/code/go
+export PATH=$PATH:$GOPATH/bin
 
 # PATH }}}
 # VARIABLES {{{
@@ -162,4 +165,4 @@ fi
 
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-chruby 1.9.3-p194
+chruby 2.0.0-p247

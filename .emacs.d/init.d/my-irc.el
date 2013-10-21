@@ -15,19 +15,14 @@
            erc-autojoin-channels-alist
            '(("freenode"
               "#emacs"
-              "#rspec"
-              "#atlrug"
               "#bnr"
-              "#clojure"
-              "#rubyspec"
-              "#erlang")
+              "#chicken")
              ("campfire"
               "#serious_business"
               "#people_s_liberation_front_of_big_nerd_ranch"
               "#serious_coding"
-              "#sc_ienergy"
-              "#playground"
-              "#book_club"))
+              "#revue"
+              "#playground"))
            erc-prompt-for-nickserv-password nil)
 
      (require 'erc-services)

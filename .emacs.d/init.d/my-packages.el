@@ -26,6 +26,7 @@
                         color-theme
                         crontab-mode
                         ctags ; a ctags browser
+                        dash-at-point ; https://github.com/stanaka/dash-at-point
                         elein
                         erlang
                         expand-region
@@ -42,6 +43,7 @@
                         js2-mode
                         feature-mode
                         keywiz
+                        livescript-mode
                         magit
                         markdown-mode
                         midje-mode
@@ -63,6 +65,7 @@
                         twilight-theme
                         twittering-mode
                         undo-tree
+                        yasnippet
                         window-number
                         w3
                         w3m

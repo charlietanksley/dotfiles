@@ -5,7 +5,16 @@
 (add-to-list 'load-path "~/.emacs.d/packages/pivotal-tracker")
 (add-to-list 'load-path "~/.emacs.d/packages/emacs-vroom")
 (add-to-list 'load-path "~/.emacs.d/packages/the-stable.el")
+(add-to-list 'load-path "~/.emacs.d/packages/chruby.el")
+(add-to-list 'load-path "~/.emacs.d/packages/chruby.el")
+(add-to-list 'load-path "~/.emacs.d/packages/TypeScript.el")
 (add-to-list 'load-path "~/code/rails-routes")
+
+;; (require 'pry)
+;; ;; optional suggestions
+;; (global-set-key [S-f9] 'pry-intercept)
+;; (global-set-key [f9] 'pry-intercept-rerun)
+
 
 (require 'the-stable)
 
@@ -55,6 +64,7 @@
                  my-programming
                  my-rcirc
                  my-ruby
+                 my-scala
                  my-scheme
                  my-secrets
                  my-settings
