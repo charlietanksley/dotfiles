@@ -1,4 +1,6 @@
 # PATH {{{
+# Emacs Cask
+export PATH=$HOME/.cask/bin:$PATH
 # HASKELL
 export PATH=~/.cabal/bin:$PATH
 # NODE
