@@ -11,7 +11,7 @@ export PATH=~/.bin:~/bin:$PATH
 export PATH=~/.git-achievements:$PATH
 
 # POSTGRESQL.APP
-export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+export PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
 # TEXLIVE
 export PATH=/usr/texbin:$PATH
 # HOMEBREW
@@ -26,7 +26,7 @@ export PATH=$PATH:$GOPATH/bin
 # VARIABLES {{{
 
 export EDITOR='vim'
-export EMACS_VERSION='24.3'
+export EMACS_VERSION='25.3'
 
 # VARIABLES }}}
 # export PATH=$PATH:/usr/local/bin:~/.cabal/bin:~/.bin:/usr/local/sbin:/usr/local/share/npm/bin:~/.git-achievements:~/bin
@@ -165,6 +165,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
+source ~/.nvm/nvm.sh
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 chruby 2.0.0-p247

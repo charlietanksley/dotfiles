@@ -171,3 +171,6 @@ zstyle :compinstall filename '/Users/charlietanksley/.zshrc'
 # End of lines added by compinstall
 #
 export PLUGIN_DIRECTORY_PATH='/Users/charlietanksley/.dotfiles/.vim/bundle'
+
+# added by travis gem
+source /Users/charlietanksley/.travis/travis.sh

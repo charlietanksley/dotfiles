@@ -1,5 +1,7 @@
 # Emacs
 TAGS
+.cask
+auto-save-list/
 
 # Erlang
 *.beam
@@ -11,6 +13,5 @@ tmp/
 # Ruby
 b/
 .bundle/
-.rspec
 .rbenv-version
 .ruby-version
